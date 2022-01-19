@@ -1,8 +1,19 @@
-import Vue from 'vue';
-import App from './App.vue';
+import Vue from 'vue'
+import Antd from 'ant-design-vue'
+import VueCompositionAPI from '@vue/composition-api'
 
-Vue.config.productionTip = false;
+import App from './App.vue'
+
+import 'ant-design-vue/dist/antd.css'
+import './styles/tailwind.css'
+import './styles/main.scss'
+import './assets/tailwind.css'
+
+Vue.config.productionTip = false
+
+Vue.use(Antd)
+Vue.use(VueCompositionAPI)
 
 new Vue({
-  render: (h) => h(App),
-}).$mount('#app');
+  render: (h) => h(App)
+}).$mount('#app')
