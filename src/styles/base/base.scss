@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+/*
+Version         : 1.0
+Created Date    : 20/1/2022
+Modified Date   : -
+Creator         : riskinputra
+Contributor     : -
+About           : -
+*/
+
+/**
+  *ALL VARIABLES MOVE TO GLOBAL-VARIABLE
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  &:hover, *:focus {outline: none}
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/**
+  * GENERAL HTML AND BODY STYLES
+  */
+html, body {
+  @include font-regular-sm;
+  font-family             : $font-stack;
+  overflow-x              : hidden;
+  box-sizing              : border-box;
+}
+
+// Custom global styles
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden
+}
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden
+}
+.line-clamp-1 {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden
+}
