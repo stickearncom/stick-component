@@ -8,13 +8,11 @@
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
-import Button from './stories/Button.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld,
-    Button
+    HelloWorld
   }
 }
 </script>
