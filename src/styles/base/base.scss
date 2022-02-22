@@ -30,7 +30,7 @@ About           : -
   */
 html, body {
   @include font-regular-sm;
-  font-family             : $font-stack;
+  font-family             : $font-stack !important;
   overflow-x              : hidden;
   box-sizing              : border-box;
 }

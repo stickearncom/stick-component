@@ -1,5 +1,5 @@
 {
-  "name": "stick-component",
+  "name": "@stickearn/stickcomponent",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -40,6 +40,7 @@
     "eslint": "^6.7.2",
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-vue": "^6.2.2",
+    "lerna": "^4.0.0",
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
     "vue-cli-plugin-tailwind": "~2.2.18",

@@ -17,11 +17,12 @@
 </template>
 
 <script>
+/* eslint-disable import/no-extraneous-dependencies */
 import Vue from 'vue'
 import { computed } from '@vue/composition-api'
 import { Button } from 'ant-design-vue'
 import '@/styles/main.scss'
-import '@/styles/tailwind.css'
+import '@/assets/tailwind.css'
 
 Vue.use(Button)
 
@@ -103,20 +104,6 @@ export default {
       default: 'button'
     }
   },
-  // computed: {
-  //   classes() {
-  //     return {
-  //       'se-btn': true,
-  //       [`se-btn--${this.color}`]: true,
-  //       [`se-btn--${this.size}`]: true,
-  //       [`se-btn--${this.type}`]: this.type !== null,
-  //       'se-btn--dimmed': this.isDimmed,
-  //       [this.className]: this.className !== null,
-  //       'full-width': this.fullWidth,
-  //       disabled: this.disabled
-  //     }
-  //   }
-  // }
   setup(props) {
     const classes = computed(() => ({
       'se-btn': true,

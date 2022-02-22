@@ -3,6 +3,11 @@
 Regular
 ===================
 **/
+@mixin font-regular-2xs {
+  font-size: $text-xxs;
+  line-height: 18px;
+  font-weight: normal;
+}
 @mixin font-regular-xs {
   font-size: $text-xs;
   line-height: 20px;

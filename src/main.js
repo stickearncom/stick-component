@@ -5,7 +5,6 @@ import VueCompositionAPI from '@vue/composition-api'
 import App from './App.vue'
 
 import 'ant-design-vue/dist/antd.css'
-import './styles/tailwind.css'
 import './styles/main.scss'
 import './assets/tailwind.css'
 
