@@ -4,7 +4,8 @@
   "private": true,
   "workspaces": [
     "src/components/*",
-    "src/components/*/*"
+    "src/components/*/*",
+    "src/components/*/*/*"
   ],
   "scripts": {
     "serve": "vue-cli-service serve",
