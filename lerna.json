@@ -1,5 +1,6 @@
 {
   "packages": [
+    "src/components/*",
     "components/*",
     "components/**",
     "components/foundations/*",
