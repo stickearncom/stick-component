@@ -1,6 +1,6 @@
 {
   "name": "@stickearn/scrow",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "publishConfig": {
     "access": "public"
   },
@@ -13,8 +13,8 @@
     "ant-design-vue": "^1.7.8",
     "vue": "^2.6.11"
   },
-  "repository" : {
-    "type" : "git",
+  "repository": {
+    "type": "git",
     "url": "ssh://git@github.com:stickHelper/stick-component.git"
   }
 }

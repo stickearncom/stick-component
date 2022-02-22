@@ -1,6 +1,6 @@
 {
   "name": "@stickearn/scicon",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "publishConfig": {
     "access": "public"
   },
@@ -10,11 +10,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@stickearn/sccol": "^0.1.0",
-    "@stickearn/scrow": "^0.1.1"
+    "@stickearn/sccol": "^0.1.1",
+    "@stickearn/scrow": "^0.1.2"
   },
-  "repository" : {
-    "type" : "git",
+  "repository": {
+    "type": "git",
     "url": "ssh://git@github.com:stickHelper/stick-component.git"
   }
 }

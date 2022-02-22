@@ -1,6 +1,6 @@
 {
   "name": "@stickearn/scstyles",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "publishConfig": {
     "access": "public"
   },
@@ -10,8 +10,8 @@
   },
   "author": "",
   "license": "ISC",
-  "repository" : {
-    "type" : "git",
+  "repository": {
+    "type": "git",
     "url": "ssh://git@github.com:stickHelper/stick-component.git"
   }
 }
