@@ -2,7 +2,8 @@
   "packages": [
     "components/*",
     "components/**",
-    "components/foundations/*"
+    "components/foundations/*",
+    "components/foundations/**"
   ],
   "lerna": "4.0.0",
   "npmClient": "npm",
