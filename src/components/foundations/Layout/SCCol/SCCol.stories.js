@@ -1,6 +1,5 @@
 import SCCol from './index.vue'
 import SCRow from '../SCRow/index.vue'
-import '@/styles/main.scss'
 
 export default {
   title: 'Foundations/Layout/Grid/Column',

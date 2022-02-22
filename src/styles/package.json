@@ -1,0 +1,12 @@
+{
+  "name": "@stickearn/styles",
+  "version": "0.0.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

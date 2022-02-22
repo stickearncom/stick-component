@@ -35,6 +35,24 @@ html, body {
   box-sizing              : border-box;
 }
 
+h1 {
+  @include font-medium-3xl;
+}
+h2 {
+  @include font-medium-2xl;
+}
+h3 {
+  @include font-medium-xl;
+}
+h4 {
+  @include font-medium-lg;
+}
+h5 {
+  @include font-medium-md;
+}
+h6 {
+  @include font-medium-sm;
+}
 // Custom global styles
 .line-clamp-3 {
   display: -webkit-box;

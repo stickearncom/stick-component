@@ -50,8 +50,8 @@
 </template>
 
 <script>
-import SCCol from '@/components/foundations/Layout/SCCol/index.vue'
-import SCRow from '@/components/foundations/Layout/SCRow/index.vue'
+import SCRow from '@stickearn/scrow'
+import SCCol from '@stickearn/sccol'
 
 export default {
   name: 'DesignConcept',

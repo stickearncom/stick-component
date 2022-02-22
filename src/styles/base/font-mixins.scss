@@ -4,7 +4,7 @@ Regular
 ===================
 **/
 @mixin font-regular-2xs {
-  font-size: $text-xxs;
+  font-size: $text-2xs;
   line-height: 18px;
   font-weight: normal;
 }
@@ -103,55 +103,4 @@ Medium
   font-size: $text-5xl;
   line-height: 64px;
   font-weight: 500;
-}
-
-/**
-===================
-Semibold
-===================
-**/
-@mixin font-semibold-xs {
-  font-size: $text-xs;
-  line-height: 20px;
-  font-weight: bold;
-}
-@mixin font-semibold-sm {
-  font-size: $text-sm;
-  line-height: 22px;
-  font-weight: bold;
-}
-@mixin font-semibold-md {
-  font-size: $text-md;
-  line-height: 24px;
-  font-weight: bold;
-}
-@mixin font-semibold-lg {
-  font-size: $text-lg;
-  line-height: 28px;
-  font-weight: bold;
-}
-@mixin font-semibold-xl {
-  font-size: $text-xl;
-  line-height: 32px;
-  font-weight: bold;
-}
-@mixin font-semibold-2xl {
-  font-size: $text-2xl;
-  line-height: 38px;
-  font-weight: bold;
-}
-@mixin font-semibold-3xl {
-  font-size: $text-3xl;
-  line-height: 46px;
-  font-weight: bold;
-}
-@mixin font-semibold-4xl {
-  font-size: $text-4xl;
-  line-height: 54px;
-  font-weight: bold;
-}
-@mixin font-semibold-5xl {
-  font-size: $text-5xl;
-  line-height: 64px;
-  font-weight: bold;
 }

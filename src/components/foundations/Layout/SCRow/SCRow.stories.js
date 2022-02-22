@@ -1,5 +1,4 @@
 import SCRow from './index.vue'
-import '@/styles/main.scss'
 
 export default {
   title: 'Foundations/Layout/Grid/Row',
