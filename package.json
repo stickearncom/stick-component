@@ -5,7 +5,8 @@
   "workspaces": [
     "src/components/*",
     "src/components/*/*",
-    "src/components/*/*/*"
+    "src/components/*/*/*",
+    "src/styles/*"
   ],
   "scripts": {
     "serve": "vue-cli-service serve",
