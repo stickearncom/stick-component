@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "@stickearn/sccol": "0.0.1",
+    "@stickearn/scicon": "^0.1.0",
     "@stickearn/scrow": "0.0.1",
     "@tailwindcss/postcss7-compat": "^2.2.17",
     "@testing-library/jest-dom": "^5.16.1",
