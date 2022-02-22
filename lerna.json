@@ -3,10 +3,16 @@
     "src/components/*",
     "src/components/*/*",
     "src/components/*/*/*",
-    "src/styles/*"
+    "src/styles/*",
+    "src/styles/**"
   ],
   "lerna": "4.0.0",
   "npmClient": "npm",
   "version": "independent",
-  "useWorkspaces": true
+  "useWorkspaces": true,
+  "command": {
+    "publish": {
+      "registry": "https://npm.pkg.github.com"
+    }
+  }
 }

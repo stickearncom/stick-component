@@ -6,7 +6,8 @@
     "src/components/*",
     "src/components/*/*",
     "src/components/*/*/*",
-    "src/styles/*"
+    "src/styles/*",
+    "src/styles/**"
   ],
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -64,5 +65,9 @@
     "componentsDefaultDirectory": "components/{name}",
     "packageManager": "npm"
   },
-  "readme": "ERROR: No README data found!"
+  "readme": "ERROR: No README data found!",
+  "repository" : {
+    "type" : "git",
+    "url": "ssh://git@github.com:stickHelper/stick-component.git"
+  }
 }
