@@ -3,10 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "workspaces": [
-    "src/components/*",
-    "src/components/**",
-    "src/components/foundations/*",
-    "src/components/foundations/**"
+    "src/components/*"
   ],
   "scripts": {
     "serve": "vue-cli-service serve",
