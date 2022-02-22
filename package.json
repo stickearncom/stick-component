@@ -2,6 +2,12 @@
   "name": "@stickearn/stickcomponent",
   "version": "0.1.0",
   "private": true,
+  "workspaces": [
+    "src/components/*",
+    "src/components/**",
+    "src/components/foundations/*",
+    "src/components/foundations/**"
+  ],
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
