@@ -1,10 +1,9 @@
 {
   "packages": [
     "src/components/*",
-    "components/*",
-    "components/**",
-    "components/foundations/*",
-    "components/foundations/**"
+    "src/components/**",
+    "src/components/foundations/*",
+    "src/components/foundations/**"
   ],
   "lerna": "4.0.0",
   "npmClient": "npm",
