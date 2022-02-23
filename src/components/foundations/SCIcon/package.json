@@ -1,6 +1,6 @@
 {
   "name": "@stickearncom/scicon",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "publishConfig": {
     "access": "public"
   },
@@ -10,8 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@stickearncom/sccol": "^0.1.1",
-    "@stickearncom/scrow": "^0.1.1"
+    "@stickearncom/sccol": "^0.1.2",
+    "@stickearncom/scrow": "^0.1.2"
   },
   "repository": {
     "type": "git",
