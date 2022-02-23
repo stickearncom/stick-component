@@ -79,8 +79,8 @@
 </template>
 
 <script>
-import SCRow from '@stickearn/scrow'
-import SCCol from '@stickearn/sccol'
+import SCRow from '@stickearncom/scrow'
+import SCCol from '@stickearncom/sccol'
 
 export default {
   name: 'FlexOrder',
