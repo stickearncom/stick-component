@@ -13,8 +13,5 @@
     "ant-design-vue": "^1.7.8",
     "vue": "^2.6.11"
   },
-  "repository": {
-    "type": "git",
-    "url": "ssh://git@github.com:stickHelper/stick-component.git"
-  }
+  "gitHead": "1a187fa1e0c29c465216e4b7b07a92cf414f7a50"
 }

@@ -12,9 +12,5 @@
   "dependencies": {
     "@stickearn/sccol": "^0.1.1",
     "@stickearn/scrow": "^0.1.2"
-  },
-  "repository": {
-    "type": "git",
-    "url": "ssh://git@github.com:stickHelper/stick-component.git"
   }
 }

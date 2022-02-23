@@ -65,9 +65,5 @@
     "componentsDefaultDirectory": "components/{name}",
     "packageManager": "npm"
   },
-  "readme": "ERROR: No README data found!",
-  "repository" : {
-    "type" : "git",
-    "url": "ssh://git@github.com:stickHelper/stick-component.git"
-  }
+  "readme": "ERROR: No README data found!"
 }
