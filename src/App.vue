@@ -1,12 +1,16 @@
 <template>
   <div id="app">
-    hallo
+    <SCButton>Hallo</SCButton>
   </div>
 </template>
 
 <script>
+import SCButton from '@/components/SCButton/index.vue'
 
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    SCButton
+  }
 }
 </script>

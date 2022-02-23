@@ -20,7 +20,7 @@
 import Vue from 'vue'
 import { Button } from 'ant-design-vue'
 import 'ant-design-vue/dist/antd.css'
-import '@stickearncom/scstyles/main.scss'
+import '@stickearncom/scstyles/fonts/fonts.css'
 
 Vue.use(Button)
 

@@ -19,9 +19,10 @@
     "storybook": "start-storybook -p 6006"
   },
   "dependencies": {
-    "@stickearncom/sccol": "^0.1.0",
-    "@stickearncom/scrow": "^0.1.0",
-    "@stickearncom/scstyles": "^0.1.0",
+    "@stickearncom/sccol": "^0.1.2",
+    "@stickearncom/scrow": "^0.1.2",
+    "@stickearncom/scstyles": "^0.1.2",
+    "@stickearncom/scicon": "^0.1.2",
     "@tailwindcss/postcss7-compat": "^2.2.17",
     "@testing-library/jest-dom": "^5.16.1",
     "@vue/composition-api": "^1.4.4",

@@ -19,6 +19,7 @@
 </template>
 
 <script>
+/* eslint-disable no-undefined */
 import Vue from 'vue'
 import { Col } from 'ant-design-vue'
 import 'ant-design-vue/dist/antd.css'
@@ -54,31 +55,31 @@ export default {
     },
     span: {
       type: Number,
-      default: null
+      default: undefined
     },
     xs: {
       type: [Number, Object],
-      default: null
+      default: undefined
     },
     sm: {
       type: [Number, Object],
-      default: null
+      default: undefined
     },
     md: {
       type: [Number, Object],
-      default: null
+      default: undefined
     },
     lg: {
       type: [Number, Object],
-      default: null
+      default: undefined
     },
     xl: {
       type: [Number, Object],
-      default: null
+      default: undefined
     },
     xxl: {
       type: [Number, Object],
-      default: null
+      default: undefined
     }
   }
 }

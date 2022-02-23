@@ -1,30 +1,62 @@
-@import '@stickearncom/scstyles/base/variables.scss';
-@import '@stickearncom/scstyles/base/font-mixins.scss';
-@import '@stickearncom/scstyles/base/colors-variables.scss';
+@import "@stickearncom/scstyles/base/variables.scss";
+@import "@stickearncom/scstyles/base/font-mixins.scss";
+@import "@stickearncom/scstyles/base/mixin.scss";
+@import "@stickearncom/scstyles/base/colors-variables.scss";
 
 .sc-btn {
   &.ant-btn {
     font-family: $font-stack;
-    color: $gray-10;
     @include font-medium-sm;
     border-radius: 6px;
     transition: 0.2s all;
+    @include flexbox;
+    @include justify-content(center);
+    @include align-items(center);
 
     &.sc-btn-default {
       border: 2px solid $gray-2;
+      height: 46px;
+      padding: 0 24px;
 
-      &:hover {
-        background-color: $purple-1;
-        border-color: $purple-1;
-        color: $purple-6;
+      &:disabled {
+        background-color: $gray-2;
+        border-color: $gray-4;
+        color: $gray-4;
       }
-      &:focus {
-        color: inherit;
+
+      &.ant-btn-lg {
+        height: 56px;
+        @include font-medium-md;
       }
-      &:active {
-        background-color: $purple-8;
-        border-color: $purple-8;
-        color: $white-1;
+      &.ant-btn-sm {
+        height: 34px;
+        @include font-medium-sm;
+      }
+    }
+
+    &:not(&:disabled) {
+      color: $gray-10;
+      &.sc-btn-default {
+
+        &:hover {
+          background-color: $purple-1;
+          border-color: $purple-1;
+          color: $purple-6;
+        }
+        &:focus {
+          color: inherit;
+        }
+        &:active {
+          background-color: $purple-8;
+          border-color: $purple-8;
+          color: $white-1;
+        }
+
+        &.ant-btn-loading {
+          i {
+            color: $purple-6;
+          }
+        }
       }
     }
   }
