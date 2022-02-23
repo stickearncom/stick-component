@@ -1,0 +1,31 @@
+@import '@stickearncom/scstyles/base/variables.scss';
+@import '@stickearncom/scstyles/base/font-mixins.scss';
+@import '@stickearncom/scstyles/base/colors-variables.scss';
+
+.sc-btn {
+  &.ant-btn {
+    font-family: $font-stack;
+    color: $gray-10;
+    @include font-medium-sm;
+    border-radius: 6px;
+    transition: 0.2s all;
+
+    &.sc-btn-default {
+      border: 2px solid $gray-2;
+
+      &:hover {
+        background-color: $purple-1;
+        border-color: $purple-1;
+        color: $purple-6;
+      }
+      &:focus {
+        color: inherit;
+      }
+      &:active {
+        background-color: $purple-8;
+        border-color: $purple-8;
+        color: $white-1;
+      }
+    }
+  }
+}

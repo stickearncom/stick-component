@@ -1,7 +1,6 @@
 <template>
   <a-row
     :id="id"
-    :class="classes"
     :align="align"
     :justify="justify"
     :type="type"
@@ -22,10 +21,6 @@ export default {
   name: 'SCRow',
   props: {
     id: {
-      type: String,
-      default: null
-    },
-    className: {
       type: String,
       default: null
     },
@@ -53,13 +48,6 @@ export default {
     gutter: {
       type: [Number, Object, Array],
       default: 0
-    }
-  },
-  computed: {
-    classes() {
-      return {
-        [`${this.className}`]: this.className !== null
-      }
     }
   }
 }

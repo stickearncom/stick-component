@@ -1,7 +1,6 @@
 <template>
   <a-col
     :id="id"
-    :class="classes"
     :flex="flex"
     :offset="offset"
     :order="order"
@@ -30,10 +29,6 @@ export default {
   name: 'SECol',
   props: {
     id: {
-      type: String,
-      default: null
-    },
-    className: {
       type: String,
       default: null
     },
@@ -84,13 +79,6 @@ export default {
     xxl: {
       type: [Number, Object],
       default: null
-    }
-  },
-  computed: {
-    classes() {
-      return {
-        [`${this.className}`]: this.className !== null
-      }
     }
   }
 }
