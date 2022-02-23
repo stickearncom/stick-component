@@ -1,6 +1,6 @@
 {
   "name": "@stickearncom/scbutton",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publishConfig": {
     "access": "public"
   },
@@ -10,10 +10,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@stickearncom/sccol": "^0.1.2",
-    "@stickearncom/scicon": "^0.1.2",
+    "@stickearncom/sccol": "^0.1.3",
+    "@stickearncom/scicon": "^0.1.3",
     "@stickearncom/scrow": "^0.1.2",
-    "@stickearncom/scstyles": "^0.1.2",
+    "@stickearncom/scstyles": "^0.1.3",
     "ant-design-vue": "^1.7.8",
     "vue": "^2.6.11"
   },
