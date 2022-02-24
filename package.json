@@ -20,9 +20,9 @@
   },
   "dependencies": {
     "@stickearncom/sccol": "^0.1.2",
-    "@stickearncom/scrow": "^0.1.2",
-    "@stickearncom/scstyles": "^0.1.2",
     "@stickearncom/scicon": "^0.1.2",
+    "@stickearncom/scrow": "^0.1.2",
+    "@stickearncom/scstyles": "^0.1.4",
     "@tailwindcss/postcss7-compat": "^2.2.17",
     "@testing-library/jest-dom": "^5.16.1",
     "@vue/composition-api": "^1.4.4",
