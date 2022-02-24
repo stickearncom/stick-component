@@ -9,10 +9,5 @@
   "lerna": "4.0.0",
   "npmClient": "npm",
   "version": "independent",
-  "useWorkspaces": true,
-  "command": {
-    "publish": {
-      "registry": "https://npm.pkg.github.com"
-    }
-  }
+  "useWorkspaces": true
 }
