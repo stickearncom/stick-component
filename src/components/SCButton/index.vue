@@ -20,6 +20,7 @@
 import Vue from 'vue'
 import { Button } from 'ant-design-vue'
 import 'ant-design-vue/dist/antd.css'
+import '@stickearncom/scstyles/main.scss'
 
 Vue.use(Button)
 
@@ -55,6 +56,7 @@ export default {
         return ['default', 'primary', 'dashed', 'text', 'link'].indexOf(value) !== -1
       }
     },
+    icon: { type: Boolean, default: false },
     block: { type: Boolean, default: false },
     danger: { type: Boolean, default: false }
   },
@@ -63,7 +65,8 @@ export default {
       return {
         'sc-btn': true,
         [`sc-btn-${this.type}`]: true,
-        [`sc-btn-${this.danger}`]: this.danger
+        'sc-btn-danger': this.danger,
+        'sc-btn-icon': this.icon
       }
     }
   }

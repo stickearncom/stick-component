@@ -2,7 +2,7 @@ import SCGrid from './index.vue'
 import '@/styles/main.scss'
 
 export default {
-  title: 'Foundations/Layout/Grid',
+  title: 'Foundations/Grid',
   component: SCGrid
 }
 

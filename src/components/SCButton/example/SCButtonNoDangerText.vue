@@ -1,7 +1,7 @@
 <template>
   <div>
     <h4 class="font-medium-lg">
-      Button default:
+      Button text:
     </h4>
     <hr class="mb-4">
     <!-- Large -->
@@ -10,26 +10,46 @@
         Large:
       </SCCol>
       <SCCol :span="8">
-        <SCButton size="large" class="mb-2">
+        <SCButton size="large" class="mb-2" type="text">
           Button
         </SCButton>
-        <SCButton size="large" danger>
-          Button
-        </SCButton>
-      </SCCol>
-      <SCCol :span="8">
-        <SCButton loading size="large" class="mb-2">
-          Button
-        </SCButton>
-        <SCButton loading size="large" danger>
+        <SCButton size="large" danger type="text">
           Button
         </SCButton>
       </SCCol>
       <SCCol :span="8">
-        <SCButton disabled size="large" class="mb-2">
+        <SCButton
+          loading
+          size="large"
+          class="mb-2"
+          type="text"
+        >
           Button
         </SCButton>
-        <SCButton disabled size="large" danger>
+        <SCButton
+          loading
+          size="large"
+          danger
+          type="text"
+        >
+          Button
+        </SCButton>
+      </SCCol>
+      <SCCol :span="8">
+        <SCButton
+          disabled
+          size="large"
+          class="mb-2"
+          type="text"
+        >
+          Button
+        </SCButton>
+        <SCButton
+          disabled
+          size="large"
+          danger
+          type="text"
+        >
           Button
         </SCButton>
       </SCCol>
@@ -40,26 +60,26 @@
         Default:
       </SCCol>
       <SCCol :span="8">
-        <SCButton class="mb-2">
+        <SCButton class="mb-2" type="text">
           Button
         </SCButton>
-        <SCButton danger>
-          Button
-        </SCButton>
-      </SCCol>
-      <SCCol :span="8">
-        <SCButton loading class="mb-2">
-          Button
-        </SCButton>
-        <SCButton loading danger>
+        <SCButton danger type="text">
           Button
         </SCButton>
       </SCCol>
       <SCCol :span="8">
-        <SCButton disabled class="mb-2">
+        <SCButton loading class="mb-2" type="text">
           Button
         </SCButton>
-        <SCButton disabled danger>
+        <SCButton loading danger type="text">
+          Button
+        </SCButton>
+      </SCCol>
+      <SCCol :span="8">
+        <SCButton disabled class="mb-2" type="text">
+          Button
+        </SCButton>
+        <SCButton disabled danger type="text">
           Button
         </SCButton>
       </SCCol>
@@ -70,26 +90,46 @@
         Small:
       </SCCol>
       <SCCol :span="8">
-        <SCButton size="small" class="mb-2">
+        <SCButton size="small" class="mb-2" type="text">
           Button
         </SCButton>
-        <SCButton size="small" danger>
-          Button
-        </SCButton>
-      </SCCol>
-      <SCCol :span="8">
-        <SCButton loading size="small" class="mb-2">
-          Button
-        </SCButton>
-        <SCButton loading size="small" danger>
+        <SCButton size="small" danger type="text">
           Button
         </SCButton>
       </SCCol>
       <SCCol :span="8">
-        <SCButton disabled size="small" class="mb-2">
+        <SCButton
+          loading
+          size="small"
+          class="mb-2"
+          type="text"
+        >
           Button
         </SCButton>
-        <SCButton disabled size="small" danger>
+        <SCButton
+          loading
+          size="small"
+          danger
+          type="text"
+        >
+          Button
+        </SCButton>
+      </SCCol>
+      <SCCol :span="8">
+        <SCButton
+          disabled
+          size="small"
+          class="mb-2"
+          type="text"
+        >
+          Button
+        </SCButton>
+        <SCButton
+          disabled
+          size="small"
+          danger
+          type="text"
+        >
           Button
         </SCButton>
       </SCCol>

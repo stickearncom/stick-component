@@ -2,7 +2,7 @@ import SCCol from './index.vue'
 import SCRow from '../SCRow/index.vue'
 
 export default {
-  title: 'Foundations/Layout/Grid/Column',
+  title: 'Foundations/Grid/Column',
   component: SCCol
 }
 

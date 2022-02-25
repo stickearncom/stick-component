@@ -1,7 +1,7 @@
 import SCRow from './index.vue'
 
 export default {
-  title: 'Foundations/Layout/Grid/Row',
+  title: 'Foundations/Grid/Row',
   component: SCRow,
   argTypes: {
     align: { control: { type: 'select', options: ['top', 'middle', 'bottom'] } },
