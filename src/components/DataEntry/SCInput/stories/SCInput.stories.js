@@ -227,6 +227,39 @@ Error.parameters = {
         />
       </SCCol>
     </SCRow>
+
+    <SCRow :gutter="[16, 32]">
+      <SCCol :span="8">
+        <SCInput
+          addon-before="http://"
+          addon-after=".com"
+          default-value="mysite"
+          size="small"
+          placeholder="small"
+          allow-clear
+          has-error
+        />
+      </SCCol>
+      <SCCol :span="8">
+        <SCInput
+          addon-before="http://"
+          addon-after=".com"
+          default-value="mysite"
+          allow-clear
+          has-error
+        />
+      </SCCol>
+      <SCCol :span="8">
+        <SCInput
+          addon-before="http://"
+          addon-after=".com"
+          default-value="mysite"
+          size="large"
+          allow-clear
+          has-error
+        />
+      </SCCol>
+    </SCRow>
   </div>
 </template>
 
@@ -243,7 +276,8 @@ export default {
     SCInput
   }
 }
-</script> 
+</script>
+    
 `
     }
   }
