@@ -1,4 +1,4 @@
-import SCRow from './index.vue'
+import SCRow from '../index.vue'
 
 export default {
   title: 'Foundations/Grid/Row',

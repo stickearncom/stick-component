@@ -9,7 +9,7 @@
     <SCRow
       type="flex"
       justify="center"
-      align="center"
+      align="middle"
       :gutter="[16, 32]"
     >
       <SCCol
@@ -30,7 +30,7 @@
 <script>
 import SCRow from '@stickearncom/scrow'
 import SCCol from '@stickearncom/sccol'
-import SCIcon from './index.vue'
+import SCIcon from '../index.vue'
 
 import icons from './iconsList'
 

@@ -1,0 +1,109 @@
+@import "@stickearncom/scstyles/base/variables.scss";
+@import "@stickearncom/scstyles/base/font-mixins.scss";
+@import "@stickearncom/scstyles/base/mixin.scss";
+@import "@stickearncom/scstyles/base/colors-variables.scss";
+
+.sc-input {
+  &.ant-input {
+    font-family: $font-stack;
+    border: 2px solid $gray-1;
+    padding: 12px 14px;
+    height: 46px;
+    @include border-radius(6px);
+    @include font-regular-sm;
+
+    &.ant-input-sm {
+      padding: 6px 14px;
+      height: 34px;
+    }
+
+    &.ant-input-lg {
+      padding: 16px 14px;
+      height: 56px;
+      @include font-regular-md;
+    }
+
+    &:not(&:disabled) {
+      background-color: $gray-1;
+      color: $gray-8;
+
+      &::placeholder {
+        color: $gray-3;
+      }
+
+      &:hover,
+      &:active,
+      &:focus {
+        background-color: $white-1;
+        border-color: $purple-6;
+        box-shadow: none;
+      }
+    }
+
+    &:disabled {
+      background-color: $gray-2;
+      border-color: $gray-2;
+      color: $gray-4;
+    }
+  }
+
+  &.ant-input-affix-wrapper {
+    .ant-input {
+      font-family: $font-stack;
+      border: 2px solid $gray-1;
+      @include padding-y(12px);
+      height: 46px;
+      @include border-radius(6px);
+      @include font-regular-sm;
+
+      &:not(:first-child) {
+        padding-left: 30px;
+      }
+      &:not(:last-child) {
+        padding-right: 50px;
+      }
+  
+      &.ant-input-sm {
+        @include padding-y(6px);
+;
+        height: 34px;
+      }
+  
+      &.ant-input-lg {
+        @include padding-y(16px);
+
+        height: 56px;
+        @include font-regular-md;
+      }
+  
+      &:not(&:disabled) {
+        background-color: $gray-1;
+        color: $gray-8;
+  
+        &::placeholder {
+          color: $gray-3;
+        }
+  
+        &:hover,
+        &:active,
+        &:focus {
+          background-color: $white-1;
+          border-color: $purple-6;
+          box-shadow: none;
+        }
+      }
+  
+      &:disabled {
+        background-color: $gray-2;
+        border-color: $gray-2;
+        color: $gray-4;
+      }
+    }
+
+    .ant-input-suffix {
+      .ant-input-clear-icon {
+        color: $red-8;
+      }
+    }
+  }
+}

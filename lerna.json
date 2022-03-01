@@ -9,5 +9,10 @@
   "lerna": "4.0.0",
   "npmClient": "npm",
   "version": "independent",
-  "useWorkspaces": true
+  "useWorkspaces": true,
+  "command": {
+    "version": {
+      "ignore": ["**/example", "**/stories"]
+    }
+  }
 }

@@ -1,5 +1,5 @@
-import SCCol from './index.vue'
-import SCRow from '../SCRow/index.vue'
+import SCCol from '../index.vue'
+import SCRow from '../../SCRow/index.vue'
 
 export default {
   title: 'Foundations/Grid/Column',

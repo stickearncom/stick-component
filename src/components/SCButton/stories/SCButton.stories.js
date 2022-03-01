@@ -1,10 +1,10 @@
-import SCButton from './index.vue'
-import SCButtonNoDangerDefault from './example/SCButtonNoDangerDefault.vue'
-import SCButtonNoDangerPrimary from './example/SCButtonNoDangerPrimary.vue'
-import SCButtonNoDangerDashed from './example/SCButtonNoDangerDashed.vue'
-import SCButtonNoDangerText from './example/SCButtonNoDangerText.vue'
-import SCButtonNoDangerLink from './example/SCButtonNoDangerLink.vue'
-import SCButtonNoDangerIcon from './example/SCButtonNoDangerIcon.vue'
+import SCButton from '../index.vue'
+import SCButtonNoDangerDefault from '../example/SCButtonNoDangerDefault.vue'
+import SCButtonNoDangerPrimary from '../example/SCButtonNoDangerPrimary.vue'
+import SCButtonNoDangerDashed from '../example/SCButtonNoDangerDashed.vue'
+import SCButtonNoDangerText from '../example/SCButtonNoDangerText.vue'
+import SCButtonNoDangerLink from '../example/SCButtonNoDangerLink.vue'
+import SCButtonNoDangerIcon from '../example/SCButtonNoDangerIcon.vue'
 
 export default {
   title: 'Components/Button',
@@ -129,14 +129,16 @@ Default.parameters = {
 <script>
 import SCRow from '@stickearncom/scrow'
 import SCCol from '@stickearncom/sccol'
+import SCButton from '@stickearncom/scbutton'
 
 export default {
   components: {
     SCRow,
-    SCCol
+    SCCol,
+    SCButton
   }
 }
-</script>
+</script>    
 `
     }
   }
@@ -296,10 +298,13 @@ Primary.parameters = {
 import SCRow from '@stickearncom/scrow'
 import SCCol from '@stickearncom/sccol'
 
+import SCButton from '@stickearncom/scbutton'
+
 export default {
   components: {
     SCRow,
-    SCCol
+    SCCol,
+    SCButton
   }
 }
 </script>
@@ -461,14 +466,16 @@ Dashed.parameters = {
 <script>
 import SCRow from '@stickearncom/scrow'
 import SCCol from '@stickearncom/sccol'
+import SCButton from '@stickearncom/scbutton'
 
 export default {
   components: {
     SCRow,
-    SCCol
+    SCCol,
+    SCButton
   }
 }
-</script>
+</script>    
 `
     }
   }
@@ -628,10 +635,13 @@ Text.parameters = {
 import SCRow from '@stickearncom/scrow'
 import SCCol from '@stickearncom/sccol'
 
+import SCButton from '@stickearncom/scbutton'
+
 export default {
   components: {
     SCRow,
-    SCCol
+    SCCol,
+    SCButton
   }
 }
 </script>
@@ -654,136 +664,254 @@ Icon.parameters = {
       code: `<template>
   <div>
     <h4 class="font-medium-lg">
-      Button link:
+      Button Icon:
     </h4>
     <hr class="mb-4">
     <!-- Large -->
     <SCRow type="flex" align="middle" :gutter="[16, 32]">
       <SCCol :span="24">
-        Large:
+        Button with icon:
       </SCCol>
-      <SCCol :span="8">
-        <SCButton size="large" class="mb-2" type="link">
-          Button
+      <SCCol flex="1">
+        <SCButton class="mb-2">
+          <SCIcon type="angle-left-b-outline" /> Button
         </SCButton>
-        <SCButton size="large" danger type="link">
-          Button
+        <SCButton danger>
+          Button <SCIcon type="angle-right-b-outline" />
         </SCButton>
-      </SCCol>
-      <SCCol :span="8">
-        <SCButton
-          loading
-          size="large"
-          class="mb-2"
-          type="link"
-        >
-          Button
-        </SCButton>
-        <SCButton
-          loading
-          size="large"
-          danger
-          type="link"
-        >
-          Button
+        <SCButton class="mt-2" danger disabled>
+          Button <SCIcon type="angle-right-b-outline" />
         </SCButton>
       </SCCol>
-      <SCCol :span="8">
-        <SCButton
-          disabled
-          size="large"
-          class="mb-2"
-          type="link"
-        >
-          Button
+      <SCCol flex="1">
+        <SCButton class="mb-2" type="primary">
+          <SCIcon type="angle-left-b-outline" /> Button
         </SCButton>
-        <SCButton
-          disabled
-          size="large"
-          danger
-          type="link"
-        >
-          Button
+        <SCButton class="mb-2" danger type="primary">
+          <SCIcon type="angle-left-b-outline" /> Button
+        </SCButton>
+        <SCButton danger type="primary" disabled>
+          Button <SCIcon type="angle-right-b-outline" />
+        </SCButton>
+      </SCCol>
+      <SCCol flex="1">
+        <SCButton class="mb-2" type="dashed">
+          <SCIcon type="angle-left-b-outline" /> Button
+        </SCButton>
+        <SCButton class="mb-2" danger type="dashed">
+          <SCIcon type="angle-left-b-outline" /> Button
+        </SCButton>
+        <SCButton danger type="dashed" disabled>
+          Button <SCIcon type="angle-right-b-outline" />
+        </SCButton>
+      </SCCol>
+      <SCCol flex="1">
+        <SCButton class="mb-2" type="text">
+          <SCIcon type="angle-left-b-outline" /> Button
+        </SCButton>
+        <SCButton class="mb-2" danger type="text">
+          <SCIcon type="angle-left-b-outline" /> Button
+        </SCButton>
+        <SCButton danger type="text" disabled>
+          Button <SCIcon type="angle-right-b-outline" />
+        </SCButton>
+      </SCCol>
+      <SCCol flex="1">
+        <SCButton class="mb-2" type="link">
+          <SCIcon type="angle-left-b-outline" /> Button
+        </SCButton>
+        <SCButton class="mb-2" danger type="link">
+          <SCIcon type="angle-left-b-outline" /> Button
+        </SCButton>
+        <SCButton danger type="link" disabled>
+          Button <SCIcon type="angle-right-b-outline" />
         </SCButton>
       </SCCol>
     </SCRow>
     <!-- Default -->
     <SCRow type="flex" align="middle" :gutter="[24, 32]">
       <SCCol :span="24">
-        Default:
+        Icon only:
       </SCCol>
-      <SCCol :span="8">
-        <SCButton class="mb-2" type="link">
-          Button
+      <SCCol flex="1">
+        <SCButton class="mb-2" icon>
+          <SCIcon type="angle-left-b-outline" />
         </SCButton>
-        <SCButton danger type="link">
-          Button
+        <SCButton danger icon>
+          <SCIcon type="angle-right-b-outline" />
+        </SCButton>
+        <SCButton
+          class="mt-2"
+          danger
+          disabled
+          icon
+        >
+          <SCIcon type="angle-right-b-outline" />
         </SCButton>
       </SCCol>
-      <SCCol :span="8">
-        <SCButton loading class="mb-2" type="link">
-          Button
+      <SCCol flex="1">
+        <SCButton class="mb-2" type="primary" icon>
+          <SCIcon type="angle-left-b-outline" />
         </SCButton>
-        <SCButton loading danger type="link">
-          Button
+        <SCButton
+          class="mb-2"
+          danger
+          type="primary"
+          icon
+        >
+          <SCIcon type="angle-left-b-outline" />
+        </SCButton>
+        <SCButton
+          danger
+          type="primary"
+          disabled
+          icon
+        >
+          <SCIcon type="angle-right-b-outline" />
         </SCButton>
       </SCCol>
-      <SCCol :span="8">
-        <SCButton disabled class="mb-2" type="link">
-          Button
+      <SCCol flex="1">
+        <SCButton class="mb-2" type="dashed" icon>
+          <SCIcon type="angle-left-b-outline" />
         </SCButton>
-        <SCButton disabled danger type="link">
-          Button
+        <SCButton
+          class="mb-2"
+          danger
+          type="dashed"
+          icon
+        >
+          <SCIcon type="angle-left-b-outline" />
+        </SCButton>
+        <SCButton
+          danger
+          type="dashed"
+          disabled
+          icon
+        >
+          <SCIcon type="angle-right-b-outline" />
+        </SCButton>
+      </SCCol>
+      <SCCol flex="1">
+        <SCButton class="mb-2" type="text" icon>
+          <SCIcon type="angle-left-b-outline" />
+        </SCButton>
+        <SCButton
+          class="mb-2"
+          danger
+          type="text"
+          icon
+        >
+          <SCIcon type="angle-left-b-outline" />
+        </SCButton>
+        <SCButton
+          danger
+          type="text"
+          disabled
+          icon
+        >
+          <SCIcon type="angle-right-b-outline" />
+        </SCButton>
+      </SCCol>
+      <SCCol flex="1">
+        <SCButton class="mb-2" type="link" icon>
+          <SCIcon type="angle-left-b-outline" />
+        </SCButton>
+        <SCButton
+          class="mb-2"
+          danger
+          type="link"
+          icon
+        >
+          <SCIcon type="angle-left-b-outline" />
+        </SCButton>
+        <SCButton
+          danger
+          type="link"
+          disabled
+          icon
+        >
+          <SCIcon type="angle-right-b-outline" />
         </SCButton>
       </SCCol>
     </SCRow>
     <!-- Small -->
     <SCRow type="flex" align="middle" :gutter="[24, 32]">
       <SCCol :span="24">
-        Small:
+        Icon only size:
       </SCCol>
-      <SCCol :span="8">
-        <SCButton size="small" class="mb-2" type="link">
-          Button
+      <SCCol flex="1">
+        <SCButton class="mb-2" icon size="small">
+          <SCIcon type="angle-left-b-outline" />
         </SCButton>
-        <SCButton size="small" danger type="link">
-          Button
+        <SCButton icon>
+          <SCIcon type="angle-right-b-outline" />
+        </SCButton>
+        <SCButton class="mt-2" icon size="large">
+          <SCIcon type="angle-right-b-outline" />
         </SCButton>
       </SCCol>
-      <SCCol :span="8">
+      <SCCol flex="1">
         <SCButton
-          loading
+          class="mb-2"
+          type="primary"
+          icon
           size="small"
+        >
+          <SCIcon type="angle-left-b-outline" />
+        </SCButton>
+        <SCButton class="mb-2" type="primary" icon>
+          <SCIcon type="angle-left-b-outline" />
+        </SCButton>
+        <SCButton type="primary" icon size="large">
+          <SCIcon type="angle-right-b-outline" />
+        </SCButton>
+      </SCCol>
+      <SCCol flex="1">
+        <SCButton
+          class="mb-2"
+          type="dashed"
+          icon
+          size="small"
+        >
+          <SCIcon type="angle-left-b-outline" />
+        </SCButton>
+        <SCButton class="mb-2" type="dashed" icon>
+          <SCIcon type="angle-left-b-outline" />
+        </SCButton>
+        <SCButton type="dashed" icon size="large">
+          <SCIcon type="angle-right-b-outline" />
+        </SCButton>
+      </SCCol>
+      <SCCol flex="1">
+        <SCButton
+          class="mb-2"
+          type="text"
+          icon
+          size="small"
+        >
+          <SCIcon type="angle-left-b-outline" />
+        </SCButton>
+        <SCButton class="mb-2" type="text" icon>
+          <SCIcon type="angle-left-b-outline" />
+        </SCButton>
+        <SCButton type="text" icon size="large">
+          <SCIcon type="angle-right-b-outline" />
+        </SCButton>
+      </SCCol>
+      <SCCol flex="1">
+        <SCButton
           class="mb-2"
           type="link"
-        >
-          Button
-        </SCButton>
-        <SCButton
-          loading
+          icon
           size="small"
-          danger
-          type="link"
         >
-          Button
+          <SCIcon type="angle-left-b-outline" />
         </SCButton>
-      </SCCol>
-      <SCCol :span="8">
-        <SCButton
-          disabled
-          size="small"
-          class="mb-2"
-          type="link"
-        >
-          Button
+        <SCButton class="mb-2" type="link" icon>
+          <SCIcon type="angle-left-b-outline" />
         </SCButton>
-        <SCButton
-          disabled
-          size="small"
-          danger
-          type="link"
-        >
-          Button
+        <SCButton type="link" icon size="large">
+          <SCIcon type="angle-right-b-outline" />
         </SCButton>
       </SCCol>
     </SCRow>
@@ -793,14 +921,19 @@ Icon.parameters = {
 <script>
 import SCRow from '@stickearncom/scrow'
 import SCCol from '@stickearncom/sccol'
+import SCIcon from '@stickearncom/scicon'
+
+import SCButton from '@stickearncom/scbutton'
 
 export default {
   components: {
     SCRow,
-    SCCol
+    SCCol,
+    SCButton,
+    SCIcon
   }
 }
-</script>
+</script>    
 `
     }
   }
@@ -960,13 +1093,16 @@ Link.parameters = {
 import SCRow from '@stickearncom/scrow'
 import SCCol from '@stickearncom/sccol'
 
+import SCButton from '@stickearncom/scbutton'
+
 export default {
   components: {
     SCRow,
-    SCCol
+    SCCol,
+    SCButton
   }
 }
-</script>
+</script>    
 `
     }
   }

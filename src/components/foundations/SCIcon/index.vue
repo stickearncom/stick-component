@@ -3,7 +3,6 @@
 </template>
 
 <script>
-import './icons/sc-icon.css'
 
 export default {
   name: 'SCIcon',
@@ -2325,3 +2324,7 @@ export default {
 
 }
 </script>
+
+<style>
+@import './icons/sc-icon.css';
+</style>

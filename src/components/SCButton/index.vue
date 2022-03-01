@@ -17,12 +17,9 @@
 </template>
 
 <script>
-import Vue from 'vue'
 import { Button } from 'ant-design-vue'
 import 'ant-design-vue/dist/antd.css'
 import '@stickearncom/scstyles/main.scss'
-
-Vue.use(Button)
 
 export default {
   name: 'SCButton',

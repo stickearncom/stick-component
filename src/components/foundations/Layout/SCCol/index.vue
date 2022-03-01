@@ -20,14 +20,14 @@
 
 <script>
 /* eslint-disable no-undefined */
-import Vue from 'vue'
 import { Col } from 'ant-design-vue'
 import 'ant-design-vue/dist/antd.css'
 
-Vue.use(Col)
-
 export default {
   name: 'SECol',
+  components: {
+    'a-col': Col
+  },
   props: {
     id: {
       type: String,

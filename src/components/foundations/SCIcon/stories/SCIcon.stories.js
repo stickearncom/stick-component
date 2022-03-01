@@ -1,5 +1,5 @@
-import SCIcon from './index.vue'
-import SCIconExample from './example.vue'
+import SCIcon from '../index.vue'
+import SCIconExample from '../example/example.vue'
 
 export default {
   title: 'Foundations/Icons',
