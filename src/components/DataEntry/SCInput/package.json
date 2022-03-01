@@ -14,9 +14,7 @@
     "@stickearncom/scicon": "^0.1.5",
     "@stickearncom/scrow": "^0.1.4",
     "@stickearncom/scstyles": "^0.1.6",
-    "@vue/composition-api": "^1.4.7",
-    "ant-design-vue": "^1.7.8",
-    "vue": "^2.6.11"
+    "ant-design-vue": "^1.7.8"
   },
   "repository": {
     "type": "git",

@@ -37,6 +37,7 @@
         background-color: $white-1;
         border-color: $purple-6;
         box-shadow: none;
+        border-right-width: 2px !important;
       }
     }
 
@@ -62,37 +63,37 @@
       &:not(:last-child) {
         padding-right: 50px;
       }
-  
+
       &.ant-input-sm {
         @include padding-y(6px);
-;
         height: 34px;
       }
-  
+
       &.ant-input-lg {
         @include padding-y(16px);
 
         height: 56px;
         @include font-regular-md;
       }
-  
+
       &:not(&:disabled) {
         background-color: $gray-1;
         color: $gray-8;
-  
+
         &::placeholder {
           color: $gray-3;
         }
-  
+
         &:hover,
         &:active,
         &:focus {
           background-color: $white-1;
           border-color: $purple-6;
           box-shadow: none;
+          border-right-width: 2px !important;
         }
       }
-  
+
       &:disabled {
         background-color: $gray-2;
         border-color: $gray-2;
@@ -104,6 +105,161 @@
       .ant-input-clear-icon {
         color: $red-8;
       }
+    }
+  }
+
+  &.sc-input-error {
+    &.ant-input {
+      &:not(&:disabled) {
+        background-color: $white-1;
+        border-color: $red-8;
+        color: $gray-8;
+
+        &:hover,
+        &:active,
+        &:focus {
+          background-color: $white-1;
+          border-color: $red-8;
+          border-right-width: 2px !important;
+        }
+      }
+    }
+
+    &.ant-input-affix-wrapper {
+      .ant-input {
+        &:not(&:disabled) {
+          background-color: $white-1;
+          border-color: $red-8;
+          color: $gray-8;
+
+          &:hover,
+          &:active,
+          &:focus {
+            background-color: $white-1;
+            border-color: $red-8;
+          }
+        }
+      }
+    }
+  }
+
+  &.ant-input-group-wrapper {
+    .ant-input-group {
+      @include font-regular-sm;
+      .ant-input-group-addon {
+        color: $gray-9;
+        padding: 0 14px;
+        background-color: $gray-2;
+        border-width: 2px;
+        border-color: $gray-2;
+        @include font-regular-sm;
+        &:first-child {
+          @include border-radius-left(6px);
+        }
+        &:last-child {
+          @include border-radius-right(6px);
+        }
+      }
+
+      .ant-input {
+        font-family: $font-stack;
+        border-width: 2px;
+        border-color: $gray-1;
+        padding: 12px 14px;
+        height: 46px;
+        @include border-radius(0);
+        @include font-regular-sm;
+
+        &.ant-input-sm {
+          padding: 6px 14px;
+          height: 34px;
+        }
+
+        &.ant-input-lg {
+          padding: 16px 14px;
+          height: 56px;
+          @include font-regular-md;
+        }
+
+        &:not(&:disabled) {
+          background-color: $gray-1;
+          color: $gray-8;
+
+          &::placeholder {
+            color: $gray-3;
+          }
+
+          &:hover,
+          &:active,
+          &:focus {
+            background-color: $white-1;
+            border-color: $purple-6;
+            box-shadow: none;
+            border-right-width: 2px !important;
+          }
+        }
+
+        &:disabled {
+          background-color: $gray-2;
+          border-color: $gray-2;
+          color: $gray-4;
+        }
+      }
+
+      .ant-input-affix-wrapper {
+        .ant-input {
+    
+          &:not(:first-child) {
+            padding-left: 30px;
+          }
+          &:not(:last-child) {
+            padding-right: 30px;
+          }
+        }
+    
+        .ant-input-suffix {
+          .ant-input-clear-icon {
+            color: $red-8;
+          }
+        }
+      }
+    }
+
+    &.sc-input-disabled {
+      .ant-input-group {
+        .ant-input-group-addon {
+          color: $gray-4;
+        }
+      }
+    }
+    &.ant-input-group-wrapper-sm {
+      .ant-input-group-addon {
+        padding: 0 12px;
+      }
+    }
+    &.ant-input-group-wrapper-lg {
+      .ant-input-group-addon {
+        @include font-regular-md;
+      }
+    }
+
+    &.sc-input-error {
+      .ant-input {
+        &:not(&:disabled) {
+          background-color: $white-1;
+          border-color: $red-8;
+          color: $gray-8;
+  
+          &:hover,
+          &:active,
+          &:focus {
+            background-color: $white-1;
+            border-color: $red-8;
+            border-right-width: 2px !important;
+          }
+        }
+      }
+
     }
   }
 }

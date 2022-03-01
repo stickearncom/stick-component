@@ -33,11 +33,8 @@
 
 <script>
 /* eslint-disable no-undefined */
-import Vue from 'vue'
 import { Input } from 'ant-design-vue'
 import 'ant-design-vue/dist/antd.css'
-
-Vue.use(Input)
 
 export default {
   components: {
@@ -94,18 +91,23 @@ export default {
     allowClear: {
       type: Boolean,
       default: false
+    },
+    hasError: {
+      type: Boolean,
+      default: false
     }
   },
   data() {
     return {
-      currentValue: this.value || ''
+      currentValue: this.value || this.defaultValue || ''
     }
   },
   computed: {
     classes() {
       return {
         'sc-input': true,
-        'sc-btn-error': this.hasError
+        'sc-input-error': this.hasError,
+        'sc-input-disabled': this.disabled
       }
     }
   },
@@ -113,9 +115,6 @@ export default {
     value(newVal) {
       this.currentValue = newVal
     }
-  },
-  mounted() {
-    console.log(this.suffix?.length)
   }
 }
 </script>
