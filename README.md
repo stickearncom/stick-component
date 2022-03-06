@@ -7,25 +7,46 @@ stickfront is Stickearn vue component. See [Live Documetation](https://stick-com
 ___
 Using npm :
 ```
+// Global install
 npm i @stickearncom/stickcomponent
+
+// Specific
+npm i @stickearncom/scbuttton
 ```
 
 Using yarn :
 ```
+// Global install
 yarn add @stickearncom/stickcomponent
+
+// Specific
+yarn add @stickearncom/scbuttton
 ```
 
 ### Quick Start
 ___
-Find `src/main.js ` and add below.
 ```
 ...
+// Find `src/main.js ` and add below.
 import Vue from 'vue'
+
+// Global
+
 import Components from "@stickearncom/stickcomponent";
 import "@stickearncom/stickcomponent/dist/stickcomponent.css";
 
 Vue.use(Components);
 
+// Specific
+import SCButton from '@stickearncom/scbutton'
+Vue.use(SCButton)
+...
+
+/// or you can install on local file.
+...
+components {
+  SCButton
+}
 ...
 ```
 
@@ -44,6 +65,7 @@ ___
 - SCIcon
 - SCButton
 - SCInput
+- SCInputNumber
 
 ### Authors
 ___

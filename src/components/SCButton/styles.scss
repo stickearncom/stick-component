@@ -14,6 +14,33 @@
     @include align-items(center);
     @include box-shadow(none);
 
+    .icon {
+      font-size: 20px;
+    }
+
+    &.ant-btn-loading {
+      .anticon-loading {
+        display: none;
+      }
+      .icon-loading-outline {
+        margin-right: 8px;
+        animation-name: spin;
+        animation-duration: 1000ms;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        font-weight: 900;
+      }
+
+      @keyframes spin {
+        from {
+            transform:rotate(0deg);
+        }
+        to {
+            transform:rotate(360deg);
+        }
+      }
+    }
+
     &.sc-btn-default,
     &.sc-btn-dashed,
     &.sc-btn-primary,

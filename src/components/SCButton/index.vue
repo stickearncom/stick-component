@@ -12,11 +12,13 @@
     :block="block"
     @click="$emit('click')"
   >
+    <SCIcon v-if="loading" type="loading-outline" />
     <slot />
   </a-button>
 </template>
 
 <script>
+import SCIcon from '@stickearncom/scicon'
 import { Button } from 'ant-design-vue'
 import 'ant-design-vue/dist/antd.css'
 import '@stickearncom/scstyles/main.scss'
@@ -24,7 +26,8 @@ import '@stickearncom/scstyles/main.scss'
 export default {
   name: 'SCButton',
   components: {
-    'a-button': Button
+    'a-button': Button,
+    SCIcon
   },
   props: {
     id: { type: String, default: null },

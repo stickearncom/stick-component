@@ -1,0 +1,94 @@
+@import "@stickearncom/scstyles/base/variables.scss";
+@import "@stickearncom/scstyles/base/font-mixins.scss";
+@import "@stickearncom/scstyles/base/mixin.scss";
+@import "@stickearncom/scstyles/base/colors-variables.scss";
+
+.sc-input-number {
+  &.ant-input-number {
+    width: 100%;
+    font-family: $font-stack;
+    border: 2px solid $gray-1;
+    height: 46px;
+    background-color: $gray-1;
+    @include border-radius(6px);
+    @include font-regular-sm;
+
+    &::placeholder {
+      @include font-regular-sm;
+      color: $gray-3;
+    }
+
+    &.ant-input-number-focused {
+      background-color: $white-1;
+      @include box-shadow(0px 0px 0px 2px rgba(127, 67, 196, 0.12));
+    }
+
+    &:not(.ant-input-number-disabled) {
+      &:hover {
+        background-color: $white-1;
+        border-color: $purple-6;
+        border-right-width: 2px !important;
+      }
+    }
+
+    &.ant-input-number-disabled {
+      background-color: $gray-2;
+      border-color: $gray-2;
+      color: $gray-4;
+
+      .ant-input-number-input {
+        color: $gray-4;
+      }
+    }
+
+    &.ant-input-number-lg {
+      height: 56px;
+      @include font-regular-md;
+      .ant-input-number-input {
+        height: 54px;
+        padding: 16px 14px;
+      }
+    }
+
+    &.ant-input-number-sm {
+      height: 32px;
+      .ant-input-number-input {
+        height: 30px;
+        padding: 6px 12px;
+      }
+    }
+
+    .ant-input-number-handler-wrap {
+      @include border-radius-right(6px);
+      border-left: 2px solid $gray-3;
+
+      .ant-input-number-handler-up,
+      .ant-input-number-handler-down {
+        background-color: $gray-2;
+
+        &-inner {
+          color: $gray-10;
+          font-size: 8px;
+          left: 50%;
+          transform: translateX(-55%);
+        }
+      }
+      
+      .ant-input-number-handler-up {
+        @include border-radius-top-right(6px);
+        border-bottom: 1px solid $gray-3;
+      }
+      .ant-input-number-handler-down {
+        @include border-radius-bottom-right(6px);
+        border-top: 1px solid $gray-3;
+      }
+    }
+
+    .ant-input-number-input {
+      @include border-radius(6px);
+      height: 44px;
+      padding: 12px 14px;
+      color: $gray-8;
+    }
+  }
+}
