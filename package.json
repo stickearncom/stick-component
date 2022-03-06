@@ -34,7 +34,8 @@
     "lint": "vue-cli-service lint",
     "build-storybook": "build-storybook",
     "start": "npm run storybook",
-    "storybook": "start-storybook -p 6006"
+    "storybook": "start-storybook -p 6006",
+    "publish": "npm run build:lib && lerna publish"
   },
   "dependencies": {
     "@stickearncom/sccol": "^0.1.2",
