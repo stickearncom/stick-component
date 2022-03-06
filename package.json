@@ -1,7 +1,24 @@
 {
   "name": "@stickearn/stickcomponent",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "stickearn",
+  "main": "./dist/stickcomponent.common.js",
+  "files": [
+    "dist/*",
+    "src/*",
+    "public/*",
+    "*.json",
+    "*.js"
+  ],
+  "keywords": [
+    "vuejs",
+    "vue-cli"
+  ],
   "workspaces": [
     "src/components/*",
     "src/components/*/*",
@@ -12,6 +29,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "build:lib": "vue-cli-service build --target lib --name stickcomponent ./src/library-plugin.js",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
     "build-storybook": "build-storybook",
