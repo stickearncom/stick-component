@@ -1,29 +1,50 @@
-# stick-component
+# stickcomponent
+[![npm version](https://badge.fury.io/js/@stickearncom%2Fstickcomponent.svg)](https://badge.fury.io/js/@stickearncom%2Fstickcomponent)
 
-## Project setup
-```
-yarn install
-```
+stickfront is Stickearn vue component. See [Live Documetation](https://stick-component-v2.netlify.app/)
 
-### Compiles and hot-reloads for development
+### Installing
+___
+Using npm :
 ```
-yarn serve
-```
-
-### Compiles and minifies for production
-```
-yarn build
+npm i @stickearncom/stickcomponent
 ```
 
-### Run your unit tests
+Using yarn :
 ```
-yarn test:unit
-```
-
-### Lints and fixes files
-```
-yarn lint
+yarn add @stickearncom/stickcomponent
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Quick Start
+___
+Find `src/main.js ` and add below.
+```
+...
+import Vue from 'vue'
+import Components from "@stickearncom/stickcomponent";
+import "@stickearncom/stickcomponent/dist/stickcomponent.css";
+
+Vue.use(Components);
+
+...
+```
+
+### Usage
+___
+```
+<SCButton>Code here...</SCButton>
+```
+
+For more information about how to usage for more components, please read documentation:
+
+### More Components
+___
+- SCCol
+- SCRow
+- SCIcon
+- SCButton
+- SCInput
+
+### Authors
+___
+- [@riskinputra](https://github.com/riskinputra) - Idea & Initial work

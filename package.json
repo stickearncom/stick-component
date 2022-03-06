@@ -35,7 +35,7 @@
     "build-storybook": "build-storybook",
     "start": "npm run storybook",
     "storybook": "start-storybook -p 6006",
-    "publish": "npm run build:lib && lerna publish"
+    "publish": "npm run build:lib && npm publish"
   },
   "dependencies": {
     "@stickearncom/sccol": "^0.1.2",
