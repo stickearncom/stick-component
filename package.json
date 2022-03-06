@@ -6,7 +6,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "author": "stickearn",
+  "author": "stickearncom",
   "main": "./dist/stickcomponent.common.js",
   "files": [
     "dist/*",
