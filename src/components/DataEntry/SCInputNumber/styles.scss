@@ -67,6 +67,7 @@
         }
     
         &:not(.ant-input-number-disabled) {
+          background-color: $white-1;
           &:hover {
             border-color: $red-8;
           }
