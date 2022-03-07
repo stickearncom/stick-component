@@ -9,6 +9,7 @@ import SCRow from './components/foundations/Layout/SCRow/index.vue'
 // Data Entry
 import SCInput from './components/DataEntry/SCInput/index.vue'
 import SCInputNumber from './components/DataEntry/SCInputNumber/index.vue'
+import SCTextarea from './components/DataEntry/SCTextarea/index.vue'
 
 // Components
 import SCButton from './components/SCButton/index.vue'
@@ -19,6 +20,7 @@ const components = {
   SCRow,
   SCInput,
   SCInputNumber,
+  SCTextarea,
   SCButton
 }
 

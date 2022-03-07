@@ -100,20 +100,6 @@ Size.parameters = {
     </SCRow>
   </div>
 </template>
-
-<script>
-import SCRow from '@stickearncom/scrow'
-import SCCol from '@stickearncom/sccol'
-import SCInput from '@stickearncom/scinput'
-
-export default {
-  components: {
-    SCRow,
-    SCCol,
-    SCInput
-  }
-}
-</script>
 `
     }
   }
@@ -166,22 +152,6 @@ PrefixSuffix.parameters = {
     </SCRow>
   </div>
 </template>
-
-<script>
-import SCRow from '@stickearncom/scrow'
-import SCCol from '@stickearncom/sccol'
-import SCIcon from '@stickearncom/scicon'
-import SCInput from '@stickearncom/scinput'
-
-export default {
-  components: {
-    SCRow,
-    SCCol,
-    SCInput,
-    SCIcon
-  }
-}
-</script>
 `
     }
   }
@@ -261,24 +231,7 @@ Error.parameters = {
       </SCCol>
     </SCRow>
   </div>
-</template>
-
-<script>
-import SCRow from '@stickearncom/scrow'
-import SCCol from '@stickearncom/sccol'
-
-import SCInput from '@stickearncom/scinput'
-
-export default {
-  components: {
-    SCRow,
-    SCCol,
-    SCInput
-  }
-}
-</script>
-    
-`
+</template>`
     }
   }
 }
@@ -342,22 +295,6 @@ PrePostTab.parameters = {
     </SCRow>
   </div>
 </template>
-
-<script>
-import SCRow from '@stickearncom/scrow'
-import SCCol from '@stickearncom/sccol'
-
-import SCInput from '@stickearncom/scinput'
-
-export default {
-  components: {
-    SCRow,
-    SCCol,
-    SCInput
-  }
-}
-</script>
-    
 `
     }
   }

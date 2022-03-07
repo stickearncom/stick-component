@@ -29,6 +29,9 @@ export default {
   components: {
     'a-input-number': InputNumber
   },
+  model: {
+    prop: 'value'
+  },
   props: {
     id: {
       type: String,

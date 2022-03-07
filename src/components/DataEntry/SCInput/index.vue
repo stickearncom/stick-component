@@ -37,8 +37,12 @@ import { Input } from 'ant-design-vue'
 import 'ant-design-vue/dist/antd.css'
 
 export default {
+  name: 'SCInput',
   components: {
     'a-input': Input
+  },
+  model: {
+    prop: 'value'
   },
   props: {
     id: {

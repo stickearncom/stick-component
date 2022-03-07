@@ -1,0 +1,136 @@
+@import "@stickearncom/scstyles/base/variables.scss";
+@import "@stickearncom/scstyles/base/font-mixins.scss";
+@import "@stickearncom/scstyles/base/mixin.scss";
+@import "@stickearncom/scstyles/base/colors-variables.scss";
+
+.sc-textarea {
+  font-family: $font-stack;
+  position: relative;
+  &.ant-input {
+    border: 2px solid $gray-1;
+    padding: 12px 14px;
+    @include border-radius(6px);
+    @include font-regular-sm;
+
+    &:not(:disabled) {
+      background-color: $gray-1;
+      color: $gray-8;
+
+      &::placeholder {
+        color: $gray-3;
+      }
+
+      &:hover,
+      &:active,
+      &:focus {
+        background-color: $white-1;
+        border-color: $purple-6;
+        border-right-width: 2px !important;
+      }
+      
+      &:active,
+      &:focus {
+        @include box-shadow(0px 0px 0px 2px rgba(127, 67, 196, 0.12));
+      }
+    }
+
+    &:disabled {
+      background-color: $gray-2;
+      border-color: $gray-2;
+      color: $gray-4;
+    }
+  }
+
+  &.ant-input-affix-wrapper {
+    .ant-input {
+      border: 2px solid $gray-1;
+      @include padding-y(12px);
+      padding-left: 14px;
+      @include border-radius(6px);
+      @include font-regular-sm;
+
+      &:not(:disabled) {
+        background-color: $gray-1;
+        color: $gray-8;
+
+        &::placeholder {
+          color: $gray-3;
+        }
+
+        &:hover,
+        &:active,
+        &:focus {
+          background-color: $white-1;
+          border-color: $purple-6;
+          box-shadow: none;
+          border-right-width: 2px !important;
+        }
+
+        &:active,
+        &:focus {
+          @include box-shadow(0px 0px 0px 2px rgba(127, 67, 196, 0.12));
+        }
+      }
+
+      &:disabled {
+        background-color: $gray-2;
+        border-color: $gray-2;
+        color: $gray-4;
+      }
+    }
+
+    &:hover {
+      .ant-input {
+        &:not(.ant-input-disabled) {
+          background-color: $white-1;
+          border-color: $purple-6;
+          border-right-width: 2px !important;
+        }
+      }
+    }
+
+    .ant-input-textarea-clear-icon {
+      color: $red-8;
+      font-size: 14px;
+      top: 12px;
+    }
+  }
+
+  &.sc-textarea-error {
+    &.ant-input,
+    .ant-input {
+      border-color: $red-8;
+  
+      &:not(:disabled) {
+        background-color: $white-1;
+  
+        &:hover,
+        &:active,
+        &:focus {
+          background-color: $white-1;
+          border-color: $red-8;
+          border-right-width: 2px !important;
+        }
+        
+        &:active,
+        &:focus {
+          @include box-shadow(0px 0px 0px 2px rgba(245, 34, 45, 0.12));
+        }
+      }
+  
+      &:disabled {
+        background-color: $gray-2;
+        border-color: $gray-2;
+        color: $gray-4;
+      }
+    }
+  }
+}
+
+.sc-textarea-data-count {
+  font-family: $font-stack;
+  @include font-medium-sm;
+  display: block;
+  color: $gray-7;
+  text-align: right;
+}

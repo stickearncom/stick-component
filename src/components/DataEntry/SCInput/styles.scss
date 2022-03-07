@@ -130,7 +130,7 @@
 
   &.sc-input-error {
     &.ant-input {
-      &:not(&:disabled) {
+      &:not(:disabled) {
         background-color: $white-1;
         border-color: $red-8;
         color: $gray-8;
@@ -152,7 +152,7 @@
 
     &.ant-input-affix-wrapper {
       .ant-input {
-        &:not(&:disabled) {
+        &:not(:disabled) {
           background-color: $white-1;
           border-color: $red-8;
           color: $gray-8;
