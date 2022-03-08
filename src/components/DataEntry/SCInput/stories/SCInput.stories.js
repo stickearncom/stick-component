@@ -7,7 +7,10 @@ import SCInputPrePostTab from '../example/SCInputPrePostTab.vue'
 
 export default {
   title: 'Data Entry/Input',
-  component: SCInput
+  component: SCInput,
+  argTypes: {
+    size: { control: { type: 'select', options: ['default', 'small', 'large'] } }
+  }
 }
 
 const Template = (args, { argTypes }) => ({

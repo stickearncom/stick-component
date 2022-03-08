@@ -1,0 +1,171 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Foundations/Styles/General Mixin" />
+
+<style>{`
+  .subheading {
+    --mediumdark: '#999999';
+    font-weight: 900;
+    font-size: 13px;
+    color: #999;
+    letter-spacing: 6px;
+    line-height: 24px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    margin-top: 40px;
+  }
+
+`}</style>
+
+# Styles Mixin
+
+```
+@mixin flexbox($s...){
+  display: -webkit-box $s;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box $s;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox $s;      /* TWEENER - IE 10 */
+  display: -webkit-flex $s;     /* NEW - Chrome */
+  display: flex $s;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+@mixin flex-middle {
+  -ms-flex-align: center;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+@mixin align-items($s...){
+    -ms-flex-align: $s;
+    -webkit-box-align: $s;
+    align-items: $s;
+}
+@mixin justify-content($s...) {
+  -webkit-justify-content: $s;
+  -ms-flex-pack: $s;
+  justify-content: $s;
+}
+
+@mixin flex-direction($s...) {
+  flex-direction: $s
+}
+
+//box shadow
+@mixin box-shadow($s...){
+  -webkit-box-shadow:$s;
+  -moz-box-shadow:$s;
+  box-shadow:$s;
+}
+
+// transition
+@mixin transition($s...){
+  -webkit-transition:$s;
+  -moz-transition:$s;
+  -o-transition:$s;
+  transition:$s;
+}
+
+@mixin transform($s...){
+  -webkit-transform: $s;
+  -ms-transform: $s;
+  transform: $s;
+}
+
+//border radius
+@mixin radius{
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+@mixin border-radius($r){
+  -webkit-border-radius: $r;
+  -moz-border-radius: $r;
+  border-radius: $r;
+}
+@mixin border-radius-bottom($r){
+  -webkit-border-bottom-right-radius: $r;
+  -webkit-border-bottom-left-radius: $r;
+  -moz-border-radius-bottomright: $r;
+  -moz-border-radius-bottomleft: $r;
+  border-bottom-right-radius: $r;
+  border-bottom-left-radius: $r;
+}
+@mixin border-radius-top($r){
+  -webkit-border-top-left-radius: $r;
+  -webkit-border-top-right-radius: $r;
+  -moz-border-radius-topleft: $r;
+  -moz-border-radius-topright: $r;
+  border-top-left-radius: $r;
+  border-top-right-radius: $r;
+}
+@mixin border-radius-right($r){
+  -webkit-border-top-right-radius: $r;
+  -webkit-border-bottom-right-radius: $r;
+  -moz-border-radius-topright: $r;
+  -moz-border-radius-bottomright: $r;
+  border-top-right-radius: $r;
+  border-bottom-right-radius: $r;
+}
+@mixin border-radius-left($r){
+  -webkit-border-top-left-radius: $r;
+  -webkit-border-bottom-left-radius: $r;
+  -moz-border-radius-topleft: $r;
+  -moz-border-radius-bottomleft: $r;
+  border-top-left-radius: $r;
+  border-bottom-left-radius: $r;
+}
+@mixin border-radius-top-left($r){
+  -webkit-border-top-left-radius: $r;
+  -moz-border-radius-topleft: $r;
+  border-top-left-radius: $r;
+}
+@mixin border-radius-top-right($r){
+  -webkit-border-top-right-radius: $r;
+  -moz-border-radius-topright: $r;
+  border-top-right-radius: $r;
+}
+@mixin border-radius-bottom-left($r){
+  -webkit-border-bottom-left-radius: $r;
+  -moz-border-radius-bottomleft: $r;
+  border-bottom-left-radius: $r;
+}
+@mixin border-radius-bottom-right($r){
+  -webkit-border-bottom-right-radius: $r;
+  -moz-border-radius-bottomright: $r;
+  border-bottom-right-radius: $r;
+}
+
+@mixin user-select($s){
+  -webkit-user-select: $s;
+  -moz-user-select: $s;
+  -ms-user-select: $s;
+  user-select: $s;
+}
+
+@mixin adjust-color-lighten($r, $s) {
+  color: lighten($r, $s);
+}
+
+@mixin adjust-color-darken($r, $s) {
+  color: darken($r, $s);
+}
+
+// Padding
+@mixin padding-y($r){
+  padding-top: $r;
+  padding-bottom: $r
+}
+@mixin padding-x($r){
+  padding-left: $r;
+  padding-right: $r
+}
+
+// Margin
+@mixin margin-y($r){
+  margin-top: $r;
+  margin-bottom: $r
+}
+@mixin margin-x($r){
+  margin-left: $r;
+  margin-right: $r
+}
+
+```

@@ -1,4 +1,26 @@
-<template>
+import SCInputSearch from '../index.vue'
+import SCInputSearchBasic from '../example/SCInputSearchBasic.vue'
+
+export default {
+  title: 'Data Entry/InputSearch',
+  component: SCInputSearch,
+  argTypes: {
+    size: { control: { type: 'select', options: ['default', 'small', 'large'] } }
+  }
+}
+
+const Template = (args, { argTypes }) => ({
+  props: Object.keys(argTypes),
+  components: { SCInputSearchBasic },
+  template: '<SCInputSearchBasic />'
+})
+
+export const Default = Template.bind({})
+
+Default.parameters = {
+  docs: {
+    source: {
+      code: `<template>
   <div>
     <h4 class="font-medium-lg">
       Input search basic:
@@ -32,19 +54,7 @@
       </SCCol>
     </SCRow>
   </div>
-</template>
-
-<script>
-import SCRow from '@stickearncom/scrow'
-import SCCol from '@stickearncom/sccol'
-
-import SCInputSearch from '../index.vue'
-
-export default {
-  components: {
-    SCRow,
-    SCCol,
-    SCInputSearch
+</template>`
+    }
   }
 }
-</script>

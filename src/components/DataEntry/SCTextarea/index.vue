@@ -11,8 +11,8 @@
     :rows="rows"
     :show-count="showCount"
     :max-length="maxLength"
-    @change="$emit('change', $event.target.value)"
-    @pressEnter="$emit('pressEnter', $event.target.value)"
+    @change="$emit('change', $event)"
+    @pressEnter="$emit('pressEnter', $event)"
   />
 </template>
 

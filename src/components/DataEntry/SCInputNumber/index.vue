@@ -75,7 +75,10 @@ export default {
     },
     size: {
       type: String,
-      default: undefined
+      default: 'default',
+      validator(value) {
+        return ['small', 'large', 'default'].indexOf(value) !== -1
+      }
     },
     step: {
       type: [String, Number],

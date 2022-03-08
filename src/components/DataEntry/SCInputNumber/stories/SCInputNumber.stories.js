@@ -7,7 +7,10 @@ import SCInputNumberFormatter from '../example/SCInputNumberFormatter.vue'
 
 export default {
   title: 'Data Entry/InputNumber',
-  component: SCInputNumber
+  component: SCInputNumber,
+  argTypes: {
+    size: { control: { type: 'select', options: ['default', 'small', 'large'] } }
+  }
 }
 
 const Template = (args, { argTypes }) => ({
