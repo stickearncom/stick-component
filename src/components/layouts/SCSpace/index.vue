@@ -12,7 +12,7 @@
 import { Space } from 'ant-design-vue'
 
 export default {
-  name: 'SESpace',
+  name: 'SCSpace',
   components: {
     'a-space': Space
   },

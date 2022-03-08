@@ -36,7 +36,7 @@ import FlexOrder from './components/FlexOrder/index.vue'
 import FlexLayout from './components/FlexLayout/index.vue'
 
 export default {
-  name: 'SEGrid',
+  name: 'SCGrid',
   components: {
     DesignConcept,
     BasicGrid,
