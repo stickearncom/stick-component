@@ -1,7 +1,7 @@
 <template>
   <a-input
     :id="id"
-    v-model="currentValue"
+    v-model="value"
     :class="classes"
     :addon-after="addonAfter"
     :addon-before="addonBefore"
@@ -42,7 +42,8 @@ export default {
     'a-input': Input
   },
   model: {
-    prop: 'value'
+    prop: 'currentValue',
+    event: 'change'
   },
   props: {
     id: {
@@ -84,7 +85,7 @@ export default {
       type: String,
       default: undefined
     },
-    value: {
+    currentValue: {
       type: String,
       default: undefined
     },
@@ -103,7 +104,7 @@ export default {
   },
   data() {
     return {
-      currentValue: this.value || this.defaultValue || ''
+      value: this.currentValue || this.defaultValue
     }
   },
   computed: {
@@ -116,8 +117,8 @@ export default {
     }
   },
   watch: {
-    value(newVal) {
-      this.currentValue = newVal
+    currentValue(newVal) {
+      this.value = newVal
     }
   }
 }

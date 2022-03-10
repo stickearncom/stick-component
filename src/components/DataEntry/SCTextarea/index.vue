@@ -1,7 +1,7 @@
 <template>
   <a-textarea
     :id="id"
-    :v-model="currentValue"
+    :v-model="value"
     :class="classes"
     :auto-size="autoSize"
     :default-value="defaultValue"
@@ -27,7 +27,8 @@ export default {
     'a-textarea': Input.TextArea
   },
   model: {
-    prop: 'value'
+    prop: 'value',
+    event: 'change'
   },
   props: {
     id: {
@@ -46,7 +47,7 @@ export default {
       type: Boolean,
       default: false
     },
-    value: {
+    currentValue: {
       type: String,
       default: undefined
     },
@@ -77,7 +78,7 @@ export default {
   },
   data() {
     return {
-      currentValue: this.value || this.defaultValue || ''
+      value: this.currentValue || this.defaultValue
     }
   },
   computed: {
@@ -90,12 +91,12 @@ export default {
       }
     },
     dataCount() {
-      return `${this.currentValue?.length ?? 0} / ${this.maxLength || 0}`
+      return `${this.value?.length ?? 0} / ${this.maxLength || 0}`
     }
   },
   watch: {
-    value(newVal) {
-      this.currentValue = newVal
+    currentValue(newVal) {
+      this.value = newVal
     },
     dataCount() {
       this.updatedShowCountValue()

@@ -1,7 +1,7 @@
 <template>
   <a-input-number
     :id="id"
-    v-model="currentValue"
+    v-model="value"
     :class="classes"
     :auto-focus="autoFocus"
     :default-value="defaultValue"
@@ -30,7 +30,8 @@ export default {
     'a-input-number': InputNumber
   },
   model: {
-    prop: 'value'
+    prop: 'currentValue',
+    event: 'change'
   },
   props: {
     id: {
@@ -84,7 +85,7 @@ export default {
       type: [String, Number],
       default: 1
     },
-    value: {
+    currentValue: {
       type: Number,
       default: undefined
     },
@@ -95,7 +96,7 @@ export default {
   },
   data() {
     return {
-      currentValue: this.value || this.defaultValue || ''
+      value: this.currentValue || this.defaultValue
     }
   },
   computed: {
@@ -108,8 +109,8 @@ export default {
     }
   },
   watch: {
-    value(newVal) {
-      this.currentValue = newVal
+    currentValue(newVal) {
+      this.value = newVal
     }
   }
 }

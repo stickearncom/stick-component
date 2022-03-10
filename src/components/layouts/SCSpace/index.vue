@@ -35,7 +35,7 @@ export default {
       type: [String, Number],
       default: 'small',
       validator(value) {
-        return ['small', 'middle', 'large'].indexOf(value) !== -1 || typeof val === 'number'
+        return typeof value === 'number' || ['small', 'middle', 'large'].indexOf(value) !== -1
       }
     }
   }

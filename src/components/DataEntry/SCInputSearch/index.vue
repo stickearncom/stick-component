@@ -29,9 +29,6 @@ export default {
     'a-button': Button,
     SCIcon
   },
-  model: {
-    prop: 'value'
-  },
   props: {
     id: {
       type: String,
@@ -61,22 +58,12 @@ export default {
       default: false
     }
   },
-  data() {
-    return {
-      currentValue: this.value || this.defaultValue || ''
-    }
-  },
   computed: {
     classes() {
       return {
         'sc-input-search': true,
         'sc-input-search-disabled': this.disabled
       }
-    }
-  },
-  watch: {
-    value(newVal) {
-      this.currentValue = newVal
     }
   }
 }

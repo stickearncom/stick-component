@@ -1,0 +1,21 @@
+{
+  "name": "@stickearncom/scselect",
+  "version": "0.0.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@stickearncom/scicon": "^0.1.5",
+    "@stickearncom/scstyles": "^0.1.7",
+    "ant-design-vue": "^1.7.8"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com:stickearncom/stick-component.git"
+  }
+}
