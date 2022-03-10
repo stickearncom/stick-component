@@ -9,7 +9,9 @@
     :default-active-first-option="defaultActiveFirstOption"
     :default-value="defaultValue"
     :disabled="disabled"
-    :dropdown-class-name="dropdownClassName"
+    :dropdown-class-name="`sc-select-dropdown sc-select-dropdown-${mode} ${
+      dropdownClassName ? 'dropdownClassName' : null
+    }`"
     :dropdown-match-select-width="dropdownMatchSelectWidth"
     :dropdown-style="dropdownStyle"
     :dropdown-menu-style="dropdownMenuStyle"
@@ -33,6 +35,7 @@
     :default-open="defaultOpen"
     :open="open"
     :loading="loading"
+    :data-label="labelName"
     @blur="$emit('blur', $event)"
     @change="$emit('change', $event)"
     @deselect="$emit('deselect', $event)"
@@ -75,7 +78,7 @@ export default {
   },
   model: {
     prop: 'currentValue',
-    event: 'change'
+    event: ['change', 'select']
   },
   props: {
     id: {
@@ -215,6 +218,10 @@ export default {
     hasError: {
       type: Boolean,
       default: false
+    },
+    labelName: {
+      type: String,
+      default: undefined
     }
   },
   data() {
@@ -242,5 +249,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import './styles.scss';
+@import "./styles.scss";
 </style>

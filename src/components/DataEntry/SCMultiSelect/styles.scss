@@ -1,0 +1,107 @@
+@import "@stickearncom/scstyles/base/variables.scss";
+@import "@stickearncom/scstyles/base/font-mixins.scss";
+@import "@stickearncom/scstyles/base/mixin.scss";
+@import "@stickearncom/scstyles/base/colors-variables.scss";
+
+.sc-multiselect {
+  &.multiselect {
+    min-height: 46px;
+    color: $gray-8;
+
+    .multiselect__placeholder {
+      min-height: 24px;
+      color: $gray-3;
+    }
+
+    .multiselect__select {
+      height: 46px;
+    }
+  }
+  &.multiselect,
+  .multiselect__input,
+  .multiselect__single {
+    font-family: $font-stack;
+    @include font-regular-sm;
+    min-height: 24px;
+  }
+
+  .multiselect__select {
+    &:before {
+      position: relative;
+      right: 0;
+      top: 22%;
+      width: 7px;
+      height: 7px;
+      margin-top: 0;
+      border-color: $gray-10 transparent transparent $gray-10;
+      border-style: solid;
+      border-width: 2px 0 0 2px;
+      background: transparent;
+      text-indent: -9999px;
+      transition: all 250ms ease-in-out;
+      text-decoration: none;
+      color: transparent;
+      display: inline-block;
+      transform: rotate(-135deg);
+    }
+  }
+
+  .multiselect__tags {
+    min-height: 46px;
+    border: 2px solid $gray-1;
+    background: $gray-1;
+    padding-top: 10px;
+    @include border-radius(6px);
+
+    .multiselect__single {
+      background: $gray-1;
+    }
+  }
+
+  &.multiselect--active {
+    &:not(.multiselect--above) {
+      .multiselect__current,
+      .multiselect__input,
+      .multiselect__tags {
+        @include border-radius-bottom(6px);
+      }
+    }
+
+    .multiselect__placeholder {
+      display: inline-block;
+    }
+  }
+
+  .multiselect__content-wrapper {
+    margin-top: 6px;
+    @include box-shadow(0px 0px 3px rgba(44, 62, 80, 0.24), 0px 4px 8px -2px rgba(44, 62, 80, 0.16));
+    @include border-radius(6px);
+    border: none;
+    padding: 8px 0;
+
+    .multiselect__option--highlight {
+      background: $gray-1;
+      color: $gray-8;
+      &:after {
+        display: none;
+      }
+    }
+
+    .multiselect__option--selected {
+      background: transparent;
+      color: $gray-8;
+
+      &::after {
+        display: none;
+      }
+      &.multiselect__option--highlight {
+        background: $gray-1;
+      }
+    }
+
+    .multiselect__option--disabled {
+        color: $gray-4 !important;
+        background: transparent !important;
+    }
+  }
+}

@@ -9,9 +9,11 @@
       <div class="w-1/3">
         <SCSelect
           mode="multiple"
-          :default-value="['a1', 'b2']"
           style="width: 90%"
+          size="large"
+          :data-name="`Label ${value.length ? '('+value.length+')' : ''}`"
           placeholder="Please select"
+          @change="value = $event"
         >
           <SCSelectOption v-for="i in 25" :key="(i + 9).toString(36) + i">
             {{ (i + 9).toString(36) + i }}
@@ -21,9 +23,10 @@
       <div class="w-1/3">
         <SCSelect
           mode="multiple"
-          :default-value="['a1', 'b2']"
           style="width: 90%"
+          :data-name="`Label ${value.length ? '('+value.length+')' : ''}`"
           placeholder="Please select"
+          @change="value = $event"
         >
           <SCSelectOption v-for="i in 25" :key="(i + 9).toString(36) + i">
             {{ (i + 9).toString(36) + i }}
@@ -33,9 +36,11 @@
       <div class="w-1/3">
         <SCSelect
           mode="multiple"
-          :default-value="['a1', 'b2']"
           style="width: 90%"
+          size="small"
+          :data-name="`Label ${value.length ? '('+value.length+')' : ''}`"
           placeholder="Please select"
+          @change="value = $event"
         >
           <SCSelectOption v-for="i in 25" :key="(i + 9).toString(36) + i">
             {{ (i + 9).toString(36) + i }}
@@ -54,6 +59,11 @@ export default {
   components: {
     SCSelect,
     SCSelectOption
+  },
+  data() {
+    return {
+      value: []
+    }
   }
 }
 </script>
