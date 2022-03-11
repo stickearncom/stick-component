@@ -13,6 +13,8 @@ import SCSpace from './components/layouts/SCSpace/index.vue'
 import SCInput from './components/DataEntry/SCInput/index.vue'
 import SCInputNumber from './components/DataEntry/SCInputNumber/index.vue'
 import SCInputSearch from './components/DataEntry/SCInputSearch/index.vue'
+import SCSelect from './components/DataEntry/SCSelect/index.vue'
+import SCSelectOption from './components/DataEntry/SCSelect/SCSelectOption/index.vue'
 import SCTextarea from './components/DataEntry/SCTextarea/index.vue'
 
 // Components
@@ -28,8 +30,10 @@ const components = {
   // Data Entry
   SCInput,
   SCInputNumber,
-  SCTextarea,
   SCInputSearch,
+  SCSelect,
+  SCSelectOption,
+  SCTextarea,
   // Components
   SCButton
 }

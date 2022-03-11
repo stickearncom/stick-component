@@ -66,8 +66,9 @@ ___
   - SCSpace
   - SCInput
   - SCInputNumber
-  - SCTextarea
   - SCInputSearch
+  - SCSelect
+  - SCTextarea
   - SCButton
 
 ### Authors
