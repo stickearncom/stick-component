@@ -5,6 +5,7 @@ import SCSelectSearch from '../example/SCSelectSearch.vue'
 import SCSelectTags from '../example/SCSelectTags.vue'
 import SCSelectError from '../example/SCSelectError.vue'
 import SCSelectMultiple from '../example/SCSelectMultiple.vue'
+import SCSelectCheckAll from '../example/SCSelectCheckAll.vue'
 
 export default {
   title: 'Data Entry/Select/Select Main',
@@ -308,160 +309,172 @@ Tags.parameters = {
     source: {
       code: `<template>
   <div>
-    <h4 class="font-medium-lg">
-      Select tags:
-    </h4>
-    <hr class="mb-4">
+    <fieldset>
+      <legend class="font-medium-md">
+        Select tags:
+      </legend>
 
-    <div class="flex">
-      <div class="w-1/3">
-        <SCSelect
-          mode="tags"
-          style="width: 90%"
-          placeholder="Tags Mode"
-          :default-value="defaultValue"
-          size="large"
-          @change="handleChange"
-        >
-          <SCSelectOption v-for="i in 25" :key="(i + 9).toString(36) + i">
-            {{ (i + 9).toString(36) + i }}
-          </SCSelectOption>
-        </SCSelect>
+      <div class="flex">
+        <div class="w-1/3">
+          <SCSelect
+            mode="tags"
+            style="width: 90%"
+            placeholder="Tags Mode"
+            :default-value="defaultValue"
+            size="large"
+            @change="handleChange"
+          >
+            <SCSelectOption v-for="i in 25" :key="(i + 9).toString(36) + i">
+              {{ (i + 9).toString(36) + i }}
+            </SCSelectOption>
+          </SCSelect>
+        </div>
+        <div class="w-1/3">
+          <SCSelect
+            mode="tags"
+            style="width: 90%"
+            placeholder="Tags Mode"
+            :default-value="defaultValue"
+            @change="handleChange"
+          >
+            <SCSelectOption v-for="i in 25" :key="(i + 9).toString(36) + i">
+              {{ (i + 9).toString(36) + i }}
+            </SCSelectOption>
+          </SCSelect>
+        </div>
+        <div class="w-1/3">
+          <SCSelect
+            mode="tags"
+            style="width: 90%"
+            placeholder="Tags Mode"
+            :default-value="defaultValue"
+            size="small"
+            @change="handleChange"
+          >
+            <SCSelectOption v-for="i in 25" :key="(i + 9).toString(36) + i">
+              {{ (i + 9).toString(36) + i }}
+            </SCSelectOption>
+          </SCSelect>
+        </div>
       </div>
-      <div class="w-1/3">
-        <SCSelect
-          mode="tags"
-          style="width: 90%"
-          placeholder="Tags Mode"
-          :default-value="defaultValue"
-          @change="handleChange"
-        >
-          <SCSelectOption v-for="i in 25" :key="(i + 9).toString(36) + i">
-            {{ (i + 9).toString(36) + i }}
-          </SCSelectOption>
-        </SCSelect>
-      </div>
-      <div class="w-1/3">
-        <SCSelect
-          mode="tags"
-          style="width: 90%"
-          placeholder="Tags Mode"
-          :default-value="defaultValue"
-          size="small"
-          @change="handleChange"
-        >
-          <SCSelectOption v-for="i in 25" :key="(i + 9).toString(36) + i">
-            {{ (i + 9).toString(36) + i }}
-          </SCSelectOption>
-        </SCSelect>
-      </div>
-    </div>
+    </fieldset>
 
-    <h4 class="font-medium-lg mt-8">
-      Select max tags:
-    </h4>
-    <hr class="mb-4">
-    <div class="flex">
-      <div class="w-1/3">
-        <SCSelect
-          mode="tags"
-          style="width: 90%"
-          placeholder="Tags Mode"
-          :default-value="defaultValue"
-          size="large"
-          :max-tag-count="2"
-          @change="handleChange"
-        >
-          <SCSelectOption v-for="i in 25" :key="(i + 9).toString(36) + i">
-            {{ (i + 9).toString(36) + i }}
-          </SCSelectOption>
-        </SCSelect>
-      </div>
-      <div class="w-1/3">
-        <SCSelect
-          mode="tags"
-          style="width: 90%"
-          placeholder="Tags Mode"
-          :default-value="defaultValue"
-          :max-tag-count="2"
-          @change="handleChange"
-        >
-          <SCSelectOption v-for="i in 25" :key="(i + 9).toString(36) + i">
-            {{ (i + 9).toString(36) + i }}
-          </SCSelectOption>
-        </SCSelect>
-      </div>
-      <div class="w-1/3">
-        <SCSelect
-          mode="tags"
-          style="width: 90%"
-          placeholder="Tags Mode"
-          :default-value="defaultValue"
-          size="small"
-          :max-tag-count="2"
-          @change="handleChange"
-        >
-          <SCSelectOption v-for="i in 25" :key="(i + 9).toString(36) + i">
-            {{ (i + 9).toString(36) + i }}
-          </SCSelectOption>
-        </SCSelect>
-      </div>
-    </div>
+    <fieldset class="mt-8">
+      <legend class="font-medium-md">
+        Select max tags:
+      </legend>
 
-    <h4 class="font-medium-lg mt-8">
-      Select max tags text length:
-    </h4>
-    <hr class="mb-4">
-    <div class="flex">
-      <div class="w-1/3">
-        <SCSelect
-          mode="tags"
-          style="width: 90%"
-          placeholder="Tags Mode"
-          :default-value="defaultValue"
-          size="large"
-          :max-tag-text-length="10"
-          @change="handleChange"
-        >
-          <SCSelectOption v-for="i in 25" :key="(i + 9).toString(36) + i">
-            Long label: {{ (i + 9).toString(36) + i }}
-          </SCSelectOption>
-        </SCSelect>
+      <div class="flex">
+        <div class="w-1/3">
+          <SCSelect
+            mode="tags"
+            style="width: 90%"
+            placeholder="Tags Mode"
+            :default-value="defaultValue"
+            size="large"
+            allow-clear
+            :max-tag-count="2"
+            is-checkbox
+            @change="handleChange"
+          >
+            <SCSelectOption v-for="i in 25" :key="(i + 9).toString(36) + i">
+              {{ (i + 9).toString(36) + i }}
+            </SCSelectOption>
+          </SCSelect>
+        </div>
+        <div class="w-1/3">
+          <SCSelect
+            mode="tags"
+            style="width: 90%"
+            placeholder="Tags Mode"
+            :default-value="defaultValue"
+            :max-tag-count="2"
+            allow-clear
+            is-checkbox
+            @change="handleChange"
+          >
+            <SCSelectOption v-for="i in 25" :key="(i + 9).toString(36) + i">
+              {{ (i + 9).toString(36) + i }}
+            </SCSelectOption>
+          </SCSelect>
+        </div>
+        <div class="w-1/3">
+          <SCSelect
+            mode="tags"
+            style="width: 90%"
+            placeholder="Tags Mode"
+            :default-value="defaultValue"
+            size="small"
+            allow-clear
+            :max-tag-count="2"
+            is-checkbox
+            @change="handleChange"
+          >
+            <SCSelectOption v-for="i in 25" :key="(i + 9).toString(36) + i">
+              {{ (i + 9).toString(36) + i }}
+            </SCSelectOption>
+          </SCSelect>
+        </div>
       </div>
-      <div class="w-1/3">
-        <SCSelect
-          mode="tags"
-          style="width: 90%"
-          placeholder="Tags Mode"
-          :default-value="defaultValue"
-          :max-tag-text-length="10"
-          @change="handleChange"
-        >
-          <SCSelectOption v-for="i in 25" :key="(i + 9).toString(36) + i">
-            Long label: {{ (i + 9).toString(36) + i }}
-          </SCSelectOption>
-        </SCSelect>
+    </fieldset>
+
+    <fieldset class="mt-8">
+      <legend class="font-medium-md">
+        Select max tags text length:
+      </legend>
+
+      <div class="flex">
+        <div class="w-1/3">
+          <SCSelect
+            mode="tags"
+            style="width: 90%"
+            placeholder="Tags Mode"
+            :default-value="defaultValue"
+            size="large"
+            :max-tag-text-length="10"
+            @change="handleChange"
+          >
+            <SCSelectOption v-for="i in 25" :key="(i + 9).toString(36) + i">
+              Long label: {{ (i + 9).toString(36) + i }}
+            </SCSelectOption>
+          </SCSelect>
+        </div>
+        <div class="w-1/3">
+          <SCSelect
+            mode="tags"
+            style="width: 90%"
+            placeholder="Tags Mode"
+            :default-value="defaultValue"
+            :max-tag-text-length="10"
+            @change="handleChange"
+          >
+            <SCSelectOption v-for="i in 25" :key="(i + 9).toString(36) + i">
+              Long label: {{ (i + 9).toString(36) + i }}
+            </SCSelectOption>
+          </SCSelect>
+        </div>
+        <div class="w-1/3">
+          <SCSelect
+            mode="tags"
+            style="width: 90%"
+            placeholder="Tags Mode"
+            :default-value="defaultValue"
+            size="small"
+            :max-tag-text-length="10"
+            @change="handleChange"
+          >
+            <SCSelectOption v-for="i in 25" :key="(i + 9).toString(36) + i">
+              Long label: {{ (i + 9).toString(36) + i }}
+            </SCSelectOption>
+          </SCSelect>
+        </div>
       </div>
-      <div class="w-1/3">
-        <SCSelect
-          mode="tags"
-          style="width: 90%"
-          placeholder="Tags Mode"
-          :default-value="defaultValue"
-          size="small"
-          :max-tag-text-length="10"
-          @change="handleChange"
-        >
-          <SCSelectOption v-for="i in 25" :key="(i + 9).toString(36) + i">
-            Long label: {{ (i + 9).toString(36) + i }}
-          </SCSelectOption>
-        </SCSelect>
-      </div>
-    </div>
+    </fieldset>
   </div>
 </template>
 
-<script>export default {
+<script>
+export default {
   data() {
     return {
       defaultValue: ['b2', 'a1', 'e5', 'd4', 'c3', 'f6', 'g1']
@@ -473,7 +486,7 @@ Tags.parameters = {
     }
   }
 }
-</script>
+</script>    
 `
     }
   }
@@ -565,42 +578,221 @@ Multiple.parameters = {
       <div class="w-1/3">
         <SCSelect
           mode="multiple"
-          :default-value="['a1', 'b2']"
           style="width: 90%"
+          size="large"
+          :data-name="\`Label \${value.length ? '('+value.length+')' : ''}\`"
           placeholder="Please select"
+          is-checkbox
+          @change="value = $event"
         >
-          <SCSelectOption v-for="i in 25" :key="(i + 9).toString(36) + i">
+          <SCSelectOption v-for="i in 5" :key="(i + 9).toString(36) + i">
             {{ (i + 9).toString(36) + i }}
+          </SCSelectOption>
+          <SCSelectOption key="xz3" disabled>
+            xz3
           </SCSelectOption>
         </SCSelect>
       </div>
       <div class="w-1/3">
         <SCSelect
           mode="multiple"
-          :default-value="['a1', 'b2']"
           style="width: 90%"
+          :data-name="\`Label \${value.length ? '('+value.length+')' : ''}\`"
           placeholder="Please select"
+          is-checkbox
+          @change="value = $event"
         >
-          <SCSelectOption v-for="i in 25" :key="(i + 9).toString(36) + i">
+          <SCSelectOption v-for="i in 5" :key="(i + 9).toString(36) + i">
             {{ (i + 9).toString(36) + i }}
+          </SCSelectOption>
+          <SCSelectOption key="xz3" disabled>
+            xz3
           </SCSelectOption>
         </SCSelect>
       </div>
       <div class="w-1/3">
         <SCSelect
           mode="multiple"
-          :default-value="['a1', 'b2']"
           style="width: 90%"
+          size="small"
+          :data-name="\`Label \${value.length ? '('+value.length+')' : ''}\`"
           placeholder="Please select"
+          is-checkbox
+          @change="value = $event"
         >
-          <SCSelectOption v-for="i in 25" :key="(i + 9).toString(36) + i">
+          <SCSelectOption v-for="i in 5" :key="(i + 9).toString(36) + i">
             {{ (i + 9).toString(36) + i }}
+          </SCSelectOption>
+          <SCSelectOption key="xz3" disabled>
+            xz3
           </SCSelectOption>
         </SCSelect>
       </div>
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      value: []
+    }
+  }
+}
+</script>
+    
+`
+    }
+  }
+}
+
+export const CheckAll = () => ({
+  components: { SCSelectCheckAll },
+  template: `<div>
+    <SCSelectCheckAll />
+  </div>
+  `
+})
+
+CheckAll.parameters = {
+  docs: {
+    source: {
+      code: `<template>
+  <div>
+    <fieldset>
+      <legend class="font-medium-md">
+        Select with checkbox all:
+      </legend>
+
+      <div class="flex">
+        <div class="w-1/3">
+          <SCSelect
+            mode="multiple"
+            style="width: 90%"
+            size="large"
+            :current-value="value"
+            :data-name="labelSelect"
+            placeholder="Please select"
+            :dropdown-class-name="\`\${
+              value.length && options.length !== value.length - 1
+                ? 'indeterminate'
+                : ''
+            }\`"
+            is-checkbox
+            @deselect="handleDeselect"
+            @select="handleSelect"
+          >
+            <SCSelectOption
+              key="all"
+              class="sc-select-option-select-all"
+              is-select-all
+            >
+              Select All
+            </SCSelectOption>
+            <SCSelectOption v-for="option in options" :key="option.value">
+              {{ option.label }}
+            </SCSelectOption>
+          </SCSelect>
+        </div>
+
+        <div class="w-1/3">
+          <SCSelect
+            mode="tags"
+            style="width: 90%"
+            placeholder="Tags Mode"
+            size="large"
+            allow-clear
+            :max-tag-count="2"
+            :dropdown-class-name="\`\${
+              valueTags.length && options.length !== valueTags.length - 1
+                ? 'indeterminate'
+                : ''
+            }\`"
+            is-checkbox
+            :current-value="valueTags"
+            @deselect="handleDeselectTags"
+            @select="handleSelectTags"
+          >
+            <SCSelectOption
+              key="all"
+              class="sc-select-option-select-all"
+              is-select-all
+              @click="handleSelectAllTags"
+            >
+              Select All
+            </SCSelectOption>
+            <SCSelectOption v-for="option in options" :key="option.value">
+              {{ option.label }}
+            </SCSelectOption>
+          </SCSelect>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+</template>
+
+<script>
+const options = []
+
+for (let i = 0; i < 10; i += 1) {
+  options.push({
+    label: (i + 9).toString(36) + i,
+    value: (i + 9).toString(36) + i
+  })
+}
+
+export default {
+  data() {
+    return {
+      options,
+      value: [],
+      valueTags: []
+    }
+  },
+  computed: {
+    labelSelect() {
+      return \`Label \${
+              this.value.length
+                ? \`(\${this.value.filter((item) => item !== 'all').length})\`
+                : ''
+            }\`
+    }
+  },
+  methods: {
+    handleSelect(value) {
+      if (value === 'all') {
+        this.value = ['all', ...this.options.map((option) => option.value)]
+      } else {
+        this.value.push(value)
+      }
+    },
+    handleDeselect(value) {
+      if (value === 'all') {
+        this.value = []
+      } else {
+        const deselectIndex = this.value.findIndex((element) => element === value)
+        this.value.splice(deselectIndex, 1)
+      }
+    },
+    handleSelectTags(value) {
+      if (value === 'all') {
+        this.valueTags = ['all', ...this.options.map((option) => option.value)]
+      } else {
+        this.valueTags.push(value)
+      }
+    },
+    handleDeselectTags(value) {
+      if (value === 'all') {
+        this.valueTags = []
+      } else {
+        const deselectIndex = this.valueTags.findIndex((element) => element === value)
+        this.valueTags.splice(deselectIndex, 1)
+      }
+    }
+  }
+}
+</script>
 `
     }
   }

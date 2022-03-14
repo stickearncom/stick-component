@@ -9,9 +9,9 @@
     :default-active-first-option="defaultActiveFirstOption"
     :default-value="defaultValue"
     :disabled="disabled"
-    :dropdown-class-name="`sc-select-dropdown sc-select-dropdown-${mode} ${
-      dropdownClassName ? 'dropdownClassName' : null
-    }`"
+    :dropdown-class-name="`sc-select-dropdown ${
+      isCheckbox ? 'sc-select-dropdown-checkbox' : ''
+    } ${ dropdownClassName ? dropdownClassName : '' }`"
     :dropdown-match-select-width="dropdownMatchSelectWidth"
     :dropdown-style="dropdownStyle"
     :dropdown-menu-style="dropdownMenuStyle"
@@ -222,6 +222,10 @@ export default {
     labelName: {
       type: String,
       default: undefined
+    },
+    isCheckbox: {
+      type: Boolean,
+      default: false
     }
   },
   data() {
@@ -236,6 +240,7 @@ export default {
         'sc-select-error': this.hasError,
         'sc-select-disabled': this.disabled,
         'sc-select-search': this.showSearch,
+        'sc-select-checkbox': this.isCheckbox,
         [`sc-select-${this.mode}`]: true
       }
     }

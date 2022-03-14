@@ -13,10 +13,14 @@
           size="large"
           :data-name="`Label ${value.length ? '('+value.length+')' : ''}`"
           placeholder="Please select"
+          is-checkbox
           @change="value = $event"
         >
-          <SCSelectOption v-for="i in 25" :key="(i + 9).toString(36) + i">
+          <SCSelectOption v-for="i in 5" :key="(i + 9).toString(36) + i">
             {{ (i + 9).toString(36) + i }}
+          </SCSelectOption>
+          <SCSelectOption key="xz3" disabled>
+            xz3
           </SCSelectOption>
         </SCSelect>
       </div>
@@ -26,10 +30,14 @@
           style="width: 90%"
           :data-name="`Label ${value.length ? '('+value.length+')' : ''}`"
           placeholder="Please select"
+          is-checkbox
           @change="value = $event"
         >
-          <SCSelectOption v-for="i in 25" :key="(i + 9).toString(36) + i">
+          <SCSelectOption v-for="i in 5" :key="(i + 9).toString(36) + i">
             {{ (i + 9).toString(36) + i }}
+          </SCSelectOption>
+          <SCSelectOption key="xz3" disabled>
+            xz3
           </SCSelectOption>
         </SCSelect>
       </div>
@@ -40,10 +48,14 @@
           size="small"
           :data-name="`Label ${value.length ? '('+value.length+')' : ''}`"
           placeholder="Please select"
+          is-checkbox
           @change="value = $event"
         >
-          <SCSelectOption v-for="i in 25" :key="(i + 9).toString(36) + i">
+          <SCSelectOption v-for="i in 5" :key="(i + 9).toString(36) + i">
             {{ (i + 9).toString(36) + i }}
+          </SCSelectOption>
+          <SCSelectOption key="xz3" disabled>
+            xz3
           </SCSelectOption>
         </SCSelect>
       </div>

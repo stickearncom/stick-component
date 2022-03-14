@@ -39,12 +39,17 @@ export default {
     class: {
       type: String,
       default: undefined
+    },
+    isSelectAll: {
+      type: Boolean,
+      default: false
     }
   },
   computed: {
     classes() {
       return {
         'sc-select-option': true,
+        'sc-select-option-select-all': this.isSelectAll,
         'sc-select-option-disabled': this.disabled,
         [this.class]: !!this.class
       }

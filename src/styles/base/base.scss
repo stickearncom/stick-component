@@ -72,3 +72,28 @@ h6 {
   -webkit-box-orient: vertical;
   overflow: hidden
 }
+
+fieldset {
+  display: block;
+  margin-inline-start: 2px !important;
+  margin-inline-end: 2px !important;
+  padding-block-start: 0.5em !important;
+  padding-inline-start: 1em !important;
+  padding-inline-end: 1em !important;
+  padding-block-end: 1em !important;
+  min-inline-size: min-content;
+  border-width: 2px;
+  border-style: groove;
+  border-color: threedface;
+  border-image: initial;
+}
+
+legend {
+  display: block;
+  padding-inline-start: 2px;
+  padding-inline-end: 2px;
+  border-width: initial;
+  border-style: none;
+  border-color: initial;
+  border-image: initial;
+}
