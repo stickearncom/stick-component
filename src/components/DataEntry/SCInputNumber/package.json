@@ -1,6 +1,6 @@
 {
   "name": "@stickearncom/scinputnumber",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "publishConfig": {
     "access": "public"
   },
@@ -13,7 +13,7 @@
     "@stickearncom/sccol": "^0.1.6",
     "@stickearncom/scicon": "^0.1.6",
     "@stickearncom/scrow": "^0.1.4",
-    "@stickearncom/scstyles": "^0.1.7",
+    "@stickearncom/scstyles": "^0.1.8",
     "ant-design-vue": "^1.7.8"
   },
   "repository": {

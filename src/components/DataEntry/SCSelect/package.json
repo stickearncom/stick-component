@@ -1,6 +1,6 @@
 {
   "name": "@stickearncom/scselect",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publishConfig": {
     "access": "public"
   },
@@ -11,7 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "@stickearncom/scicon": "^0.1.6",
-    "@stickearncom/scstyles": "^0.1.7",
+    "@stickearncom/scstyles": "^0.1.8",
     "ant-design-vue": "^1.7.8"
   },
   "repository": {
