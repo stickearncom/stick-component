@@ -10,7 +10,7 @@
         <h5 class="font-medium-md">
           Single select
         </h5>
-        <hr class="mb-3">
+        <hr class="mb-3 w-11/12">
 
         <SCMultiSelect
           class="w-11/12"
@@ -30,7 +30,7 @@
         <h5 class="font-medium-md">
           Single select (object)
         </h5>
-        <hr class="mb-3">
+        <hr class="mb-3 w-11/12">
 
         <SCMultiSelect
           :current-value="valueObject"
@@ -41,7 +41,12 @@
           :searchable="false"
           :allow-empty="false"
           @select="valueObject = $event"
-        />
+        >
+          <template slot="singleLabel" slot-scope="props">
+            <strong>{{ props.option.name }}</strong> is written in<strong>
+              {{ props.option.language }}</strong>
+          </template>
+        </SCMultiSelect>
         <pre
           class="language-json px-2 py-3 mt-2 bg-gray-300 w-11/12"
         ><code>{{ valueObject }}</code></pre>
@@ -51,7 +56,7 @@
         <h5 class="font-medium-md">
           Single select search
         </h5>
-        <hr class="mb-3">
+        <hr class="mb-3 w-11/12">
 
         <SCMultiSelect
           :current-value="valueObject"

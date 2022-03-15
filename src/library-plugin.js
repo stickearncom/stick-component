@@ -15,6 +15,7 @@ import SCInputNumber from './components/DataEntry/SCInputNumber/index.vue'
 import SCInputSearch from './components/DataEntry/SCInputSearch/index.vue'
 import SCSelect from './components/DataEntry/SCSelect/index.vue'
 import SCSelectOption from './components/DataEntry/SCSelect/SCSelectOption/index.vue'
+import SCMultiSelect from './components/DataEntry/SCMultiSelect/index.vue'
 import SCTextarea from './components/DataEntry/SCTextarea/index.vue'
 
 // Components
@@ -33,6 +34,7 @@ const components = {
   SCInputSearch,
   SCSelect,
   SCSelectOption,
+  SCMultiSelect,
   SCTextarea,
   // Components
   SCButton

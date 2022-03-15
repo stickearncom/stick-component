@@ -72,7 +72,7 @@
 import { Select } from 'ant-design-vue'
 
 export default {
-  name: 'SCselect',
+  name: 'SCSelect',
   components: {
     'a-select': Select
   },

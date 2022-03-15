@@ -344,6 +344,7 @@
     .sc-select-option-select-all {
       &::before {
         background-color: $white-1;
+        border-color: $gray-2;
       }
 
       &::after {

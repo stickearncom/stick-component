@@ -45,16 +45,13 @@
     @input="$emit('input', $event)"
     @select="$emit('select', $event)"
     @remove="$emit('remove', $event)"
-    @search-change="$emit('searchChange', $event)"
+    @search-change="$emit('search-change', $event)"
     @tag="$emit('tag', $event)"
     @open="$emit('open', $event)"
     @close="$emit('close', $event)"
   >
-    <template slot="singleLabel" slot-scope="props">
-      <slot :props="props" name="singleLabel" />
-    </template>
     <template slot="option" slot-scope="props">
-      <slot :slot-scope="props" name="option" />
+      <slot :option="props.option" :search="props.search" name="option" />
     </template>
     <template slot="maxElements">
       <slot name="maxElements" />
@@ -72,10 +69,10 @@
       <slot name="afterList" />
     </template>
     <template slot="caret" slot-scope="props">
-      <slot :slot-scope="props" name="caret" />
+      <slot :toggle="props.toggle" name="caret" />
     </template>
-    <template slot="singleLabel">
-      <slot name="singleLabel" />
+    <template slot="singleLabel" slot-scope="props">
+      <slot :option="props.option" name="singleLabel" />
     </template>
     <template slot="placeholder">
       <slot name="placeholder" />
@@ -83,11 +80,25 @@
     <template slot="limit">
       <slot name="limit" />
     </template>
+    <template slot="selection" slot-scope="props">
+      <slot
+        :isOpen="props.isOpen"
+        :remove="props.remove"
+        :search="props.search"
+        :values="props.values"
+        name="selection"
+      />
+    </template>
     <template slot="clear" slot-scope="props">
-      <slot :slot-scope="props" name="clear" />
+      <slot :search="props.search" name="clear" />
     </template>
     <template slot="tag" slot-scope="props">
-      <slot :slot-scope="props" name="tag" />
+      <slot
+        :option="props.option"
+        :search="props.search"
+        :remove="props.remove"
+        name="tag"
+      />
     </template>
   </multiselect>
 </template>
@@ -291,6 +302,18 @@ export default {
       validator(value) {
         return ['small', 'default', 'large'].indexOf(value) !== -1
       }
+    },
+    isCheckbox: {
+      type: Boolean,
+      default: false
+    },
+    hasError: {
+      type: Boolean,
+      default: false
+    },
+    multipleWithTag: {
+      type: Boolean,
+      default: false
     }
   },
   data() {
@@ -303,18 +326,18 @@ export default {
       return {
         'sc-multiselect': true,
         [`sc-multiselect-${this.size}`]: true,
-        'sc-multiselect-disabled': this.disabled
+        'sc-multiselect-multiple': this.multiple,
+        'sc-multiselect-multiple-tag': this.multipleWithTag,
+        'sc-multiselect-taggable': this.taggable,
+        'sc-multiselect-disabled': this.disabled,
+        'sc-multiselect-checkbox': this.isCheckbox,
+        'sc-multiselect-error': this.hasError
       }
     }
   },
   watch: {
     currentValue(newVal) {
       this.value = newVal
-    }
-  },
-  methods: {
-    handleSlot(value) {
-      console.log('first', value)
     }
   }
 }
