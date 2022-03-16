@@ -7,10 +7,10 @@
 
     <SCRow :gutter="[16, 32]">
       <SCCol :span="9">
-        <SCInput placeholder="Input basic" allow-clear />
+        <SCInput v-model="value" placeholder="Input basic" allow-clear />
       </SCCol>
       <SCCol :span="9">
-        <SCInput placeholder="Input disabled" disabled />
+        <SCInput v-model="value" placeholder="Input disabled" disabled />
       </SCCol>
     </SCRow>
   </div>
@@ -27,6 +27,16 @@ export default {
     SCRow,
     SCCol,
     SCInput
+  },
+  data() {
+    return {
+      value: ''
+    }
+  },
+  watch: {
+    value(val) {
+      console.log({ val })
+    }
   }
 }
 </script>

@@ -1,7 +1,7 @@
 <template>
   <a-input
     :id="id"
-    v-model="value"
+    v-model="currentValue"
     :class="classes"
     :addon-after="addonAfter"
     :addon-before="addonBefore"
@@ -13,8 +13,8 @@
     :suffix="suffix"
     :placeholder="placeholder"
     :allow-clear="allowClear"
-    @change="$emit('change', $event)"
-    @pressEnter="$emit('pressEnter', $event)"
+    @change="$emit('change', $event.target.value)"
+    @pressEnter="$emit('pressEnter', $event.target.value)"
   >
     <template slot="addonAfter">
       <slot name="addonAfter" />
@@ -42,7 +42,7 @@ export default {
     'a-input': Input
   },
   model: {
-    prop: 'currentValue',
+    prop: 'value',
     event: 'change'
   },
   props: {
@@ -85,7 +85,7 @@ export default {
       type: String,
       default: undefined
     },
-    currentValue: {
+    value: {
       type: String,
       default: undefined
     },
@@ -104,7 +104,7 @@ export default {
   },
   data() {
     return {
-      value: this.currentValue || this.defaultValue
+      currentValue: this.value || this.defaultValue
     }
   },
   computed: {
@@ -114,11 +114,6 @@ export default {
         'sc-input-error': this.hasError,
         'sc-input-disabled': this.disabled
       }
-    }
-  },
-  watch: {
-    currentValue(newVal) {
-      this.value = newVal
     }
   }
 }

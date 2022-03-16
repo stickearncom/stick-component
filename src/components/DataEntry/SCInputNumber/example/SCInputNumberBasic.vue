@@ -8,6 +8,7 @@
     <SCRow :gutter="[16, 32]">
       <SCCol :span="8">
         <SCInputNumber
+          v-model="value"
           :default-value="10"
           size="large"
           :min="1"
@@ -47,6 +48,16 @@ export default {
     SCRow,
     SCCol,
     SCInputNumber
+  },
+  data() {
+    return {
+      value: null
+    }
+  },
+  watch: {
+    value(val) {
+      console.log({ val })
+    }
   },
   methods: {
     onChange(value) {

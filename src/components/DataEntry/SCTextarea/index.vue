@@ -1,7 +1,7 @@
 <template>
   <a-textarea
     :id="id"
-    :v-model="value"
+    :v-model="currentValue"
     :class="classes"
     :auto-size="autoSize"
     :default-value="defaultValue"
@@ -11,8 +11,8 @@
     :rows="rows"
     :show-count="showCount"
     :max-length="maxLength"
-    @change="$emit('change', $event)"
-    @pressEnter="$emit('pressEnter', $event)"
+    @change="$emit('change', $event.target.value)"
+    @pressEnter="$emit('pressEnter', $event.target.value)"
   />
 </template>
 
@@ -47,7 +47,7 @@ export default {
       type: Boolean,
       default: false
     },
-    currentValue: {
+    value: {
       type: String,
       default: undefined
     },
@@ -78,7 +78,7 @@ export default {
   },
   data() {
     return {
-      value: this.currentValue || this.defaultValue
+      currentValue: this.value || this.defaultValue
     }
   },
   computed: {
@@ -92,45 +92,6 @@ export default {
     },
     dataCount() {
       return `${this.value?.length ?? 0} / ${this.maxLength || 0}`
-    }
-  },
-  watch: {
-    currentValue(newVal) {
-      this.value = newVal
-    },
-    dataCount() {
-      this.updatedShowCountValue()
-    }
-  },
-  mounted() {
-    this.showCountElement()
-  },
-  methods: {
-    showCountElement() {
-      if (this.showCount) {
-        const getElementShowCount = document.getElementsByClassName(
-          'sc-textarea-show-count'
-        )
-        const element = document.createElement('div')
-        element.classList.add('sc-textarea-data-count')
-        element.appendChild(document.createTextNode(this.dataCount))
-        if (getElementShowCount.length) {
-          if (this.allowClear) {
-            this.$el.appendChild(element)
-          } else {
-            this.$el.parentNode.insertBefore(element, this.$el.nextElementSibling)
-          }
-        }
-      }
-    },
-    updatedShowCountValue() {
-      if (this.showCount) {
-        if (this.allowClear) {
-          this.$el.getElementsByClassName('sc-textarea-data-count')[0].textContent = this.dataCount
-        } else {
-          this.$el.nextElementSibling.textContent = this.dataCount
-        }
-      }
     }
   }
 }

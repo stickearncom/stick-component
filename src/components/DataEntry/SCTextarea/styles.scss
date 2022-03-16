@@ -125,12 +125,15 @@
       }
     }
   }
-}
 
-.sc-textarea-data-count {
-  font-family: $font-stack;
-  @include font-medium-sm;
-  display: block;
-  color: $gray-7;
-  text-align: right;
+  &.sc-textarea-show-count {
+    &::after {
+      content: attr(data-count);
+      display: inherit;
+      position: absolute;
+      right: 0;
+      bottom: -22px;
+      @include font-medium-sm;
+    }
+  }
 }

@@ -77,8 +77,8 @@ export default {
     'a-select': Select
   },
   model: {
-    prop: 'currentValue',
-    event: ['change', 'select']
+    prop: 'value',
+    event: 'change'
   },
   props: {
     id: {

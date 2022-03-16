@@ -24,41 +24,44 @@
       </SCCol>
       <SCCol :span="8">
         <SCTextarea
-          :value="value"
-          placeholder="Autosize height based on content lines"
+          v-model="value"
+          placeholder="Autosize height with minimum and maximum number of lines"
           auto-size
           :max-length="10"
           show-count
-          @change="value = $event"
+          allow-clear
+          :data-count="dataCount"
         />
         <div style="margin: 24px 0" />
         <SCTextarea
-          :value="value2"
+          v-model="value2"
           placeholder="Autosize height with minimum and maximum number of lines"
           :auto-size="{ minRows: 2, maxRows: 6 }"
           :max-length="10"
           show-count
           allow-clear
-          @change="value2 = $event"
+          :data-count="dataCount2"
         />
         <div style="margin: 24px 0" />
         <SCTextarea
-          :value="value3"
-          placeholder="Controlled autosize"
+          v-model="value3"
+          placeholder="Autosize height with minimum and maximum number of lines"
           :auto-size="{ minRows: 3, maxRows: 5 }"
           :max-length="10"
           show-count
           allow-clear
-          @change="value3 = $event"
+          :data-count="dataCount3"
         />
       </SCCol>
       <SCCol :span="8">
         <SCTextarea
-          placeholder="Autosize height based on content lines"
+          placeholder="Autosize height with minimum and maximum number of lines"
           auto-size
           :max-length="10"
           show-count
+          allow-clear
           disabled
+          :data-count="dataCount2"
         />
         <div style="margin: 24px 0" />
         <SCTextarea
@@ -68,6 +71,7 @@
           show-count
           allow-clear
           disabled
+          :data-count="dataCount2"
         />
         <div style="margin: 24px 0" />
         <SCTextarea
@@ -77,6 +81,7 @@
           show-count
           allow-clear
           disabled
+          :data-count="dataCount3"
         />
       </SCCol>
     </SCRow>
@@ -102,9 +107,15 @@ export default {
       value3: ''
     }
   },
-  watch: {
-    value2(newVal) {
-      console.log({ newVal })
+  computed: {
+    dataCount() {
+      return `${this.value?.length ?? 0} / 10`
+    },
+    dataCount2() {
+      return `${this.value2?.length ?? 0} / 10`
+    },
+    dataCount3() {
+      return `${this.value3?.length ?? 0} / 10`
     }
   }
 }

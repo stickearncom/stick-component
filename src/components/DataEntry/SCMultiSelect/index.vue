@@ -114,7 +114,7 @@ export default {
     Multiselect
   },
   model: {
-    prop: 'currentValue',
+    prop: 'value',
     event: 'change'
   },
   props: {

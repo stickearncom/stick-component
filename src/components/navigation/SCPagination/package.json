@@ -1,0 +1,20 @@
+{
+  "name": "@stickearncom/scpagination",
+  "version": "0.0.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@stickearncom/scstyles": "^0.1.8",
+    "ant-design-vue": "^1.7.8"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com:stickearncom/stick-component.git"
+  }
+}
