@@ -32,6 +32,7 @@
             v-model="current"
             show-size-changer
             :total="500"
+            :page-size="pageSize"
             @showSizeChange="onShowSizeChange"
           />
           <br>
@@ -40,6 +41,7 @@
             show-size-changer
             :total="500"
             size="small"
+            :page-size="pageSize"
             @showSizeChange="onShowSizeChange"
           />
         </fieldset>
@@ -58,6 +60,7 @@
             show-size-changer
             :total="500"
             show-quick-jumper
+            :page-size="pageSize"
             @showSizeChange="onShowSizeChange"
             @change="current = $event"
           />
@@ -92,7 +95,7 @@ export default {
   },
   methods: {
     onShowSizeChange(current, pageSize) {
-      console.log(current, pageSize)
+      console.log('ini', { current, pageSize })
     }
   }
 }

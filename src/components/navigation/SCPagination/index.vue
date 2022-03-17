@@ -4,7 +4,7 @@
     :class="classes"
     :default-current="defaultCurrent"
     :current="current"
-    :page-size.sync="pageSize"
+    :page-size.sync="pageSizeSync"
     :default-page-size="defaultPageSize"
     :disabled="disabled"
     :hide-on-single-page="hideOnSinglePage"
@@ -19,7 +19,7 @@
     :size="size"
     :total="total"
     @change="$emit('change', $event)"
-    @showSizeChange="$emit('showSizeChange', $event)"
+    @showSizeChange="onShowSizeChange"
   />
 </template>
 
@@ -106,12 +106,27 @@ export default {
       default: 0
     }
   },
+  data() {
+    return {
+      pageSizeSync: this.pageSize
+    }
+  },
   computed: {
     classes() {
       return {
         'sc-pagination': true,
         [`sc-pagination-${this.size}`]: this.size !== ''
       }
+    }
+  },
+  watch: {
+    pageSize(newVal) {
+      this.pageSizeSync = newVal
+    }
+  },
+  methods: {
+    onShowSizeChange(current, pageSize) {
+      this.$emit('showSizeChange', current, pageSize)
     }
   }
 }

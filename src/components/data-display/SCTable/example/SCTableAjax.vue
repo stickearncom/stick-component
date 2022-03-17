@@ -33,6 +33,7 @@
       <SCPagination
         :current="query.page"
         :total="total"
+        :page-size="query.pageSize"
         show-size-changer
         show-quick-jumper
         @change="handleChangePagination"
@@ -92,7 +93,8 @@ export default {
       current: 1,
       total: 200,
       query: {
-        page: 1
+        page: 1,
+        pageSize: 10
       },
       loading: false
     }
@@ -105,6 +107,7 @@ export default {
       console.log({ filters, sorter })
     },
     handleChangePagination(value) {
+      console.log('first', value)
       this.query.page = value
     },
     onShowSizeChange(current, pageSize) {
