@@ -10,16 +10,16 @@ import SCRow from './components/foundations/Layout/SCRow/index.vue'
 import SCSpace from './components/layouts/SCSpace/index.vue'
 
 // Data Entry
-import SCInput from './components/DataEntry/SCInput/index.vue'
-import SCInputNumber from './components/DataEntry/SCInputNumber/index.vue'
-import SCInputSearch from './components/DataEntry/SCInputSearch/index.vue'
-import SCSelect from './components/DataEntry/SCSelect/index.vue'
-import SCSelectOption from './components/DataEntry/SCSelect/SCSelectOption/index.vue'
-import SCMultiSelect from './components/DataEntry/SCMultiSelect/index.vue'
-import SCTextarea from './components/DataEntry/SCTextarea/index.vue'
+import SCInput from './components/data-entry/SCInput/index.vue'
+import SCInputNumber from './components/data-entry/SCInputNumber/index.vue'
+import SCInputSearch from './components/data-entry/SCInputSearch/index.vue'
+import SCSelect from './components/data-entry/SCSelect/index.vue'
+import SCSelectOption from './components/data-entry/SCSelect/SCSelectOption/index.vue'
+import SCMultiSelect from './components/data-entry/SCMultiSelect/index.vue'
+import SCTextarea from './components/data-entry/SCTextarea/index.vue'
 
 // Components
-import SCButton from './components/SCButton/index.vue'
+import SCButton from './components/general/SCButton/index.vue'
 
 // Navigation
 import SCPagination from './components/navigation/SCPagination/index.vue'

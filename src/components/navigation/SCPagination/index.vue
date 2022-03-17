@@ -4,6 +4,7 @@
     :class="classes"
     :default-current="defaultCurrent"
     :current="current"
+    :page-size.sync="pageSize"
     :default-page-size="defaultPageSize"
     :disabled="disabled"
     :hide-on-single-page="hideOnSinglePage"
@@ -63,6 +64,10 @@ export default {
     itemRender: {
       type: Function,
       default: undefined
+    },
+    pageSize: {
+      type: Number,
+      default: 10
     },
     pageSizeOptions: {
       type: Array,

@@ -7,7 +7,7 @@ import SCButtonNoDangerLink from '../example/SCButtonNoDangerLink.vue'
 import SCButtonNoDangerIcon from '../example/SCButtonNoDangerIcon.vue'
 
 export default {
-  title: 'Components/Button',
+  title: 'General/Button',
   component: SCButton,
   argTypes: {
     size: { control: { type: 'select', options: ['default', 'small', 'large'] } },

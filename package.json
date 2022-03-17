@@ -1,6 +1,6 @@
 {
   "name": "@stickearncom/stickcomponent",
-  "version": "0.2.8",
+  "version": "0.2.9",
   "private": false,
   "license": "MIT",
   "publishConfig": {
@@ -41,6 +41,7 @@
     "@stickearncom/scbutton": "^0.1.5",
     "@stickearncom/sccol": "^0.1.5",
     "@stickearncom/scicon": "^0.1.5",
+    "@stickearncom/scpagination": "0.0.1",
     "@stickearncom/scrow": "^0.1.4",
     "@stickearncom/scstyles": "^0.1.7",
     "@tailwindcss/postcss7-compat": "^2.2.17",
