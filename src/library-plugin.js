@@ -21,6 +21,9 @@ import SCTextarea from './components/DataEntry/SCTextarea/index.vue'
 // Components
 import SCButton from './components/SCButton/index.vue'
 
+// Navigation
+import SCPagination from './components/navigation/SCPagination/index.vue'
+
 const components = {
   // Foundations
   SCIcon,
@@ -37,7 +40,9 @@ const components = {
   SCMultiSelect,
   SCTextarea,
   // Components
-  SCButton
+  SCButton,
+  // Navigation
+  SCPagination
 }
 
 const install = (Vue) => {
