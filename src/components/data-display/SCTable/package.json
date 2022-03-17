@@ -1,6 +1,6 @@
 {
   "name": "@stickearncom/sctable",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publishConfig": {
     "access": "public"
   },
@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@stickearncom/scpagination": "^0.0.1",
+    "@stickearncom/scpagination": "^0.0.2",
     "ant-design-vue": "^1.7.8"
   },
   "repository": {
