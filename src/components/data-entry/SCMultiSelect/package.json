@@ -18,5 +18,6 @@
   "repository": {
     "type": "git",
     "url": "ssh://git@github.com:stickearncom/stick-component.git"
-  }
+  },
+  "gitHead": "c273f1fb622e8640b488ec38b13f929935fe1c00"
 }
