@@ -11,10 +11,10 @@
     :default-expand-all-rows="defaultExpandAllRows"
     :default-expanded-row-keys="defaultExpandedRowKeys"
     :expanded-row-keys="expandedRowKeys"
-    :expanded-row-render="expandedRowRender"
     :expand-icon="expandIcon"
     :expand-row-by-click="expandRowByClick"
     :expand-icon-column-index="expandIconColumnIndex"
+    :expanded-row-render="expandedRowRender"
     :footer="footer"
     :indent-size="indentSize"
     :loading="loading"
@@ -31,13 +31,28 @@
     :custom-row="customRow"
     :get-popup-container="getPopupContainer"
     :transform-cell-text="transformCellText"
-    @change="$emit('change', $event)"
+    @change="onChange"
     @expand="$emit('expand', $event)"
     @expandedRowsChange="$emit('expandedRowsChange', $event)"
   >
-    <template v-for="column in columns" :slot="column.key" slot-scope="text, record">
-      {{ handleprops({ text, record }) }}
-      <slot :name="column.key" :text="text" :record="record" />
+    <template
+      v-for="column in columns"
+      :slot="
+        column.scopedSlots && column.scopedSlots.customRender
+          ? column.scopedSlots.customRender
+          : column.key
+      "
+      slot-scope="text, record"
+    >
+      <slot
+        :name="
+          column.scopedSlots && column.scopedSlots.customRender
+            ? column.scopedSlots.customRender
+            : column.key
+        "
+        :text="text"
+        :record="record"
+      />
     </template>
     <slot />
   </a-table>
@@ -183,9 +198,13 @@ export default {
     }
   },
   methods: {
-    handleprops(val) {
-      console.log({ val })
+    onChange(pagination, filters, sorter) {
+      this.$emit('change', pagination, filters, sorter)
     }
   }
 }
 </script>
+
+<style lang="scss">
+@import './styles.scss';
+</style>

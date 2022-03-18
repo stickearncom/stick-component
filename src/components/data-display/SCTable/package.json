@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "@stickearncom/scpagination": "^0.0.4",
+    "@stickearncom/scstyles": "^0.1.8",
     "ant-design-vue": "^1.7.8"
   },
   "repository": {

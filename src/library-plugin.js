@@ -9,6 +9,9 @@ import SCRow from './components/foundations/Layout/SCRow/index.vue'
 // Layouts
 import SCSpace from './components/layouts/SCSpace/index.vue'
 
+// Data Display
+import SCTable from './components/data-display/SCTable/index.vue'
+
 // Data Entry
 import SCInput from './components/data-entry/SCInput/index.vue'
 import SCInputNumber from './components/data-entry/SCInputNumber/index.vue'
@@ -18,7 +21,7 @@ import SCSelectOption from './components/data-entry/SCSelect/SCSelectOption/inde
 import SCMultiSelect from './components/data-entry/SCMultiSelect/index.vue'
 import SCTextarea from './components/data-entry/SCTextarea/index.vue'
 
-// Components
+// General
 import SCButton from './components/general/SCButton/index.vue'
 
 // Navigation
@@ -31,6 +34,8 @@ const components = {
   SCRow,
   // Layouts
   SCSpace,
+  // Data Display
+  SCTable,
   // Data Entry
   SCInput,
   SCInputNumber,
@@ -39,7 +44,7 @@ const components = {
   SCSelectOption,
   SCMultiSelect,
   SCTextarea,
-  // Components
+  // General
   SCButton,
   // Navigation
   SCPagination

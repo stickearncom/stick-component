@@ -1,0 +1,186 @@
+@import "@stickearncom/scstyles/base/variables.scss";
+@import "@stickearncom/scstyles/base/font-mixins.scss";
+@import "@stickearncom/scstyles/base/mixin.scss";
+@import "@stickearncom/scstyles/base/colors-variables.scss";
+
+.sc-table {
+  &.ant-table-wrapper {
+    .ant-table-content {
+      .ant-table-thead {
+        tr > th {
+          background: $gray-1;
+          color: $gray-10;
+          font-size: 12px;
+          border-top: 1px solid $gray-2;
+          border-bottom: 1px solid $gray-2;
+        }
+
+        tr:first-child > th:first-child {
+          @include border-radius-top-left(6px);
+          border-left: 1px solid $gray-2;
+        }
+        tr:last-child > th:last-child {
+          @include border-radius-top-right(6px);
+          border-right: 1px solid $gray-2;
+        }
+      }
+
+      .ant-table-tbody {
+        tr > td {
+          border-bottom: 1px solid $gray-2;
+        }
+        tr > td:first-child {
+          border-left: 1px solid $gray-2;
+        }
+        tr > td:last-child {
+          border-right: 1px solid $gray-2;
+        }
+        tr:last-child {
+          td:first-child {
+            @include border-radius-bottom-left(6px);
+          }
+          td:last-child {
+            @include border-radius-bottom-right(6px);
+          }
+        }
+      }
+
+      .ant-checkbox-wrapper {
+        .ant-checkbox {
+          &:hover {
+            .ant-checkbox-inner {
+              border-color: $purple-6;
+            }
+          }
+          &.ant-checkbox-indeterminate {
+            .ant-checkbox-inner {
+              &::after {
+                background-color: $purple-6;
+                width: 12px;
+                height: 12px;
+                @include border-radius(3px);
+              }
+            }
+          }
+          &.ant-checkbox-checked {
+            &:after {
+              border: 2px solid $purple-6;
+              @include border-radius(6px);
+            }
+            .ant-checkbox-inner {
+              background-color: $purple-6;
+              border-color: $purple-6;
+
+              &:after {
+                top: 45%;
+                left: 27%;
+                height: 10.142857px;
+              }
+            }
+          }
+          &.ant-checkbox-disabled {
+            .ant-checkbox-inner {
+              background-color: $gray-2;
+              border-color: $gray-4;
+            }
+          }
+          .ant-checkbox-inner {
+            width: 24px;
+            height: 24px;
+            border: 2px solid $gray-2;
+            @include border-radius(6px);
+          }
+        }
+      }
+
+      .ant-table-row {
+        .ant-radio-wrapper {
+          .ant-radio {
+            &.ant-radio-checked {
+              &::after {
+                border-color: $purple-6;
+              }
+              .ant-radio-inner {
+                border-color: $purple-6;
+                &::after {
+                  background-color: $purple-6;
+                  top: 4px;
+                  left: 4px;
+                  width: 12px;
+                  height: 12px;
+                }
+              }
+            }
+            &.ant-radio-disabled {
+              .ant-radio-inner {
+                border-color: $gray-4;
+                background-color: $gray-2;
+              }
+            }
+            .ant-radio-inner {
+              height: 24px;
+              width: 24px;
+              border: 2px solid $gray-2;
+
+              &:after {
+                top: 4px;
+                left: 4px;
+                width: 12px;
+                height: 12px;
+                background-color: $purple-6;
+              }
+            }
+
+            .ant-radio-input:focus + .ant-radio-inner {
+              @include box-shadow(0 0 0 3px rgb(127 67 196 / 8%));
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .ant-table-bordered .ant-table-thead > tr > th,
+  .ant-table-bordered .ant-table-tbody > tr > td {
+    border-right: 1px solid $gray-2;
+  }
+
+  .ant-table-bordered .ant-table-header > table,
+  .ant-table-bordered .ant-table-body > table,
+  .ant-table-bordered .ant-table-fixed-left table,
+  .ant-table-bordered .ant-table-fixed-right table {
+    border: none;
+  }
+
+  .ant-table-thead
+    > tr
+    > th
+    .ant-table-column-sorter
+    .ant-table-column-sorter-inner
+    .ant-table-column-sorter-up,
+  .ant-table-thead
+    > tr
+    > th
+    .ant-table-column-sorter
+    .ant-table-column-sorter-inner
+    .ant-table-column-sorter-down,
+  .ant-table-thead > tr > th .anticon-filter,
+  .ant-table-thead > tr > th .ant-table-filter-icon {
+    color: $gray-8;
+  }
+  .ant-table-thead
+    > tr
+    > th
+    .ant-table-column-sorter
+    .ant-table-column-sorter-inner
+    .ant-table-column-sorter-up.on,
+  .ant-table-thead
+    > tr
+    > th
+    .ant-table-column-sorter
+    .ant-table-column-sorter-inner
+    .ant-table-column-sorter-down.on,
+  .ant-table-thead > tr > th .ant-table-filter-selected.anticon {
+    color: $purple-6;
+  }
+}

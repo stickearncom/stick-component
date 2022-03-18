@@ -13,14 +13,13 @@
       @change="handleTableChange"
     >
       <template
-        v-for="col in ['name', 'age', 'address', 'tags', 'action']"
+        v-for="col in ['name', 'gender', 'email']"
         :slot="col"
         slot-scope="{ text, record }"
       >
-        {{ handleTableChange(record) }}
         <div :key="col" class="cell">
           <template v-if="col === 'name'">
-            <a>{{ record.name.first || '-' }}</a>
+            <a>{{ record.name.first }} {{ record.name.last }}</a>
           </template>
           <template v-else>
             <span>{{ text || '-' }}</span>
@@ -31,9 +30,10 @@
 
     <div class="w-full text-right mt-4">
       <SCPagination
+        :disabled="loading"
         :current="query.page"
         :total="total"
-        :page-size="query.pageSize"
+        :page-size="query.results"
         show-size-changer
         show-quick-jumper
         @change="handleChangePagination"
@@ -52,6 +52,7 @@ const columns = [
   {
     title: 'Name',
     dataIndex: 'name',
+    key: 'name',
     sorter: true,
     width: '20%',
     scopedSlots: { customRender: 'name' }
@@ -59,15 +60,19 @@ const columns = [
   {
     title: 'Gender',
     dataIndex: 'gender',
+    key: 'gender',
     filters: [
       { text: 'Male', value: 'male' },
       { text: 'Female', value: 'female' }
     ],
-    width: '20%'
+    width: '20%',
+    scopedSlots: { customRender: 'gender' }
   },
   {
     title: 'Email',
-    dataIndex: 'email'
+    dataIndex: 'email',
+    key: 'email',
+    scopedSlots: { customRender: 'email' }
   }
 ]
 
@@ -94,7 +99,9 @@ export default {
       total: 200,
       query: {
         page: 1,
-        pageSize: 10
+        results: 10,
+        sortField: '',
+        sortOrder: ''
       },
       loading: false
     }
@@ -105,13 +112,18 @@ export default {
   methods: {
     handleTableChange(_, filters, sorter) {
       console.log({ filters, sorter })
+      this.query.sortField = sorter.field
+      this.query.sortOrder = sorter.order
+      this.fetch()
     },
     handleChangePagination(value) {
-      console.log('first', value)
       this.query.page = value
+      this.fetch()
     },
-    onShowSizeChange(current, pageSize) {
-      console.log({ current, pageSize })
+    onShowSizeChange(_, pageSize) {
+      this.query.results = pageSize
+      this.query.page = 1
+      this.fetch()
     },
     fetch() {
       this.loading = true
@@ -119,15 +131,12 @@ export default {
         results: 10,
         ...this.query
       }).then((res) => {
-        console.log({ res })
-        this.data = res.results.map((result) => {
-          result.name = `${result.name.first} ${result.name.last}`
-          return result
-        })
+        this.data = res.results
         this.query.page = res.page
         this.loading = false
       })
     }
   }
+
 }
 </script>
