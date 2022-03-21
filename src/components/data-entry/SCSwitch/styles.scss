@@ -1,0 +1,62 @@
+@import "@stickearncom/scstyles/base/variables.scss";
+@import "@stickearncom/scstyles/base/font-mixins.scss";
+@import "@stickearncom/scstyles/base/mixin.scss";
+@import "@stickearncom/scstyles/base/colors-variables.scss";
+
+.sc-switch {
+  &.ant-switch {
+    height: 24px;
+    background-color: $gray-1;
+
+    &:after {
+      top: 1.5px;
+      @include box-shadow(0px 2px 4px rgba(127, 67, 196, 0.2));
+    }
+
+    &:focus {
+      @include box-shadow(0 0 0 2px rgba($color: $gray-1, $alpha: .2));
+    }
+
+    &.ant-switch-disabled:not(.ant-switch-loading):not(.ant-switch-checked):after {
+      background-color: $gray-4;
+    }
+
+    &.ant-switch-checked {
+      background-color: $purple-6;
+
+      &:active {
+        background-color: $purple-8;
+      }
+
+      &.ant-switch-disabled:not(.ant-switch-loading) {
+        background-color: $gray-4;
+      }
+    }
+
+    [ant-click-animating-without-extra-node="true"]::after,
+    .ant-click-animating-node {
+      @include box-shadow(0px 2px 4px rgba(127, 67, 196, 0.2));
+    }
+
+    &.ant-switch-small {
+      height: 18px;
+    }
+
+    .ant-switch-inner {
+      @include flexbox;
+      @include align-items(center);
+      i {
+        font-size: 12px;
+        font-weight: bold;
+      }
+    }
+
+    .ant-switch-loading .ant-switch-loading-icon {
+      color: $gray-4;
+    }
+
+    &.ant-switch-checked.ant-switch-loading .ant-switch-loading-icon {
+      color: $purple-6;
+    }
+  }
+}

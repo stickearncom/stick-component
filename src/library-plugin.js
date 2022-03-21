@@ -20,6 +20,9 @@ import SCSelect from './components/data-entry/SCSelect/index.vue'
 import SCSelectOption from './components/data-entry/SCSelect/SCSelectOption/index.vue'
 import SCMultiSelect from './components/data-entry/SCMultiSelect/index.vue'
 import SCTextarea from './components/data-entry/SCTextarea/index.vue'
+import SCSwitch from './components/data-entry/SCSwitch/index.vue'
+import SCCheckbox from './components/data-entry/SCCheckbox/index.vue'
+import SCCheckboxGroup from './components/data-entry/SCCheckboxGroup/index.vue'
 
 // General
 import SCButton from './components/general/SCButton/index.vue'
@@ -44,6 +47,9 @@ const components = {
   SCSelectOption,
   SCMultiSelect,
   SCTextarea,
+  SCSwitch,
+  SCCheckbox,
+  SCCheckboxGroup,
   // General
   SCButton,
   // Navigation
