@@ -67,7 +67,7 @@ export default {
   },
   watch: {
     checked(newVal) {
-      this.currentValue = newVal
+      this.checked = newVal
     }
   }
 }

@@ -53,10 +53,6 @@ export default {
     onChange(checkedList) {
       this.indeterminate = !!checkedList.length && checkedList.length < plainOptions.length
       this.checkAll = checkedList.length === plainOptions.length
-      console.log({
-        indeterminate: this.indeterminate,
-        checkAll: this.checkAll
-      })
     },
     onCheckAllChange(e) {
       Object.assign(this, {
