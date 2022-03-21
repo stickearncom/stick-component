@@ -115,6 +115,11 @@ export default {
         'sc-input-disabled': this.disabled
       }
     }
+  },
+  watch: {
+    value(newVal) {
+      this.currentValue = newVal
+    }
   }
 }
 </script>

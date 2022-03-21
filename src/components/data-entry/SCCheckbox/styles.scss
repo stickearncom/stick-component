@@ -20,6 +20,9 @@
       }
 
       &.ant-checkbox-checked {
+        &.ant-checkbox-indeterminate {
+          background-color: $white-1;
+        }
         .ant-checkbox-inner {
           background-color: $purple-6;
         }

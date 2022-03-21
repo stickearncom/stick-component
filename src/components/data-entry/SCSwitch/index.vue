@@ -88,6 +88,11 @@ export default {
         [`sc-switch-${this.size}`]: true
       }
     }
+  },
+  watch: {
+    checked(newVal) {
+      this.currentValue = newVal
+    }
   }
 }
 </script>

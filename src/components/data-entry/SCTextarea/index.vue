@@ -93,6 +93,11 @@ export default {
     dataCount() {
       return `${this.value?.length ?? 0} / ${this.maxLength || 0}`
     }
+  },
+  watch: {
+    value(newVal) {
+      this.currentValue = newVal
+    }
   }
 }
 </script>

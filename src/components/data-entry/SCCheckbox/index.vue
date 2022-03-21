@@ -64,6 +64,11 @@ export default {
         'sc-checkbox-disabled': this.disabled
       }
     }
+  },
+  watch: {
+    checked(newVal) {
+      this.currentValue = newVal
+    }
   }
 }
 </script>

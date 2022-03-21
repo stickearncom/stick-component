@@ -64,6 +64,11 @@ export default {
         'sc-checkbox-group-disabled': this.disabled
       }
     }
+  },
+  watch: {
+    value(newVal) {
+      this.currentValue = newVal
+    }
   }
 }
 </script>

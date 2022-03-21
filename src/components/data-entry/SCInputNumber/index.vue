@@ -107,6 +107,11 @@ export default {
         'sc-input-number-disabled': this.disabled
       }
     }
+  },
+  watch: {
+    value(newVal) {
+      this.currentValue = newVal
+    }
   }
 }
 </script>
