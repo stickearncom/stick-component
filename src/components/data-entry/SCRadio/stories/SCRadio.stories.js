@@ -1,9 +1,9 @@
-import SCSwitch from '../index.vue'
+import SCRadio from '../index.vue'
 import SCRadioBasic from '../example/SCRadioBasic.vue'
 
 export default {
   title: 'Data Entry/Radio',
-  component: SCSwitch,
+  component: SCRadio,
   argTypes: {
     size: { control: { type: 'select', options: ['default', 'small'] } }
   }

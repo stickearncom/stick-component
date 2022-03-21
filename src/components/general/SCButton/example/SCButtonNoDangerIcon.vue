@@ -256,9 +256,10 @@
 </template>
 
 <script>
-import SCRow from '@stickearncom/scrow'
-import SCCol from '@stickearncom/sccol'
-import SCIcon from '@stickearncom/scicon'
+/* eslint-disable import/no-extraneous-dependencies */
+import SCCol from '@/components/foundations/Layout/SCCol/index.vue'
+import SCRow from '@/components/foundations/Layout/SCRow/index.vue'
+import SCIcon from '@/components/foundations/SCIcon/index.vue'
 
 import SCButton from '../index.vue'
 

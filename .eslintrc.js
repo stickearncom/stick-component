@@ -177,6 +177,7 @@ module.exports = {
     'template-tag-spacing': 'error',
     'unicode-bom': 'error',
     'wrap-regex': 'off',
+    'no-duplicate-imports': 0,
 
     // VUE ESLINT
     'vue/max-attributes-per-line': ['error', {

@@ -13,9 +13,7 @@
           </legend>
 
           <div class="flex justify-around">
-            <SCSwitch default-checked @change="onChange" />
-
-            <SCSwitch default-checked size="small" @change="onChange" />
+            <SCRadio>Radio</SCRadio>
           </div>
         </fieldset>
       </div>
@@ -24,11 +22,11 @@
 </template>
 
 <script>
-import SCSwitch from '../index.vue'
+import SCRadio from '../index.vue'
 
 export default {
   components: {
-    SCSwitch
+    SCRadio
   },
   data() {
     return {}

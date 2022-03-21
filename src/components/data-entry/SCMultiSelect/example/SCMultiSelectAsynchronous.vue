@@ -174,7 +174,8 @@
 </template>
 
 <script>
-import SCIcon from '@stickearncom/scicon'
+/* eslint-disable import/no-extraneous-dependencies */
+import SCIcon from '@/components/foundations/SCIcon/index.vue'
 import SCMultiSelect from '../index.vue'
 import { ajaxFindCountry } from './countriesApi'
 

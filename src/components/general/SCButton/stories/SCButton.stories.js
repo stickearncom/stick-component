@@ -124,21 +124,7 @@ Default.parameters = {
       </SCCol>
     </SCRow>
   </div>
-</template>
-
-<script>
-import SCRow from '@stickearncom/scrow'
-import SCCol from '@stickearncom/sccol'
-import SCButton from '@stickearncom/scbutton'
-
-export default {
-  components: {
-    SCRow,
-    SCCol,
-    SCButton
-  }
-}
-</script>    
+</template>  
 `
     }
   }
@@ -293,21 +279,6 @@ Primary.parameters = {
     </SCRow>
   </div>
 </template>
-
-<script>
-import SCRow from '@stickearncom/scrow'
-import SCCol from '@stickearncom/sccol'
-
-import SCButton from '@stickearncom/scbutton'
-
-export default {
-  components: {
-    SCRow,
-    SCCol,
-    SCButton
-  }
-}
-</script>
 `
     }
   }
@@ -463,19 +434,7 @@ Dashed.parameters = {
   </div>
 </template>
 
-<script>
-import SCRow from '@stickearncom/scrow'
-import SCCol from '@stickearncom/sccol'
-import SCButton from '@stickearncom/scbutton'
-
-export default {
-  components: {
-    SCRow,
-    SCCol,
-    SCButton
-  }
-}
-</script>    
+<script>  
 `
     }
   }
@@ -630,21 +589,6 @@ Text.parameters = {
     </SCRow>
   </div>
 </template>
-
-<script>
-import SCRow from '@stickearncom/scrow'
-import SCCol from '@stickearncom/sccol'
-
-import SCButton from '@stickearncom/scbutton'
-
-export default {
-  components: {
-    SCRow,
-    SCCol,
-    SCButton
-  }
-}
-</script>
 `
     }
   }
@@ -919,21 +863,6 @@ Icon.parameters = {
 </template>
 
 <script>
-import SCRow from '@stickearncom/scrow'
-import SCCol from '@stickearncom/sccol'
-import SCIcon from '@stickearncom/scicon'
-
-import SCButton from '@stickearncom/scbutton'
-
-export default {
-  components: {
-    SCRow,
-    SCCol,
-    SCButton,
-    SCIcon
-  }
-}
-</script>    
 `
     }
   }
@@ -1087,22 +1016,7 @@ Link.parameters = {
       </SCCol>
     </SCRow>
   </div>
-</template>
-
-<script>
-import SCRow from '@stickearncom/scrow'
-import SCCol from '@stickearncom/sccol'
-
-import SCButton from '@stickearncom/scbutton'
-
-export default {
-  components: {
-    SCRow,
-    SCCol,
-    SCButton
-  }
-}
-</script>    
+</template>   
 `
     }
   }

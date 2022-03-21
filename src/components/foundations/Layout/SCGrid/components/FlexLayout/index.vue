@@ -216,8 +216,9 @@
 </template>
 
 <script>
-import SCRow from '@stickearncom/scrow'
-import SCCol from '@stickearncom/sccol'
+/* eslint-disable import/no-extraneous-dependencies */
+import SCCol from '@/components/foundations/Layout/SCCol/index.vue'
+import SCRow from '@/components/foundations/Layout/SCRow/index.vue'
 
 export default {
   name: 'FlexLayout',

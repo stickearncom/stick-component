@@ -103,7 +103,7 @@
 </template>
 
 <script>
-import SCIcon from '@stickearncom/scicon'
+import SCIcon from '@/components/foundations/SCIcon/index.vue'
 import SCSwitch from '../index.vue'
 
 export default {

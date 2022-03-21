@@ -9,10 +9,6 @@
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "@stickearncom/sccol": "^0.1.6",
-    "@stickearncom/scrow": "^0.1.4"
-  },
   "repository": {
     "type": "git",
     "url": "ssh://git@github.com:stickearncom/stick-component.git"

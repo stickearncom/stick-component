@@ -28,7 +28,8 @@
 </template>
 
 <script>
-import SCIcon from '@stickearncom/scicon'
+/* eslint-disable import/no-extraneous-dependencies */
+import SCIcon from '@/components/foundations/SCIcon/index.vue'
 import SCSelect from '../index.vue'
 
 let index = 0

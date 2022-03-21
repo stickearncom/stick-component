@@ -44,7 +44,7 @@
 </template>
 
 <script>
-import SCPagination from '@stickearncom/scpagination'
+import SCPagination from '../../../navigation/SCPagination/index.vue'
 
 import SCTable from '../index.vue'
 

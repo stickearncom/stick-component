@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import SCButton from '@/components/SCButton/index.vue'
+import SCButton from '@/components/general/SCButton/index.vue'
 
 export default {
   name: 'App',
