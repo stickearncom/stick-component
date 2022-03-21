@@ -39,7 +39,7 @@
   },
   "dependencies": {
     "@stickearncom/scbutton": "next",
-    "@stickearncom/sccheckbox": "0.0.1",
+    "@stickearncom/sccheckbox": "next",
     "@stickearncom/sccol": "next",
     "@stickearncom/scicon": "next",
     "@stickearncom/scpagination": "next",

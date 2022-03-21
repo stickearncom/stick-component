@@ -1,36 +1,30 @@
 <template>
   <div>
     <h4 class="font-medium-lg">
-      Checkbox:
+      Checkbox group basic:
     </h4>
     <hr class="mb-4">
 
     <div class="flex">
-      <div class="w-4/12">
-        <fieldset class="w-11/12">
-          <legend class="font-medium-md">
-            Check all
-          </legend>
-
-          <SCCheckbox
-            class="pb-2 mb-2 border-b border-gray-400 border-solid w-full"
-            :indeterminate="indeterminate"
-            :checked="checkAll"
-            @change="onCheckAllChange"
-          >
-            Check all
-          </SCCheckbox>
-          <div class="flex">
-            <SCCheckboxGroup v-model="checkedList" :options="plainOptions" @change="onChange" />
-          </div>
-        </fieldset>
+      <div class="w-6/12">
+        <SCCheckbox
+          class="pb-2 mb-2 border-b border-gray-400 border-solid w-full"
+          :indeterminate="indeterminate"
+          :checked="checkAll"
+          @change="onCheckAllChange"
+        >
+          Check all
+        </SCCheckbox>
+        <div class="flex">
+          <SCCheckboxGroup v-model="checkedList" :options="plainOptions" @change="onChange" />
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import SCCheckbox from '@stickearncom/sccheckbox'
+import SCCheckbox from '../../SCCheckbox/index.vue'
 import SCCheckboxGroup from '../index.vue'
 
 const plainOptions = ['Apple', 'Pear', 'Orange']
@@ -54,11 +48,11 @@ export default {
       this.indeterminate = !!checkedList.length && checkedList.length < plainOptions.length
       this.checkAll = checkedList.length === plainOptions.length
     },
-    onCheckAllChange(e) {
+    onCheckAllChange(value) {
       Object.assign(this, {
-        checkedList: e.target.checked ? plainOptions : [],
+        checkedList: value ? plainOptions : [],
         indeterminate: false,
-        checkAll: e.target.checked
+        checkAll: value
       })
     }
   }

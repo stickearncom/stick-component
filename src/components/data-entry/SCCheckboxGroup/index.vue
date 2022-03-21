@@ -9,6 +9,9 @@
     :options="options"
     @change="$emit('change', $event)"
   >
+    <template slot="label" slot-scope="{ value: current }">
+      <slot name="label" :value="current" />
+    </template>
     <slot />
   </a-checkbox-group>
 </template>
@@ -54,7 +57,7 @@ export default {
   },
   data() {
     return {
-      currentValue: this.value || this.defaultValue
+      currentValue: this.value.length ? this.value : this.defaultValue
     }
   },
   computed: {
@@ -67,6 +70,9 @@ export default {
   },
   watch: {
     value(newVal) {
+      this.currentValue = newVal
+    },
+    defaultValue(newVal) {
       this.currentValue = newVal
     }
   }

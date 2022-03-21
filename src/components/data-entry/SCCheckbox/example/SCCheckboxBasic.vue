@@ -62,9 +62,9 @@ export default {
     }
   },
   methods: {
-    onChange(e) {
-      this.indeterminate = !e.target.checked
-      console.log(`checked = ${e.target.checked}`)
+    onChange(value) {
+      this.indeterminate = !value
+      console.log(`checked = ${value}`)
     }
   }
 }

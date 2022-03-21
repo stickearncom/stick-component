@@ -7,7 +7,7 @@
     :default-checked="defaultChecked"
     :disabled="disabled"
     :indeterminate="indeterminate"
-    @change="$emit('change', $event)"
+    @change="$emit('change', $event.target.checked)"
   >
     <slot />
   </a-checkbox>
@@ -67,7 +67,6 @@ export default {
   },
   watch: {
     checked(newVal) {
-      console.log({ newVal })
       this.currentValue = newVal
     }
   }
