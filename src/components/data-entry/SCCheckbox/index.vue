@@ -67,7 +67,8 @@ export default {
   },
   watch: {
     checked(newVal) {
-      this.checked = newVal
+      console.log({ newVal })
+      this.currentValue = newVal
     }
   }
 }
