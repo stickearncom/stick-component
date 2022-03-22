@@ -60,16 +60,26 @@ For more information about how to usage for more components, please read documen
 
 ### More Components
 ___
-  - SCIcon
-  - SCCol
-  - SCRow
-  - SCSpace
-  - SCInput
-  - SCInputNumber
-  - SCInputSearch
-  - SCSelect
-  - SCTextarea
-  - SCButton
+- SCIcon
+- SCCol
+- SCRow
+- SCSpace
+- SCTable
+- SCInput
+- SCInputNumber
+- SCInputSearch
+- SCSelect
+- SCSelectOption
+- SCMultiSelect
+- SCTextarea
+- SCSwitch
+- SCCheckbox
+- SCCheckboxGroup
+- SCRadio
+- SCRadioButton
+- SCRadioGroup
+- SCButton
+- SCPagination
 
 ### Authors
 ___

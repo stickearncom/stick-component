@@ -1,0 +1,90 @@
+@import "@stickearncom/scstyles/base/variables.scss";
+@import "@stickearncom/scstyles/base/font-mixins.scss";
+@import "@stickearncom/scstyles/base/mixin.scss";
+@import "@stickearncom/scstyles/base/colors-variables.scss";
+
+.sc-radio-button {
+  &.ant-radio-button-wrapper {
+    @include font-medium-sm;
+    border: 2px solid $gray-2;
+    background: $gray-1;
+    height: 46px;
+    display: inline-flex;
+    @include align-items(center);
+    color: $gray-8;
+    padding: 0 24px;
+
+    &:focus-within {
+      box-shadow: none;
+    }
+    &:first-child {
+      @include border-radius(6px 0 0 6px);
+      border-right-color: transparent;
+    }
+    &:last-child {
+      @include border-radius(0 6px 6px 0);
+      border-left-color: transparent;
+    }
+    &:not(:first-child)::before {
+      width: 2px;
+      background-color: $gray-2;
+      transition: none;
+    }
+    &:not(:last-child) {
+      border-right-color: transparent;
+    }
+
+    &.ant-radio-button-wrapper-checked {
+      &:not(.ant-radio-button-wrapper-disabled) {
+        color: $purple-6;
+        border-color: $purple-6;
+        background-color: $purple-1;
+
+        &::before {
+          width: 2px;
+          transition: none;
+          left: -2px;
+        }
+
+        &:first-child {
+          border-right-color: transparent;
+          &:active {
+            border-right-color: transparent;
+          }
+        }
+        &:last-child {
+          border-left-color: transparent;
+          &:active {
+            border-left-color: transparent;
+          }
+        }
+        &:not(:first-child):not(:last-child) {
+          border-left-color: transparent;
+          border-right-color: transparent;
+          
+          &:active {
+            border-left-color: transparent;
+            border-right-color: transparent;
+            
+          }
+        }
+        &:active {
+          color: $purple-6;
+          border-color: $purple-6;
+          background-color: $purple-1;
+        }
+      }
+    }
+    
+    &.ant-radio-button-wrapper-disabled {
+      background-color: $gray-2;
+      border-color: $gray-2;
+      color: $gray-4;
+      &.ant-radio-button-wrapper-checked {
+        background-color: $gray-2;
+        border-color: $gray-2;
+        color: $gray-4;
+      }
+    }
+  }
+}

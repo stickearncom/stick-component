@@ -1,7 +1,6 @@
 <template>
-  <a-radio
+  <a-radio-button
     :id="id"
-    v-model="currentValue"
     :class="classes"
     :auto-focus="autoFocus"
     :default-checked="defaultChecked"
@@ -10,7 +9,7 @@
     @change="$emit('change', $event)"
   >
     <slot />
-  </a-radio>
+  </a-radio-button>
 </template>
 
 <script>
@@ -18,9 +17,9 @@
 import { Radio } from 'ant-design-vue'
 
 export default {
-  name: 'SCRadio',
+  name: 'SCRadioButton',
   components: {
-    'a-radio': Radio
+    'a-radio-button': Radio.Button
   },
   model: {
     prop: 'checked',
@@ -60,7 +59,7 @@ export default {
   computed: {
     classes() {
       return {
-        'sc-radio': true
+        'sc-radio-button': true
       }
     }
   },

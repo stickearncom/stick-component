@@ -23,6 +23,9 @@ import SCTextarea from './components/data-entry/SCTextarea/index.vue'
 import SCSwitch from './components/data-entry/SCSwitch/index.vue'
 import SCCheckbox from './components/data-entry/SCCheckbox/index.vue'
 import SCCheckboxGroup from './components/data-entry/SCCheckboxGroup/index.vue'
+import SCRadio from './components/data-entry/SCRadio/index.vue'
+import SCRadioButton from './components/data-entry/SCRadioButton/index.vue'
+import SCRadioGroup from './components/data-entry/SCRadioGroup/index.vue'
 
 // General
 import SCButton from './components/general/SCButton/index.vue'
@@ -50,6 +53,9 @@ const components = {
   SCSwitch,
   SCCheckbox,
   SCCheckboxGroup,
+  SCRadio,
+  SCRadioButton,
+  SCRadioGroup,
   // General
   SCButton,
   // Navigation

@@ -3,10 +3,7 @@ import SCRadioBasic from '../example/SCRadioBasic.vue'
 
 export default {
   title: 'Data Entry/Radio',
-  component: SCRadio,
-  argTypes: {
-    size: { control: { type: 'select', options: ['default', 'small'] } }
-  }
+  component: SCRadio
 }
 
 const Template = (args, { argTypes }) => ({
@@ -23,53 +20,43 @@ Default.parameters = {
       code: `<template>
   <div>
     <h4 class="font-medium-lg">
-      Space basic:
+      Radio:
     </h4>
     <hr class="mb-4">
 
-    <div class="w-full block">
-      <SCSwitch class="bg-blue-100">
-        <div class="px-4 py-6 bg-yellow-300">
-          Display 1
-        </div>
-        <div class="px-4 py-6 bg-red-300">
-          Display 2
-        </div>
-        <div class="px-4 py-6 bg-purple-300">
-          Display 3
-        </div>
-      </SCSwitch>
-    </div>
+    <div class="flex">
+      <div class="w-4/12">
+        <fieldset class="w-11/12">
+          <legend class="font-medium-md">
+            Basic
+          </legend>
 
-    <div class="mt-6 w-full block">
-      <SCSwitch class="bg-blue-100" size="large">
-        <div class="px-4 py-6 bg-yellow-300">
-          Display 1
-        </div>
-        <div class="px-4 py-6 bg-red-300">
-          Display 2
-        </div>
-        <div class="px-4 py-6 bg-purple-300">
-          Display 3
-        </div>
-      </SCSwitch>
-    </div>
+          <div class="flex justify-between">
+            <SCRadio>Radio</SCRadio>
+          </div>
+        </fieldset>
+      </div>
 
-    <div class="mt-6 w-full block">
-      <SCSwitch class="bg-blue-100" :size="64">
-        <div class="px-4 py-6 bg-yellow-300">
-          Display 1
-        </div>
-        <div class="px-4 py-6 bg-red-300">
-          Display 2
-        </div>
-        <div class="px-4 py-6 bg-purple-300">
-          Display 3
-        </div>
-      </SCSwitch>
+      <div class="w-4/12">
+        <fieldset class="w-11/12">
+          <legend class="font-medium-md">
+            Disabled
+          </legend>
+
+          <div class="flex justify-between">
+            <SCRadio disabled>
+              Radio
+            </SCRadio>
+            <SCRadio disabled checked>
+              Radio
+            </SCRadio>
+          </div>
+        </fieldset>
+      </div>
     </div>
   </div>
-</template>`
+</template>
+`
     }
   }
 }

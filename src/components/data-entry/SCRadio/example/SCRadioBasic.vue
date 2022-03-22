@@ -6,14 +6,31 @@
     <hr class="mb-4">
 
     <div class="flex">
-      <div class="w-3/12">
+      <div class="w-4/12">
         <fieldset class="w-11/12">
           <legend class="font-medium-md">
             Basic
           </legend>
 
-          <div class="flex justify-around">
+          <div class="flex justify-between">
             <SCRadio>Radio</SCRadio>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="w-4/12">
+        <fieldset class="w-11/12">
+          <legend class="font-medium-md">
+            Disabled
+          </legend>
+
+          <div class="flex justify-between">
+            <SCRadio disabled>
+              Radio
+            </SCRadio>
+            <SCRadio disabled checked>
+              Radio
+            </SCRadio>
           </div>
         </fieldset>
       </div>

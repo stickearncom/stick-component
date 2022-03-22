@@ -3,8 +3,8 @@
 @import "@stickearncom/scstyles/base/mixin.scss";
 @import "@stickearncom/scstyles/base/colors-variables.scss";
 
-.sc-radio {
-  &.ant-radio-wrapper {
+.sc-radio-group {
+  .ant-radio-wrapper {
     display: inline-flex;
     @include align-items(center);
     @include font-regular-sm;
@@ -33,7 +33,6 @@
         &::after {
           background-color: $gray-4;
         }
-
       }
       + span {
         color: $gray-4;
@@ -41,7 +40,35 @@
     }
   }
 
-  &.ant-radio-wrapper:hover .ant-radio, .ant-radio:hover .ant-radio-inner, .ant-radio-input:focus + .ant-radio-inner {
+  .ant-radio-wrapper:hover .ant-radio,
+  .ant-radio:hover .ant-radio-inner,
+  .ant-radio-input:focus + .ant-radio-inner {
     border-color: $purple-6;
+  }
+
+  &.ant-radio-group-solid {
+    .sc-radio-button.ant-radio-button-wrapper-checked {
+      &:not(.ant-radio-button-wrapper-disabled) {
+        background-color: $purple-6;
+        color: $white-1;
+      }
+      &:not(:first-child)::before {
+        background-color: $purple-6;
+        transition: background-color 0.3s;
+      }
+    }
+  }
+  &.ant-radio-group-small {
+    .sc-radio-button.ant-radio-button-wrapper {
+      height: 34px;
+      padding: 0 16px;
+    }
+  }
+  &.ant-radio-group-large {
+    .sc-radio-button.ant-radio-button-wrapper {
+      @include font-medium-md;
+      height: 56px;
+      padding: 0 30px;
+    }
   }
 }
