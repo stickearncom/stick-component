@@ -1,6 +1,6 @@
 {
   "name": "@stickearncom/scbutton",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "publishConfig": {
     "access": "public"
   },
@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@stickearncom/scicon": "^0.1.6",
+    "@stickearncom/scicon": "^0.1.7",
     "@stickearncom/scstyles": "^0.1.8",
     "ant-design-vue": "^1.7.8"
   },
