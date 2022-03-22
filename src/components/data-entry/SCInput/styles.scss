@@ -190,6 +190,24 @@
         &:last-child {
           @include border-radius-right(6px);
         }
+
+        .sc-select.ant-select {
+          .ant-select-selection {
+            background-color: $gray-2;
+
+            &:hover {
+              border-color: transparent;
+            }
+          }
+        }
+        .sc-select.ant-select-focused:not(.sc-select-disabled) .ant-select-selection {
+          @include box-shadow(none);
+        }
+
+        .sc-select.ant-select-open .ant-select-selection,
+        .sc-select.ant-select-focused .ant-select-selection {
+          color: inherit;
+        }
       }
 
       .ant-input {
