@@ -65,6 +65,7 @@ ___
 - SCRow
 - SCSpace
 - SCTable
+- SCTag
 - SCInput
 - SCInputNumber
 - SCInputSearch
