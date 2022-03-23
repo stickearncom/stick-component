@@ -1,6 +1,6 @@
 {
   "name": "@stickearncom/stickcomponent",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "private": false,
   "license": "MIT",
   "publishConfig": {
@@ -49,7 +49,8 @@
     "postcss": "^7",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.17",
     "vue": "^2.6.11",
-    "vue-multiselect": "^2.1.6"
+    "vue-multiselect": "^2.1.6",
+    "vue-router": "^4.0.14"
   },
   "devDependencies": {
     "@babel/core": "^7.16.7",

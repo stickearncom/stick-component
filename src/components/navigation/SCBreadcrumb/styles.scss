@@ -1,0 +1,11 @@
+@import "@stickearncom/scstyles/base/variables.scss";
+@import "@stickearncom/scstyles/base/font-mixins.scss";
+@import "@stickearncom/scstyles/base/mixin.scss";
+@import "@stickearncom/scstyles/base/colors-variables.scss";
+
+.sc-breadcrumb {
+  .sc-breadcrumb__container {
+    @include flexbox;
+    @include align-items(center);
+  }
+}
