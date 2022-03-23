@@ -4,8 +4,30 @@
 @import "@stickearncom/scstyles/base/colors-variables.scss";
 
 .sc-breadcrumb {
-  .sc-breadcrumb__container {
-    @include flexbox;
-    @include align-items(center);
+  &.ant-breadcrumb {
+    @include font-medium-xs;
+    color: $gray-4;
+
+    span {
+      display: inline-flex;
+      @include align-items(center);
+    }
+    
+    .ant-breadcrumb-link {
+      line-height: 0;
+    }
+    a {
+      color: $gray-4;
+
+      &:hover {
+        color: $purple-6;
+        text-decoration: underline;
+      }
+    }
+    .ant-breadcrumb-separator {
+      color: $gray-8;
+      font-size: 16px;
+      line-height: 0;
+    }
   }
 }

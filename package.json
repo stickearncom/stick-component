@@ -2,11 +2,18 @@
   "name": "@stickearncom/stickcomponent",
   "version": "0.3.3",
   "private": false,
-  "license": "MIT",
-  "publishConfig": {
-    "access": "public"
-  },
   "author": "stickearncom",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "test:unit": "vue-cli-service test:unit",
+    "lint": "vue-cli-service lint",
+    "build-storybook": "build-storybook",
+    "build:lib": "vue-cli-service build --target lib --name stickcomponent ./src/library-plugin.js",
+    "publish:lib": "npm run build:lib && npm publish",
+    "start": "npm run storybook",
+    "storybook": "start-storybook -p 6006"
+  },
   "main": "./dist/stickcomponent.common.js",
   "files": [
     "dist/*",
@@ -15,28 +22,6 @@
     "*.json",
     "*.js"
   ],
-  "keywords": [
-    "vuejs",
-    "vue-cli"
-  ],
-  "workspaces": [
-    "src/components/*",
-    "src/components/*/*",
-    "src/components/*/*/*",
-    "src/styles/*",
-    "src/styles/**"
-  ],
-  "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "build:lib": "vue-cli-service build --target lib --name stickcomponent ./src/library-plugin.js",
-    "test:unit": "vue-cli-service test:unit",
-    "lint": "vue-cli-service lint",
-    "build-storybook": "build-storybook",
-    "start": "npm run storybook",
-    "storybook": "start-storybook -p 6006",
-    "publish:lib": "npm run build:lib && npm publish"
-  },
   "dependencies": {
     "@stickearncom/scicon": "^0.1.6",
     "@stickearncom/scstyles": "^0.1.8",
@@ -61,6 +46,7 @@
     "@testing-library/vue": "^5.8.2",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-plugin-router": "^4.5.17",
     "@vue/cli-plugin-unit-jest": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
     "@vue/eslint-config-airbnb": "^5.0.2",
@@ -85,9 +71,24 @@
     "componentsDefaultDirectory": "components/{name}",
     "packageManager": "npm"
   },
+  "keywords": [
+    "vuejs",
+    "vue-cli"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "readme": "ERROR: No README data found!",
   "repository": {
     "type": "git",
     "url": "ssh://git@github.com:stickearncom/stick-component.git"
-  }
+  },
+  "workspaces": [
+    "src/components/*",
+    "src/components/*/*",
+    "src/components/*/*/*",
+    "src/styles/*",
+    "src/styles/**"
+  ]
 }

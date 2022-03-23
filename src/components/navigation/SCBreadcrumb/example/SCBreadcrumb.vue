@@ -13,7 +13,20 @@
           </legend>
 
           <div class="flex justify-between">
-            <SCBreadcrumb :routes="routes" />
+            <SCBreadcrumb :routes="routes">
+              <template slot="itemRender" slot-scope="props">
+                <span v-if="routes.indexOf(props.route) === routes.length - 1">
+                  {{ props.route.breadcrumbName }}
+                </span>
+                <a v-else :href="`${props.paths}`">
+                  {{ props.route.breadcrumbName }}
+                </a>
+              </template>
+
+              <template slot="separator">
+                <SCIcon type="angle-right-b-solid" />
+              </template>
+            </SCBreadcrumb>
           </div>
         </fieldset>
       </div>
@@ -23,36 +36,33 @@
 
 <script>
 import SCBreadcrumb from '../index.vue'
+import SCIcon from '../../../foundations/SCIcon/index.vue'
 
 export default {
   components: {
-    SCBreadcrumb
+    SCBreadcrumb,
+    SCIcon
   },
   data() {
     return {
       routes: [
         {
-          path: '/home',
-          label: 'Home'
+          path: 'home',
+          breadcrumbName: 'Home'
         },
         {
-          path: '/application-center',
-          label: 'Application Center'
+          path: 'application-center',
+          breadcrumbName: 'Application Center'
         },
         {
-          path: '/application-list',
-          label: 'Application list'
+          path: 'application-list',
+          breadcrumbName: 'Application list'
         },
         {
-          path: '/application',
-          label: 'Application'
+          path: 'application',
+          breadcrumbName: 'Application'
         }
       ]
-    }
-  },
-  methods: {
-    onChange(checked) {
-      console.log(`a-switch to ${checked}`)
     }
   }
 }

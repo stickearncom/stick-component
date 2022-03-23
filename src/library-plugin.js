@@ -33,6 +33,7 @@ import SCButton from './components/general/SCButton/index.vue'
 
 // Navigation
 import SCPagination from './components/navigation/SCPagination/index.vue'
+import SCBreadcrumb from './components/navigation/SCBreadcrumb/index.vue'
 
 const components = {
   // Foundations
@@ -61,7 +62,8 @@ const components = {
   // General
   SCButton,
   // Navigation
-  SCPagination
+  SCPagination,
+  SCBreadcrumb
 }
 
 const install = (Vue) => {

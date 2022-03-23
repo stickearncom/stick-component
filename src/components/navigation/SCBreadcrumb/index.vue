@@ -1,33 +1,37 @@
-<script src="https://unpkg.com/vue-router@4"></script>
-
 <template>
-  <div :id="id" :class="classes">
-    <ul class="sc-breadcrumb__container">
-      <li
-        v-for="(route, index) in routes"
-        :key="index"
-        class="sc-breadcrumb__item"
-        :class="route.active ? 'active' : null"
-      >
-        <router-link
-          :to="`${route.path}`"
-        >
-          {{ route.label }}
-        </router-link>
-
-        <span v-if="routes.length - 1 !== index" class="sc-breadcrumb__separator">
-          <i class="icon icon-angle-right" />
-        </span>
-      </li>
-    </ul>
-  </div>
+  <a-breadcrumb
+    :id="id"
+    :class="classes"
+    :params="params"
+    :routes="routes"
+    :separator="separator"
+    @change="$emit('change', $event)"
+  >
+    <template slot="itemRender" slot-scope="props">
+      <slot
+        name="itemRender"
+        :route="props.route"
+        :params="props.params"
+        :routes="props.routes"
+        :paths="props.paths"
+      />
+    </template>
+    <template slot="separator">
+      <slot name="separator" />
+    </template>
+    <slot />
+  </a-breadcrumb>
 </template>
 
 <script>
 /* eslint-disable no-undefined */
+import { Breadcrumb } from 'ant-design-vue'
 
 export default {
   name: 'SCBreadcrumb',
+  components: {
+    'a-breadcrumb': Breadcrumb
+  },
   props: {
     id: {
       type: String,
@@ -35,12 +39,15 @@ export default {
     },
     routes: {
       type: Array,
-      default: () => []
-    }
-  },
-  data() {
-    return {
-      currentValue: this.checked || this.defaultChecked
+      default: undefined
+    },
+    params: {
+      type: Object,
+      default: undefined
+    },
+    separator: {
+      type: String,
+      default: undefined
     }
   },
   computed: {
@@ -48,11 +55,6 @@ export default {
       return {
         'sc-breadcrumb': true
       }
-    }
-  },
-  watch: {
-    checked(newVal) {
-      this.currentValue = newVal
     }
   }
 }
