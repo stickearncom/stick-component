@@ -6,12 +6,12 @@
 }
 
 @font-face {
-  font-family: 'stickicons';
-  src:  url('./fonts/stickicons.eot?ofs2u8');
-  src:  url('./fonts/stickicons.eot?ofs2u8#iefix') format('embedded-opentype'),
-    url('./fonts/stickicons.ttf?ofs2u8') format('truetype'),
-    url('./fonts/stickicons.woff?ofs2u8') format('woff'),
-    url('./fonts/stickicons.svg?ofs2u8#stickicons') format('svg');
+  font-family: 'stickcomponenticons';
+  src:  url('./fonts/stickcomponenticons.eot?33xnoz');
+  src:  url('./fonts/stickcomponenticons.eot?33xnoz#iefix') format('embedded-opentype'),
+    url('./fonts/stickcomponenticons.ttf?33xnoz') format('truetype'),
+    url('./fonts/stickcomponenticons.woff?33xnoz') format('woff'),
+    url('./fonts/stickcomponenticons.svg?33xnoz#stickcomponenticons') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -19,7 +19,7 @@
 
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'stickicons' !important;
+  font-family: 'stickcomponenticons';
   speak: never;
   font-style: normal;
   font-weight: normal;
