@@ -191,6 +191,9 @@ export default {
       isLoading: false
     }
   },
+  mounted() {
+    this.asyncFind('')
+  },
   methods: {
     limitText(count) {
       return `and ${count} other countries`

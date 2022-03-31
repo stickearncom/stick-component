@@ -27,6 +27,7 @@ import SCCheckboxGroup from './components/data-entry/SCCheckboxGroup/index.vue'
 import SCRadio from './components/data-entry/SCRadio/index.vue'
 import SCRadioButton from './components/data-entry/SCRadioButton/index.vue'
 import SCRadioGroup from './components/data-entry/SCRadioGroup/index.vue'
+import SCTreeSelect from './components/data-entry/SCTreeSelect/index.vue'
 
 // General
 import SCButton from './components/general/SCButton/index.vue'
@@ -59,6 +60,7 @@ const components = {
   SCRadio,
   SCRadioButton,
   SCRadioGroup,
+  SCTreeSelect,
   // General
   SCButton,
   // Navigation
