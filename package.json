@@ -16,11 +16,7 @@
   },
   "main": "./dist/stickcomponent.common.js",
   "files": [
-    "dist/*",
-    "src/*",
-    "public/*",
-    "*.json",
-    "*.js"
+    "dist/*"
   ],
   "dependencies": {
     "@stickearncom/scicon": "^0.1.10",

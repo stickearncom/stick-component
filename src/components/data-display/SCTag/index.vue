@@ -19,7 +19,7 @@
 import { Tag } from 'ant-design-vue'
 
 export default {
-  name: 'SCRadio',
+  name: 'SCTag',
   components: {
     'a-tag': Tag
   },
