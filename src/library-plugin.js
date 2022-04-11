@@ -17,6 +17,7 @@ import SCTag from './components/data-display/SCTag/index.vue'
 import SCInput from './components/data-entry/SCInput/index.vue'
 import SCInputNumber from './components/data-entry/SCInputNumber/index.vue'
 import SCInputSearch from './components/data-entry/SCInputSearch/index.vue'
+import SCInputPassword from './components/data-entry/SCInputPassword/index.vue'
 import SCSelect from './components/data-entry/SCSelect/index.vue'
 import SCSelectOption from './components/data-entry/SCSelect/SCSelectOption/index.vue'
 import SCMultiSelect from './components/data-entry/SCMultiSelect/index.vue'
@@ -49,6 +50,7 @@ const components = {
   // Data Entry
   SCInput,
   SCInputNumber,
+  SCInputPassword,
   SCInputSearch,
   SCSelect,
   SCSelectOption,

@@ -1,0 +1,56 @@
+@import "@stickearncom/scstyles/base/variables.scss";
+@import "@stickearncom/scstyles/base/font-mixins.scss";
+@import "@stickearncom/scstyles/base/mixin.scss";
+@import "@stickearncom/scstyles/base/colors-variables.scss";
+
+.sc-input-password {
+  &.ant-input-password {
+    .ant-input {
+      font-family: $font-stack;
+      border: 2px solid $gray-1;
+      padding: 12px 14px;
+      height: 46px;
+      @include border-radius(6px);
+      @include font-regular-sm;
+  
+      &.ant-input-sm {
+        padding: 6px 14px;
+        height: 34px;
+      }
+  
+      &.ant-input-lg {
+        padding: 16px 14px;
+        height: 56px;
+        @include font-regular-md;
+      }
+  
+      &:not(:disabled) {
+        background-color: $gray-1;
+        color: $gray-8;
+  
+        &::placeholder {
+          color: $gray-3;
+        }
+  
+        &:hover,
+        &:active,
+        &:focus {
+          background-color: $white-1;
+          border-color: $purple-6;
+          border-right-width: 2px !important;
+        }
+        
+        &:active,
+        &:focus {
+          @include box-shadow(0px 0px 0px 2px rgba(127, 67, 196, 0.12));
+        }
+      }
+  
+      &:disabled {
+        background-color: $gray-2;
+        border-color: $gray-2;
+        color: $gray-4;
+      }
+    }
+  }
+}
