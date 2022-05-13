@@ -1,9 +1,9 @@
-import SCSwitch from '../index.vue'
+import SCCheckbox from '../index.vue'
 import SCCheckboxBasic from '../example/SCCheckboxBasic.vue'
 
 export default {
   title: 'Data Entry/Checkbox',
-  component: SCSwitch,
+  component: SCCheckbox,
   argTypes: {
     size: { control: { type: 'select', options: ['default', 'small'] } }
   }

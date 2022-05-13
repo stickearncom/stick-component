@@ -12,6 +12,7 @@ import SCSpace from './components/layouts/SCSpace/index.vue'
 // Data Display
 import SCTable from './components/data-display/SCTable/index.vue'
 import SCTag from './components/data-display/SCTag/index.vue'
+import SCTabs from './components/data-display/SCTabs/index.vue'
 
 // Data Entry
 import SCInput from './components/data-entry/SCInput/index.vue'
@@ -47,6 +48,7 @@ const components = {
   // Data Display
   SCTable,
   SCTag,
+  SCTabs,
   // Data Entry
   SCInput,
   SCInputNumber,

@@ -1,0 +1,50 @@
+@import "@stickearncom/scstyles/base/variables.scss";
+@import "@stickearncom/scstyles/base/font-mixins.scss";
+@import "@stickearncom/scstyles/base/mixin.scss";
+@import "@stickearncom/scstyles/base/colors-variables.scss";
+
+.sc-tabs {
+  text-align: center;
+  border-bottom: 1px solid $gray-2;
+  color: $gray-8;
+  @include font-medium-sm;
+
+  .sc-tabs__list {
+    @include flexbox;
+    flex-wrap: wrap;
+    margin-bottom: -1px;
+  }
+
+  .sc-tabs__item {
+    &:not(:last-of-type) {
+      margin-right: 16px;
+    }
+
+    a {
+      display: inline-block;
+      position: relative;
+      @include padding-y(12px);
+      @include padding-x(24px);
+      text-decoration: none;
+
+      &:hover {
+        color: $purple-4;
+      }
+
+      &.active {
+        color: $purple-6;
+        &:after {
+          content: '';
+          display: block;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 2px;
+          background: $purple-6;
+          transform: translate3d(0px, 0px, 0px);;
+        }
+      }
+    }
+  }
+}
