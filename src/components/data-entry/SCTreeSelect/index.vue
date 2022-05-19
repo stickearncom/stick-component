@@ -30,9 +30,9 @@
     :tree-default-expand-all="treeDefaultExpandAll"
     :tree-default-expanded-keys="treeDefaultExpandedKeys"
     :tree-expanded-keys="treeExpandedKeys"
-    @change="$emit('change', $event)"
+    @change="handleChange"
     @search="$emit('search', $event)"
-    @select="$emit('select', $event)"
+    @select="handleSelect"
     @treeExpand="$emit('treeExpand', $event)"
   >
     <template slot="maxTagPlaceholder">
@@ -219,6 +219,14 @@ export default {
   watch: {
     value(newVal) {
       this.currentValue = newVal
+    }
+  },
+  methods: {
+    handleChange(value, label, extra) {
+      this.$emit('change', value, label, extra)
+    },
+    handleSelect(value, node, extra) {
+      this.$emit('select', value, node, extra)
     }
   }
 }
