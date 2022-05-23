@@ -116,7 +116,7 @@
     }
 
     .ant-select-selection {
-      border: 2px solid $gray-2;
+      border: 2px solid transparent;
       @include border-radius(6px);
       background: $gray-1;
 

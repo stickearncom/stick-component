@@ -38,6 +38,10 @@ import SCButton from './components/general/SCButton/index.vue'
 import SCPagination from './components/navigation/SCPagination/index.vue'
 import SCBreadcrumb from './components/navigation/SCBreadcrumb/index.vue'
 
+// Feedback
+import SCSkeleton from './components/feedback/SCSkeleton/index.vue'
+import SCSpin from './components/feedback/SCSpin/index.vue'
+
 const components = {
   // Foundations
   SCIcon,
@@ -69,7 +73,10 @@ const components = {
   SCButton,
   // Navigation
   SCPagination,
-  SCBreadcrumb
+  SCBreadcrumb,
+  // Feedback
+  SCSkeleton,
+  SCSpin
 }
 
 const install = (Vue) => {
