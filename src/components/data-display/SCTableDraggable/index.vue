@@ -2,7 +2,6 @@
   <table
     :id="id"
     :class="classes"
-    @change="onChange"
   >
     <thead class="sc-table-draggable__head">
       <tr>
@@ -11,31 +10,46 @@
         </th>
       </tr>
     </thead>
-    <tbody v-if="loading" class="sc-table-draggable__body">
-      <tr><td><SCSpin /></td></tr>
-    </tbody>
     <draggable
-      v-else
       v-model="data"
       tag="tbody"
       class="sc-table-draggable__body"
       handle=".handle"
+      @update="handleUpdate"
     >
-      <slot name="body" :items="dataSource" />
+      <tr v-if="!data.length">
+        <td :colspan="columns.length">
+          <div class="empty-section">
+            <img src="./empty-image.svg" alt="empty-image">
+
+            <p>You don't have any data yet</p>
+          </div>
+        </td>
+      </tr>
+
+      <slot v-else name="body" :items="dataSource" />
     </draggable>
+
+    <div v-if="loading" class="sc-table-draggable__loading">
+      <div class="sc-spin">
+        <span class="sc-spin__purple" />
+      </div>
+    </div>
   </table>
 </template>
 
 <script>
 /* eslint-disable no-undefined */
 import draggable from 'vuedraggable'
-import SCSpin from '@stickearncom/scspin'
 
 export default {
   name: 'SCTableDraggable',
   components: {
-    draggable,
-    SCSpin
+    draggable
+  },
+  model: {
+    prop: 'dataSource',
+    event: 'update'
   },
   props: {
     id: {
@@ -76,8 +90,8 @@ export default {
     }
   },
   methods: {
-    onChange(pagination, filters, sorter) {
-      this.$emit('change', pagination, filters, sorter)
+    handleUpdate() {
+      this.$emit('update', this.data)
     }
   }
 }

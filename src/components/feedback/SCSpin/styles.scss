@@ -6,7 +6,7 @@
 .sc-spin {
   @include flexbox;
   @include align-items(center);
-  .sc-spin {
+  > span {
     width: 24px;
     height: 24px;
     display: inline-flex;
@@ -30,7 +30,7 @@
       width: 24px;
       height: 24px;
     }
-    &__small {
+    &.sc-spin__small {
       width: 16px;
       height: 16px;
       &:after {
@@ -38,7 +38,7 @@
         height: 16px;
       }
     }
-    &__large {
+    &.sc-spin__large {
       width: 32px;
       height: 32px;
       &:after {
@@ -46,23 +46,23 @@
         height: 32px;
       }
     }
-    &__purple {
+    &.sc-spin__purple {
       border-color: rgba($purple-6, 0.2);
       border-left-color: rgba($purple-6, 0.8);
     }
-    &__yellow {
+    &.sc-spin__yellow {
       border-color: rgba($yellow-6, 0.2);
       border-left-color: rgba($yellow-6, 0.8);
     }
-    &__red {
+    &.sc-spin__red {
       border-color: rgba($red-6, 0.2);
       border-left-color: rgba($red-6, 0.8);
     }
-    &__green {
+    &.sc-spin__green {
       border-color: rgba($green-6, 0.2);
       border-left-color: rgba($green-6, 0.8);
     }
-    &__blue {
+    &.sc-spin__blue {
       border-color: rgba($blue-6, 0.2);
       border-left-color: rgba($blue-6, 0.8);
     }

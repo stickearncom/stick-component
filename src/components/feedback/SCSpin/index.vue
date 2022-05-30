@@ -38,7 +38,6 @@ export default {
   computed: {
     classes() {
       return {
-        'sc-spin': true,
         [`sc-spin__${this.size}`]: true,
         [`sc-spin__${this.color}`]: true,
         [this.className]: this.className !== null

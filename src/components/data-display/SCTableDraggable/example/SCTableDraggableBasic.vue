@@ -5,12 +5,12 @@
     </h4>
     <hr class="mb-8">
 
-    <SCTableDraggable :columns="columns" :data-source="data">
+    <SCTableDraggable v-model="data" :columns="columns" @update="handleUpdate">
       <template slot="body" slot-scope="props">
         <tr v-for="(item, index) in props.items" :key="`body-${index}`">
           <td v-for="(column, idx) in columns" :key="`${column.key}-body-${idx}`">
             <template v-if="column.key === 'key'">
-              <span><i class="icon icon-elipsis-double-v-alt-solid" /></span>
+              <span class="handle"><i class="icon icon-elipsis-double-v-alt-solid" /></span>
             </template>
             <template v-else-if="column.key === 'action'">
               <a>Invite 一 {{ item.name }}</a>
@@ -95,8 +95,15 @@ export default {
       columns
     }
   },
+  watch: {
+    // You can use watch for v-model
+    data(newVal) {
+      console.log(newVal)
+    }
+  },
   methods: {
-    handleprop(value) {
+    // Or you can use method event update
+    handleUpdate(value) {
       console.log({ value })
     }
   }
