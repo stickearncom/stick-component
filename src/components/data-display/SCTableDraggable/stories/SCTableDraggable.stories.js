@@ -24,7 +24,7 @@ Default.parameters = {
     </h4>
     <hr class="mb-8">
 
-    <SCTableDraggable :columns="columns" :data-source="data">
+    <SCTableDraggable :columns="columns" :data-source="data" @update="handleUpdate">
       <template slot="body" slot-scope="props">
         <tr v-for="(item, index) in props.items" :key="\`body-\${index}\`">
           <td v-for="(column, idx) in columns" :key="\`\${column.key}-body-\${idx}\`">
@@ -107,6 +107,18 @@ export default {
     return {
       data,
       columns
+    }
+  },
+  watch: {
+    // You can use watch for v-model
+    data(newVal) {
+      console.log(newVal)
+    }
+  },
+  methods: {
+    // Or you can use method event update
+    handleUpdate(value) {
+      console.log({ value })
     }
   }
 }
