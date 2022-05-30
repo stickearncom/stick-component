@@ -13,16 +13,18 @@
       >
         <div :key="col" class="cell">
           <template v-if="col === 'name'">
-            <a>{{ record.name || '-' }}</a>
+            <a>{{ record.name || "-" }}</a>
           </template>
           <template v-else-if="col === 'age'">
-            {{ record.age || '-' }}
+            {{ record.age || "-" }}
           </template>
           <template v-else-if="col === 'address'">
-            {{ record.address || '-' }}
+            {{ record.address || "-" }}
           </template>
           <template v-else-if="col === 'tags'">
-            <span v-for="tag in record.tags" :key="tag" class="ml-3">{{ tag }}</span>
+            <span v-for="tag in record.tags" :key="tag" class="ml-3">{{
+              tag
+            }}</span>
           </template>
           <template v-else-if="col === 'action'">
             <a>Invite 一 {{ record.name }}</a>
@@ -32,7 +34,7 @@
             <a> More actions </a>
           </template>
           <template v-else>
-            <span>{{ text || '-' }}</span>
+            <span>{{ text || "-" }}</span>
           </template>
         </div>
       </template>

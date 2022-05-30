@@ -1,0 +1,62 @@
+@import "@stickearncom/scstyles/base/variables.scss";
+@import "@stickearncom/scstyles/base/font-mixins.scss";
+@import "@stickearncom/scstyles/base/mixin.scss";
+@import "@stickearncom/scstyles/base/colors-variables.scss";
+
+.sc-table-draggable {
+  // 
+  width: 100%;
+  text-align: left;
+  border-radius: 4px 4px 0 0;
+  border-collapse: separate;
+  border-spacing: 0;
+
+  .sc-table-draggable__head {
+    tr > th {
+      background: $gray-1;
+      color: $gray-10;
+      border-top: 1px solid $gray-2;
+      border-bottom: 1px solid $gray-2;
+      @include font-medium-xs;
+      text-align: left;
+      transition: background 0.3s ease;
+    }
+
+    tr:first-child > th:first-child {
+      @include border-radius-top-left(6px);
+      border-left: 1px solid $gray-2;
+    }
+    tr:last-child > th:last-child {
+      @include border-radius-top-right(6px);
+      border-right: 1px solid $gray-2;
+    }
+  }
+
+  .sc-table-draggable__head > tr > th,
+  .sc-table-draggable__body > tr > td {
+    padding: 16px;
+    overflow-wrap: break-word;
+  }
+  .sc-table-draggable__body > tr:hover > td {
+    background: #e6f7ff;
+  }
+  .sc-table-draggable__body {
+    tr > td {
+      border-bottom: 1px solid $gray-2;
+    }
+    tr > td:first-child {
+      border-left: 1px solid $gray-2;
+    }
+    tr > td:last-child {
+      border-right: 1px solid $gray-2;
+    }
+    tr:last-child {
+      td:first-child {
+        @include border-radius-bottom-left(6px);
+      }
+      td:last-child {
+        @include border-radius-bottom-right(6px);
+      }
+    }
+  }
+}
