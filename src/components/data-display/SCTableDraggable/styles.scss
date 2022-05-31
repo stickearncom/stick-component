@@ -25,7 +25,8 @@
       color: $gray-10;
       border-top: 1px solid $gray-2;
       border-bottom: 1px solid $gray-2;
-      @include font-medium-xs;
+      @include font-medium-sm;
+      font-weight: 700;
       text-align: left;
       transition: background 0.3s ease;
     }

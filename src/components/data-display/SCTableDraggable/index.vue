@@ -5,7 +5,7 @@
   >
     <thead class="sc-table-draggable__head">
       <tr>
-        <th v-for="column in columns" :key="column.key">
+        <th v-for="column in columns" :key="column.key" :style="{textAlign: column.align}">
           {{ column.title }}
         </th>
       </tr>
@@ -74,6 +74,10 @@ export default {
     loading: {
       type: Boolean,
       default: false
+    },
+    scroll: {
+      type: Object,
+      default: () => null
     }
   },
   data() {

@@ -8,16 +8,20 @@
     <SCTableDraggable v-model="data" :columns="columns" @update="handleUpdate">
       <template slot="body" slot-scope="props">
         <tr v-for="(item, index) in props.items" :key="`body-${index}`">
-          <td v-for="(column, idx) in columns" :key="`${column.key}-body-${idx}`">
+          <td
+            v-for="(column, idx) in columns"
+            :key="`${column.key}-body-${idx}`"
+            :align="column.align ? column.align : null"
+          >
             <template v-if="column.key === 'key'">
-              <span class="handle"><i class="icon icon-elipsis-double-v-alt-solid" /></span>
+              <span
+                class="handle"
+              ><i
+                class="icon icon-elipsis-double-v-alt-solid"
+              /></span>
             </template>
             <template v-else-if="column.key === 'action'">
-              <a>Invite 一 {{ item.name }}</a>
-              |
               <a>Delete</a>
-              |
-              <a> More actions </a>
             </template>
             <template v-else>
               {{ item[column.key] }}
@@ -51,8 +55,7 @@ const columns = [
   },
   {
     title: 'Tags',
-    key: 'tags',
-    dataIndex: 'tags'
+    key: 'tags'
   },
   {
     title: 'Action',
