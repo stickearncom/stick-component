@@ -1,0 +1,42 @@
+@import "@stickearncom/scstyles/base/variables.scss";
+@import "@stickearncom/scstyles/base/font-mixins.scss";
+@import "@stickearncom/scstyles/base/mixin.scss";
+@import "@stickearncom/scstyles/base/colors-variables.scss";
+
+.sc-popconfirm {
+  @include flexbox;
+  @include align-items(center);
+}
+
+  .ant-popover-inner-content {
+    width: 330px;
+    height: 125px;
+    border-radius: 7px;
+
+    .ant-popover-message {
+      i {
+        padding: 7px 0 0 26px;
+      }
+
+      .ant-popover-message-title {
+        margin-left: 15px;
+        padding: 8px 0 0 30px;
+      }
+    }
+
+    .ant-popover-buttons {
+      margin-top: 25px;
+
+      .ant-btn {
+        border: none;
+      }
+
+      .ant-btn-primary {
+        background: $purple-6;
+        border-radius: 6px;
+        padding: 6px 16px;
+        width: 57px;
+        height: 34px;
+      }
+    }
+  }
