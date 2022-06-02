@@ -42,6 +42,7 @@ import SCBreadcrumb from './components/navigation/SCBreadcrumb/index.vue'
 // Feedback
 import SCSkeleton from './components/feedback/SCSkeleton/index.vue'
 import SCSpin from './components/feedback/SCSpin/index.vue'
+import SCPopConfirm from './components/feedback/SCPopConfirm/index.vue'
 
 const components = {
   // Foundations
@@ -78,7 +79,8 @@ const components = {
   SCBreadcrumb,
   // Feedback
   SCSkeleton,
-  SCSpin
+  SCSpin,
+  SCPopConfirm
 }
 
 const install = (Vue) => {
