@@ -14,29 +14,75 @@
     border-radius: 7px;
 
     .ant-popover-message {
-      i {
-        padding: 7px 0 0 26px;
+      padding: 0;
+      @include flexbox;
+      @include align-items(center);
+
+      i.icon {
+        font-size: 18px;
       }
 
       .ant-popover-message-title {
-        margin-left: 15px;
-        padding: 8px 0 0 30px;
+        margin-left: 8px;
+        padding: 0;
       }
     }
 
     .ant-popover-buttons {
-      margin-top: 25px;
+      margin-top: 24px;
+      width: 100%;
+      @include flexbox;
+      @include justify-content(flex-end);
 
       .ant-btn {
-        border: none;
-      }
-
-      .ant-btn-primary {
-        background: $purple-6;
+        font-family: $font-stack;
+        @include font-medium-sm;
         border-radius: 6px;
-        padding: 6px 16px;
-        width: 57px;
-        height: 34px;
+        transition: 0.2s all;
+        @include flexbox;
+        @include justify-content(center);
+        @include align-items(center);
+        @include box-shadow(none);
+
+        color: $gray-10;
+        background-color: $white-1;
+        &:hover {
+          background-color: $purple-1;
+          border-color: $purple-1;
+          color: $purple-6;
+        }
+        &:focus {
+          color: inherit;
+        }
+        &:active {
+          background-color: $purple-8;
+          border-color: $purple-8;
+          color: $white-1;
+        }
+
+        &.ant-btn-sm {
+          height: 34px;
+          @include font-medium-sm;
+          padding: 0 16px;
+          border: 2px solid $gray-2;
+        }
+        &.ant-btn-primary {
+          border: 2px solid $purple-6;
+          background-color: $purple-6;
+          color: $white-1;
+          &:hover {
+            background-color: $purple-4;
+            border-color: $purple-4;
+          }
+          &:focus {
+            color: $white-1;
+          }
+          &:active {
+            background-color: $purple-8;
+            border-color: $purple-8;
+            color: $white-1;
+          }
+        }
       }
     }
   }

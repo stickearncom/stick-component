@@ -4,7 +4,7 @@
       :id="id"
       :title="title"
       :ok-text="okText"
-      ok-type="primary"
+      :ok-type="okType"
       :cancel-text="cancelText"
       :disabled="disabled"
       :placement="placement"
@@ -12,12 +12,7 @@
       @cancel="$emit('cancel', $event)"
       @visibleChange="$emit('visibleChange', $event)"
     >
-      <a-icon
-        slot="icon"
-        :type="icon"
-        :style="{ color: 'rgba(250, 184, 0, 1)' }"
-        theme="filled"
-      />
+      <SCIcon slot="icon" :type="icon" />
       <slot />
     </a-popconfirm>
   </div>
@@ -25,13 +20,14 @@
 
 <script>
 /* eslint-disable no-undefined */
-import { Popconfirm, Icon } from 'ant-design-vue'
+import { Popconfirm } from 'ant-design-vue'
+import SCIcon from '@stickearncom/scicon'
 
 export default {
   name: 'SCPopConfirm',
   components: {
     'a-popconfirm': Popconfirm,
-    'a-icon': Icon
+    SCIcon
   },
   props: {
     id: {
@@ -46,9 +42,13 @@ export default {
       type: String,
       default: 'Yes'
     },
+    okType: {
+      type: String,
+      default: 'primary'
+    },
     icon: {
       type: String,
-      default: 'warning'
+      default: 'exclamation-triangle-solid'
     },
     disabled: {
       type: Boolean,
@@ -56,7 +56,7 @@ export default {
     },
     title: {
       type: String,
-      default: '---'
+      default: undefined
     },
     placement: {
       type: String,
