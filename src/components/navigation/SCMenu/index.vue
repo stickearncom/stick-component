@@ -11,7 +11,6 @@
     :open-keys="openKeys"
     :selectable="selectable"
     :selected-keys="selectedKeys"
-    :style="style"
     :sub-menu-close-delay="subMenuCloseDelay"
     :sub-menu-open-delay="subMenuOpenDelay"
     :theme="theme"
@@ -75,10 +74,6 @@ export default {
     },
     selectedKeys: {
       type: String,
-      default: undefined
-    },
-    style: {
-      type: Object,
       default: undefined
     },
     subMenuCloseDelay: {
