@@ -1,0 +1,140 @@
+@import "@stickearncom/scstyles/base/variables.scss";
+@import "@stickearncom/scstyles/base/font-mixins.scss";
+@import "@stickearncom/scstyles/base/mixin.scss";
+@import "@stickearncom/scstyles/base/colors-variables.scss";
+
+.sc-dropdown-button {
+
+  &.ant-btn-group > .ant-btn:first-child:not(:last-child),
+  &.ant-btn-group > span:first-child:not(:last-child) > .ant-btn {
+    @include border-radius-left(6px);
+    border-width: 2px 1px 2px 2px;
+  }
+
+  &.ant-dropdown-button.ant-btn-group > .ant-btn:last-child:not(:first-child) {
+    @include border-radius-right(6px);
+    border-width: 2px 2px 2px 1px;
+  }
+
+  .ant-btn {
+    font-family: $font-stack;
+    @include font-medium-sm;
+    transition: 0.2s all;
+    @include flexbox;
+    @include justify-content(center);
+    @include align-items(center);
+    @include box-shadow(none);
+    height: 46px;
+    padding: 0 24px;
+
+    .icon {
+      font-size: 20px;
+    }
+
+    &.ant-btn-loading {
+      .anticon-loading {
+        display: none;
+      }
+      .icon-loading-outline {
+        margin-right: 8px;
+        animation-name: spin;
+        animation-duration: 1000ms;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        font-weight: 900;
+      }
+
+      @keyframes spin {
+        from {
+            transform:rotate(0deg);
+        }
+        to {
+            transform:rotate(360deg);
+        }
+      }
+    }
+
+    &-default {
+      border-color: $gray-2;
+      &:disabled {
+        background-color: $gray-2;
+        border-color: $gray-4;
+        color: $gray-4;
+      }
+    }
+
+    &:not(&:disabled) {
+      color: $gray-10;
+      background-color: $white-1;
+
+      &:hover {
+        background-color: $purple-1;
+        border-color: $purple-1;
+        color: $purple-6;
+      }
+      &:focus {
+        color: inherit;
+      }
+      &:active {
+        background-color: $purple-8;
+        border-color: $purple-8;
+        color: $white-1;
+      }
+
+      &.ant-btn-loading {
+        i {
+          color: $purple-6;
+        }
+      }
+    }
+  }
+
+  &__disabled {
+    &.sc-dropdown__link,
+    .sc-dropdown__link {
+      color: $gray-4;
+      cursor: not-allowed;
+
+      &:hover {
+        color: $gray-4;
+      }
+      &:focus {
+        color: $gray-4;
+      }
+    }
+  }
+  &__link {
+    @include font-medium-sm;
+    color: $gray-8;
+    &:hover {
+      color: $purple-6;
+    }
+    &:focus {
+      color: $purple-8;
+    }
+  }
+
+  &__collapse {
+    ul.sc-menu {
+      @include box-shadow(0px 0px 3px rgba(44, 62, 80, 0.24), 0px 4px 8px -2px rgba(44, 62, 80, 0.16));
+      @include border-radius(6px);
+      @include padding-y(8px);
+      background-color: #ffffff;
+
+      .sc-menu-item {
+        color: $gray-8;
+        @include font-medium-sm;
+        padding: 10px 14px;
+
+        &:hover {
+          background-color: $gray-1;
+        }
+
+        a {
+          color: $gray-8;
+          @include font-medium-sm;
+        }
+      }
+    }
+  }
+}

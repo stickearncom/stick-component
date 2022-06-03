@@ -38,6 +38,10 @@ import SCButton from './components/general/SCButton/index.vue'
 // Navigation
 import SCPagination from './components/navigation/SCPagination/index.vue'
 import SCBreadcrumb from './components/navigation/SCBreadcrumb/index.vue'
+import SCDropdown from './components/navigation/SCDropdown/index.vue'
+import SCDropdownButton from './components/navigation/SCDropdownButton/index.vue'
+import SCMenu from './components/navigation/SCMenu/index.vue'
+import SCMenuItem from './components/navigation/SCMenuItem/index.vue'
 
 // Feedback
 import SCSkeleton from './components/feedback/SCSkeleton/index.vue'
@@ -77,6 +81,10 @@ const components = {
   // Navigation
   SCPagination,
   SCBreadcrumb,
+  SCDropdown,
+  SCDropdownButton,
+  SCMenu,
+  SCMenuItem,
   // Feedback
   SCSkeleton,
   SCSpin,

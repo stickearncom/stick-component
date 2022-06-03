@@ -1,0 +1,56 @@
+@import "@stickearncom/scstyles/base/variables.scss";
+@import "@stickearncom/scstyles/base/font-mixins.scss";
+@import "@stickearncom/scstyles/base/mixin.scss";
+@import "@stickearncom/scstyles/base/colors-variables.scss";
+
+.sc-dropdown {
+
+  &__disabled {
+    &.sc-dropdown__link,
+    .sc-dropdown__link {
+      color: $gray-4;
+      cursor: not-allowed;
+
+      &:hover {
+        color: $gray-4;
+      }
+      &:focus {
+        color: $gray-4;
+      }
+    }
+  }
+  &__link {
+    @include font-medium-sm;
+    color: $gray-8;
+    &:hover {
+      color: $purple-6;
+    }
+    &:focus {
+      color: $purple-8;
+    }
+  }
+
+  &__collapse {
+    ul.sc-menu {
+      @include box-shadow(0px 0px 3px rgba(44, 62, 80, 0.24), 0px 4px 8px -2px rgba(44, 62, 80, 0.16));
+      @include border-radius(6px);
+      @include padding-y(8px);
+      background-color: #ffffff;
+
+      .sc-menu-item {
+        color: $gray-8;
+        @include font-medium-sm;
+        padding: 10px 14px;
+
+        &:hover {
+          background-color: $gray-1;
+        }
+
+        a {
+          color: $gray-8;
+          @include font-medium-sm;
+        }
+      }
+    }
+  }
+}
