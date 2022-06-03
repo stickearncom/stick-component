@@ -70,28 +70,6 @@ export default {
     SCIcon,
     SCMenu,
     SCMenuItem
-  },
-  data() {
-    return {
-      routes: [
-        {
-          path: 'home',
-          breadcrumbName: 'Home'
-        },
-        {
-          path: 'application-center',
-          breadcrumbName: 'Application Center'
-        },
-        {
-          path: 'application-list',
-          breadcrumbName: 'Application list'
-        },
-        {
-          path: 'application',
-          breadcrumbName: 'Application'
-        }
-      ]
-    }
   }
 }
 </script>

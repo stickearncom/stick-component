@@ -1,7 +1,6 @@
 <template>
   <a-dropdown
     :id="id"
-    v-modal="show"
     :class="classes"
     :trigger="trigger"
     :disabled="disabled"

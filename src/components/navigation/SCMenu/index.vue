@@ -4,7 +4,6 @@
     :class="classes"
     :default-selected-keys="defaultSelectedKeys"
     :force-sub-menu-render="forceSubMenuRender"
-    :inline-collapsed="inlineCollapsed"
     :inline-indent="inlineIndent"
     :mode="mode"
     :multiple="multiple"
@@ -44,10 +43,6 @@ export default {
     forceSubMenuRender: {
       type: Boolean,
       default: false
-    },
-    inlineCollapsed: {
-      type: Boolean,
-      default: undefined
     },
     inlineIndent: {
       type: Number,
