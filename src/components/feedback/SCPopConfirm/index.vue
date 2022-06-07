@@ -12,7 +12,7 @@
       @cancel="$emit('cancel', $event)"
       @visibleChange="$emit('visibleChange', $event)"
     >
-      <SCIcon slot="icon" :type="icon" />
+      <SCIcon slot="icon" :type="icon" :color="iconColor" />
       <slot />
     </a-popconfirm>
   </div>
@@ -36,11 +36,11 @@ export default {
     },
     cancelText: {
       type: String,
-      default: 'No'
+      default: 'Cancel'
     },
     okText: {
       type: String,
-      default: 'Yes'
+      default: 'Delete'
     },
     okType: {
       type: String,
@@ -49,6 +49,10 @@ export default {
     icon: {
       type: String,
       default: 'exclamation-triangle-solid'
+    },
+    iconColor: {
+     type: String,
+     default: '#000000'
     },
     disabled: {
       type: Boolean,
