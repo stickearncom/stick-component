@@ -1,5 +1,9 @@
 <template>
-  <i class="icon" :class="`icon-${type}`" />
+  <i
+    class="icon"
+    :class="`icon-${type}`"
+    :style="{ color: color }"
+  />
 </template>
 
 <script>
@@ -7,6 +11,10 @@
 export default {
   name: 'SCIcon',
   props: {
+    color: {
+     type: String,
+     default: '#000000'
+    },
     type: {
       type: String,
       default: '',

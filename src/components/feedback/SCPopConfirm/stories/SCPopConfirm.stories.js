@@ -29,6 +29,7 @@ Default.parameters = {
           placement="leftTop"
           class="mb-2"
           title="Are you sure to delete this task?"
+          iconColor="#FAB800"
         >
           <SCButton class="mb-2" type="primary">
             Left Top
@@ -38,6 +39,7 @@ Default.parameters = {
           placement="leftBottom"
           class="mb-2"
           title="Are you sure to delete this task?"
+          iconColor="#FAB800"
         >
           <SCButton class="mb-2" type="primary">
             Left Bottom
@@ -50,6 +52,7 @@ Default.parameters = {
           placement="topLeft"
           class="mb-2"
           title="Are you sure to delete this task?"
+          iconColor="#FAB800"
         >
           <SCButton class="mb-2" type="primary">
             Top Left
@@ -59,6 +62,7 @@ Default.parameters = {
           placement="bottomLeft"
           class="mb-2"
           title="Are you sure to delete this task?"
+          iconColor="#FAB800"
         >
           <SCButton class="mb-2" type="primary">
             Bottom Left
@@ -71,6 +75,7 @@ Default.parameters = {
           placement="top"
           class="mb-2"
           title="Are you sure to delete this task?"
+          iconColor="#FAB800"
         >
           <SCButton class="mb-2" type="primary">
             Top
@@ -80,6 +85,7 @@ Default.parameters = {
           placement="bottom"
           class="mb-2"
           title="Are you sure to delete this task?"
+          iconColor="#FAB800"
         >
           <SCButton class="mb-2" type="primary">
             Bottom
@@ -92,6 +98,7 @@ Default.parameters = {
           placement="topRight"
           class="mb-2"
           title="Are you sure to delete this task?"
+          iconColor="#FAB800"
         >
           <SCButton class="mb-2" type="primary">
             Top Right
@@ -101,6 +108,7 @@ Default.parameters = {
           placement="bottomRight"
           class="mb-2"
           title="Are you sure to delete this task?"
+          iconColor="#FAB800"
         >
           <SCButton class="mb-2" type="primary">
             Bottom Right
@@ -113,6 +121,7 @@ Default.parameters = {
           placement="rightTop"
           class="mb-2"
           title="Are you sure to delete this task?"
+          iconColor="#FAB800"
         >
           <SCButton class="mb-2" type="primary">
             Right Top
@@ -122,6 +131,7 @@ Default.parameters = {
           placement="rightBottom"
           class="mb-2"
           title="Are you sure to delete this task?"
+          iconColor="#FAB800"
         >
           <SCButton class="mb-2" type="primary">
             Right Bottom
@@ -134,6 +144,7 @@ Default.parameters = {
           placement="right"
           class="mb-2"
           title="Are you sure to delete this task?"
+          iconColor="#FAB800"
         >
           <SCButton class="mb-2" type="primary">
             Right
@@ -143,6 +154,7 @@ Default.parameters = {
           placement="left"
           class="mb-2"
           title="Are you sure to delete this task?"
+          iconColor="#FAB800"
         >
           <SCButton class="mb-2" type="primary">
             Left
@@ -151,7 +163,7 @@ Default.parameters = {
       </SCCol>
     </SCRow>
   </div>
-</template>      
+</template>  
 `
     }
   }

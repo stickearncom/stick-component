@@ -10,6 +10,7 @@
           placement="leftTop"
           class="mb-2"
           title="Are you sure to delete this task?"
+          iconColor="#FAB800"
         >
           <SCButton class="mb-2" type="primary">
             Left Top
@@ -19,6 +20,7 @@
           placement="leftBottom"
           class="mb-2"
           title="Are you sure to delete this task?"
+          iconColor="#FAB800"
         >
           <SCButton class="mb-2" type="primary">
             Left Bottom
@@ -31,6 +33,7 @@
           placement="topLeft"
           class="mb-2"
           title="Are you sure to delete this task?"
+          iconColor="#FAB800"
         >
           <SCButton class="mb-2" type="primary">
             Top Left
@@ -40,6 +43,7 @@
           placement="bottomLeft"
           class="mb-2"
           title="Are you sure to delete this task?"
+          iconColor="#FAB800"
         >
           <SCButton class="mb-2" type="primary">
             Bottom Left
@@ -52,6 +56,7 @@
           placement="top"
           class="mb-2"
           title="Are you sure to delete this task?"
+          iconColor="#FAB800"
         >
           <SCButton class="mb-2" type="primary">
             Top
@@ -61,6 +66,7 @@
           placement="bottom"
           class="mb-2"
           title="Are you sure to delete this task?"
+          iconColor="#FAB800"
         >
           <SCButton class="mb-2" type="primary">
             Bottom
@@ -73,6 +79,7 @@
           placement="topRight"
           class="mb-2"
           title="Are you sure to delete this task?"
+          iconColor="#FAB800"
         >
           <SCButton class="mb-2" type="primary">
             Top Right
@@ -82,6 +89,7 @@
           placement="bottomRight"
           class="mb-2"
           title="Are you sure to delete this task?"
+          iconColor="#FAB800"
         >
           <SCButton class="mb-2" type="primary">
             Bottom Right
@@ -94,6 +102,7 @@
           placement="rightTop"
           class="mb-2"
           title="Are you sure to delete this task?"
+          iconColor="#FAB800"
         >
           <SCButton class="mb-2" type="primary">
             Right Top
@@ -103,6 +112,7 @@
           placement="rightBottom"
           class="mb-2"
           title="Are you sure to delete this task?"
+          iconColor="#FAB800"
         >
           <SCButton class="mb-2" type="primary">
             Right Bottom
@@ -115,6 +125,7 @@
           placement="right"
           class="mb-2"
           title="Are you sure to delete this task?"
+          iconColor="#FAB800"
         >
           <SCButton class="mb-2" type="primary">
             Right
@@ -124,6 +135,7 @@
           placement="left"
           class="mb-2"
           title="Are you sure to delete this task?"
+          iconColor="#FAB800"
         >
           <SCButton class="mb-2" type="primary">
             Left
