@@ -73,9 +73,58 @@ Default.parameters = {
           </div>
         </fieldset>
       </div>
+
+      <div class="w-6/12">
+        <fieldset class="w-11/12">
+          <legend class="font-medium-md">
+            Placement
+          </legend>
+
+          <SCRow :gutter="[8, 16]">
+            <SCCol v-for="(placement, index) in placements" :key="index" :span="8">
+              <SCDropdown :placement="placement">
+                <SCButton>{{ placement }}</SCButton>
+                <SCMenu slot="overlay">
+                  <SCMenuItem>
+                    <a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href="http://www.alipay.com/"
+                    >1st menu item</a>
+                  </SCMenuItem>
+                  <SCMenuItem>
+                    <a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href="http://www.taobao.com/"
+                    >2nd menu item</a>
+                  </SCMenuItem>
+                  <SCMenuItem>
+                    <a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href="http://www.tmall.com/"
+                    >3rd menu item</a>
+                  </SCMenuItem>
+                </SCMenu>
+              </SCDropdown>
+            </SCCol>
+          </SCRow>
+        </fieldset>
+      </div>
     </div>
   </div>
 </template>
+
+<script>
+  export default {
+    data() {
+      return {
+        placements: ['bottomLeft', 'bottomCenter', 'bottomRight', 'topLeft', 'topCenter', 'topRight']
+      }
+    }
+  }
+</script>
 `
     }
   }

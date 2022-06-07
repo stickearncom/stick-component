@@ -13,7 +13,7 @@
           </legend>
 
           <div class="flex justify-between">
-            <SCDropdown>
+            <SCDropdownButton>
               Hover me
               <SCMenu slot="overlay">
                 <SCMenuItem>
@@ -23,9 +23,9 @@
                   <a href="javascript:;">2nd menu item</a>
                 </SCMenuItem>
               </SCMenu>
-            </SCDropdown>
+            </SCDropdownButton>
 
-            <SCDropdown :trigger="['click']">
+            <SCDropdownButton :trigger="['click']">
               Click me
               <SCMenu slot="overlay">
                 <SCMenuItem>
@@ -35,16 +35,16 @@
                   <a href="javascript:;">2nd menu item</a>
                 </SCMenuItem>
               </SCMenu>
-            </SCDropdown>
+            </SCDropdownButton>
 
-            <SCDropdown :disabled="true">
+            <SCDropdownButton :disabled="true">
               Disabled
               <SCMenu slot="overlay">
                 <SCMenuItem>
                   <a href="javascript:;">1st menu item</a>
                 </SCMenuItem>
               </SCMenu>
-            </SCDropdown>
+            </SCDropdownButton>
           </div>
         </fieldset>
       </div>
@@ -53,13 +53,13 @@
 </template>
 
 <script>
-import SCDropdown from '../index.vue'
+import SCDropdownButton from '../index.vue'
 import SCMenu from '../../SCMenu/index.vue'
 import SCMenuItem from '../../SCMenuItem/index.vue'
 
 export default {
   components: {
-    SCDropdown,
+    SCDropdownButton,
     SCMenu,
     SCMenuItem
   }

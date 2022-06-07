@@ -12,7 +12,7 @@
       @cancel="$emit('cancel', $event)"
       @visibleChange="$emit('visibleChange', $event)"
     >
-      <SCIcon slot="icon" :type="icon" :color="iconColor" />
+      <SCIcon slot="icon" :type="icon" :style="{ color: iconColor }" />
       <slot />
     </a-popconfirm>
   </div>
@@ -51,8 +51,8 @@ export default {
       default: 'exclamation-triangle-solid'
     },
     iconColor: {
-     type: String,
-     default: '#000000'
+      type: String,
+      default: '#000000'
     },
     disabled: {
       type: Boolean,

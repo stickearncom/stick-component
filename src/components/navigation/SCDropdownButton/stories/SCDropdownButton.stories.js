@@ -32,7 +32,7 @@ Default.parameters = {
           </legend>
 
           <div class="flex justify-between">
-            <SCDropdown>
+            <SCDropdownButton>
               Hover me
               <SCMenu slot="overlay">
                 <SCMenuItem>
@@ -42,9 +42,9 @@ Default.parameters = {
                   <a href="javascript:;">2nd menu item</a>
                 </SCMenuItem>
               </SCMenu>
-            </SCDropdown>
+            </SCDropdownButton>
 
-            <SCDropdown :trigger="['click']">
+            <SCDropdownButton :trigger="['click']">
               Click me
               <SCMenu slot="overlay">
                 <SCMenuItem>
@@ -54,16 +54,16 @@ Default.parameters = {
                   <a href="javascript:;">2nd menu item</a>
                 </SCMenuItem>
               </SCMenu>
-            </SCDropdown>
+            </SCDropdownButton>
 
-            <SCDropdown :disabled="true">
+            <SCDropdownButton :disabled="true">
               Disabled
               <SCMenu slot="overlay">
                 <SCMenuItem>
                   <a href="javascript:;">1st menu item</a>
                 </SCMenuItem>
               </SCMenu>
-            </SCDropdown>
+            </SCDropdownButton>
           </div>
         </fieldset>
       </div>
