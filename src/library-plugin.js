@@ -46,7 +46,11 @@ import SCMenuItem from './components/navigation/SCMenuItem/index.vue'
 // Feedback
 import SCSkeleton from './components/feedback/SCSkeleton/index.vue'
 import SCSpin from './components/feedback/SCSpin/index.vue'
+<<<<<<< Updated upstream
 import SCPopConfirm from './components/feedback/SCPopConfirm/index.vue'
+=======
+import SCAlert from './components/feedback/SCAlert/index.vue'
+>>>>>>> Stashed changes
 
 const components = {
   // Foundations
@@ -88,7 +92,11 @@ const components = {
   // Feedback
   SCSkeleton,
   SCSpin,
+<<<<<<< Updated upstream
   SCPopConfirm
+=======
+  SCAlert
+>>>>>>> Stashed changes
 }
 
 const install = (Vue) => {

@@ -1,0 +1,55 @@
+@import "@stickearncom/scstyles/base/variables.scss";
+@import "@stickearncom/scstyles/base/font-mixins.scss";
+@import "@stickearncom/scstyles/base/mixin.scss";
+@import "@stickearncom/scstyles/base/colors-variables.scss";
+
+.sc-alert {
+  .ant-alert.ant-alert-no-icon {
+    padding: 10px 16px;
+  }
+
+  .ant-alert-info {
+    background-color: $purple-1;
+    border: 1px solid $purple-4;
+  }
+
+  .ant-alert-info .ant-alert-icon {
+    color: $purple-7;
+  }
+
+  .ant-alert-banner {
+    border-radius: 10px;
+  }
+
+  .ant-alert {
+    border-radius: 10px;
+    position: relative;
+    padding: 15px 15px 15px 64px;
+    color: rgba(0, 0, 0, 0.65);
+    line-height: 1.5;
+
+    .ant-alert-icon {
+      position: absolute;
+      top: 11px;
+      left: 22px;
+      font-size: 24px;
+    }
+  }
+
+  .ant-alert-with-description {
+    .ant-alert-icon {
+      position: absolute;
+      top: 16px;
+      left: 24px;
+      font-size: 24px;
+    }
+  }
+
+  .ant-alert-message {
+    @include font-medium-sm;
+  }
+
+  .ant-alert-description {
+    @include font-regular-sm;
+  }
+}

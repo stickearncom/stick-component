@@ -49,6 +49,7 @@ module.exports = {
     'no-labels': 'error',
     'no-lone-blocks': 'error',
     'no-loop-func': 'error',
+    'linebreak-style': ['error', 'windows'],
     'no-multi-spaces': [
       'error',
       {
