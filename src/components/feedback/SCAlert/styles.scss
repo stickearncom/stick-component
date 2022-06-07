@@ -13,6 +13,10 @@
     border: 1px solid $purple-4;
   }
 
+  .ant-alert-info.ant-alert-banner {
+    border: none;
+  }
+
   .ant-alert-info .ant-alert-icon {
     color: $purple-7;
   }
@@ -34,6 +38,10 @@
       left: 22px;
       font-size: 24px;
     }
+
+    .ant-alert-close-icon {
+      top: 5px;
+    }
   }
 
   .ant-alert-with-description {
@@ -42,6 +50,10 @@
       top: 16px;
       left: 24px;
       font-size: 24px;
+    }
+
+    .ant-alert-close-icon {
+      top: 5px;
     }
   }
 
