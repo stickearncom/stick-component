@@ -1,4 +1,5 @@
 import './styles/main.scss'
+import './styles/icons/sc-icon.css'
 import './styles/fonts-face.scss'
 
 // Foundations
