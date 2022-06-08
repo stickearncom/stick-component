@@ -13,18 +13,34 @@
           </legend>
 
           <div>
-            <SCAlert text="Hello There!" />
-            <br>
+            <SCAlert text="Hello There!" class="mb-4" />
+            <SCAlert text="Hello There!" show-icon class="mb-4" />
+
             <SCAlert
               text="Hello Error!"
               type="error"
               description="Interactively monetize corporate alignments."
+              class="mb-4"
             />
-            <br>
+            <SCAlert
+              text="Hello Error!"
+              type="error"
+              description="Interactively monetize corporate alignments."
+              show-icon
+              class="mb-4"
+            />
+
             <SCAlert
               text="Hello Info!"
               type="info"
               description="Interactively monetize corporate alignments."
+              class="mb-4"
+            />
+            <SCAlert
+              text="Hello Info!"
+              type="info"
+              description="Interactively monetize corporate alignments."
+              show-icon
             />
           </div>
         </fieldset>

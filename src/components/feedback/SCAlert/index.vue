@@ -1,35 +1,30 @@
 <template>
-  <div
+  <a-alert
     :id="id"
     :class="classes"
+    :show-icon="banner ? banner : showIcon"
+    :message="text"
+    :type="type"
+    :description="description"
+    :banner="banner"
+    :closable="closable"
+    @close="$emit('close')"
   >
-    <a-alert
-      :show-icon="showIcon"
-      :message="text"
-      :type="type"
-      :description="description"
-      :banner="banner"
-      :closable="closable"
-      @close="$emit('close')"
-    >
-      <template #icon>
-        <a-icon v-if="type === 'error'" type="close-circle" theme="filled" />
-        <a-icon v-else-if="type === 'info'" type="info-circle" theme="filled" />
-        <a-icon v-else-if="type === 'success'" type="check-circle" theme="filled" />
-      </template>
-    </a-alert>
-  </div>
+    <template #icon>
+      <i v-if="type === 'error'" class="icon icon-times-circle-solid" />
+      <i v-else-if="type === 'info'" class="icon icon-check-circle-solid" />
+      <i v-else-if="type === 'success'" class="icon icon-info-circle-solid" />
+    </template>
+  </a-alert>
 </template>
 
 <script>
-import { Alert, Icon } from 'ant-design-vue'
+import { Alert } from 'ant-design-vue'
 
 export default {
   name: 'SCAlert',
-  emits: ['close'],
   components: {
-    'a-alert': Alert,
-    'a-icon': Icon
+    'a-alert': Alert
   },
   props: {
     id: {
@@ -53,7 +48,7 @@ export default {
     },
     showIcon: {
       type: Boolean,
-      default: true
+      default: false
     },
     banner: {
       type: Boolean,

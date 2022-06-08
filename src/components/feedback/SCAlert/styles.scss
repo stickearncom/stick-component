@@ -4,51 +4,53 @@
 @import "@stickearncom/scstyles/base/colors-variables.scss";
 
 .sc-alert {
-  .ant-alert.ant-alert-no-icon {
-    padding: 10px 16px;
-  }
-
-  .ant-alert-info {
-    background-color: $purple-1;
-    border: 1px solid $purple-4;
-  }
-
-  .ant-alert-info.ant-alert-banner {
-    border: none;
-  }
-
-  .ant-alert-info .ant-alert-icon {
-    color: $purple-7;
-  }
-
-  .ant-alert-banner {
-    border-radius: 10px;
-  }
-
-  .ant-alert {
-    border-radius: 10px;
+  &.ant-alert {
+    @include border-radius(6px);
     position: relative;
-    padding: 15px 15px 15px 64px;
-    color: rgba(0, 0, 0, 0.65);
+    padding: 10px 10px 10px 50px;
+    color: $gray-8;
     line-height: 1.5;
+
+    &.ant-alert-no-icon {
+      padding: 10px 16px;
+    }
 
     .ant-alert-icon {
       position: absolute;
-      top: 1px;
-      left: 22px;
+      top: 50%;
+      transform: translateY(-45%);
+      left: 16px;
       font-size: 24px;
     }
 
     .ant-alert-close-icon {
       top: 5px;
     }
+    
   }
 
-  .ant-alert-with-description {
+  &.ant-alert-info {
+    background-color: $purple-1;
+    border: 1px solid $purple-4;
+
+    &.ant-alert-banner {
+      border: none;
+    }
+
+    .ant-alert-icon {
+      color: $purple-7;
+    }
+  }
+
+  &.ant-alert-banner {
+    @include border-radius(6px);
+  }
+
+  &.ant-alert-with-description {
     .ant-alert-icon {
       position: absolute;
-      top: 15px;
-      left: 24px;
+      top: 23px;
+      left: 16px;
       font-size: 24px;
     }
 
@@ -62,6 +64,6 @@
   }
 
   .ant-alert-description {
-    @include font-regular-sm;
+    @include font-regular-xs;
   }
 }
