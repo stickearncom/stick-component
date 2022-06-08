@@ -33,6 +33,7 @@
           </span>
           <template v-if="menu.type === 'sub-menu'">
             <a-menu-item v-for="child in menu.children" :key="child.key">
+              <i v-if="child.icon" class="icon mr-2.5" :class="`icon-${child.icon}`" />
               {{ child.label }}
             </a-menu-item>
           </template>
@@ -44,11 +45,25 @@
                 {{ group.label }}
               </span>
               <a-menu-item v-for="child in group.children" :key="child.key">
+                <i v-if="child.icon" class="icon mr-2.5" :class="`icon-${child.icon}`" />
                 {{ child.label }}
               </a-menu-item>
             </a-menu-item-group>
           </template>
         </a-sub-menu>
+        <a-menu-item-group
+          v-else-if="menu.type === 'menu-group'"
+          :key="`group-${menu.key}`"
+        >
+          <span slot="title">
+            <i v-if="menu.icon" class="icon mr-2.5" :class="`icon-${menu.icon}`" />
+            {{ menu.label }}
+          </span>
+          <a-menu-item v-for="child in menu.children" :key="child.key">
+            <i v-if="child.icon" class="icon mr-2.5" :class="`icon-${child.icon}`" />
+            {{ child.label }}
+          </a-menu-item>
+        </a-menu-item-group>
       </template>
     </template>
   </a-menu>

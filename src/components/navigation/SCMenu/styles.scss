@@ -58,6 +58,7 @@
 
   // Dark theme
   &.ant-menu-dark {
+    background: $purple-10;
     color: $white-1;
 
     .ant-menu-item:hover,
@@ -78,10 +79,20 @@
     &.ant-menu-submenu-popup .ant-menu-item-selected {
       background-color: $purple-6;
     }
-  }
 
-  &.ant-menu-dark {
-    background: $purple-10;
+    .ant-menu-submenu-vertical,
+    .ant-menu-submenu-vertical-left,
+    .ant-menu-submenu-vertical-right,
+    .ant-menu-submenu-inline {
+      >.ant-menu-submenu-title:hover {
+        .ant-menu-submenu-arrow {
+          &::after,
+          &::before {
+            background: linear-gradient(to right, $white-1, $white-1);
+          }
+        }
+      }
+    }
   }
 
   .ant-menu-submenu-vertical,

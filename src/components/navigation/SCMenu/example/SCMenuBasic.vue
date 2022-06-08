@@ -65,14 +65,14 @@ export default {
           type: 'menu',
           path: '#',
           label: 'Navigation Two',
-          icon: 'envelope-alt-solid',
+          icon: 'apps-solid',
           disabled: true
         },
         {
           key: 'subMenu1',
           type: 'sub-menu',
           label: 'Navigation Three - Submenu',
-          icon: 'envelope-alt-solid',
+          icon: 'setting-solid',
           children: [
             {
               key: 'option-1',
@@ -92,7 +92,7 @@ export default {
           key: 'subMenu2',
           type: 'sub-menu-group',
           label: 'Navigation Four - Submenu Group',
-          icon: 'envelope-alt-solid',
+          icon: 'pentagon-solid',
           children: [
             {
               label: 'Item 1',
