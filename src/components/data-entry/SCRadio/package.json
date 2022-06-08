@@ -1,6 +1,6 @@
 {
   "name": "@stickearncom/scradio",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "publishConfig": {
     "access": "public"
   },
@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@stickearncom/scstyles": "^0.1.8",
+    "@stickearncom/scstyles": "^0.1.9",
     "ant-design-vue": "^1.7.8"
   },
   "repository": {

@@ -1,6 +1,6 @@
 {
   "name": "@stickearncom/scswitch",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "publishConfig": {
     "access": "public"
   },
@@ -11,7 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "@stickearncom/scicon": "^0.1.12",
-    "@stickearncom/scstyles": "^0.1.8",
+    "@stickearncom/scstyles": "^0.1.9",
     "ant-design-vue": "^1.7.8"
   },
   "repository": {
