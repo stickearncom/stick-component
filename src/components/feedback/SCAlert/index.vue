@@ -1,8 +1,7 @@
 <template>
   <div
     :id="id"
-    class="sc-alert"
-    :class="className"
+    :class="classes"
   >
     <a-alert
       :show-icon="showIcon"
@@ -14,22 +13,23 @@
       @close="$emit('close')"
     >
       <template #icon>
-        <i v-if="type === 'error'" class="icon-exclamation-circle-solid" />
-        <i v-else-if="type === 'info'" class="icon-info-circle-solid" />
-        <i v-else-if="type === 'success'" class="icon-check-circle-solid" />
+        <a-icon v-if="type === 'error'" type="close-circle" theme="filled" />
+        <a-icon v-else-if="type === 'info'" type="info-circle" theme="filled" />
+        <a-icon v-else-if="type === 'success'" type="check-circle" theme="filled" />
       </template>
     </a-alert>
   </div>
 </template>
 
 <script>
-import { Alert } from 'ant-design-vue'
+import { Alert, Icon } from 'ant-design-vue'
 
 export default {
   name: 'SCAlert',
   emits: ['close'],
   components: {
-    'a-alert': Alert
+    'a-alert': Alert,
+    'a-icon': Icon
   },
   props: {
     id: {
@@ -43,10 +43,6 @@ export default {
     text: {
       type: String,
       default: ''
-    },
-    className: {
-      type: String,
-      default: null
     },
     type: {
       type: String,
@@ -66,6 +62,13 @@ export default {
     closable:  {
       type: Boolean,
       default: false
+    }
+  },
+  computed: {
+    classes() {
+      return {
+        'sc-alert': true
+      }
     }
   }
 }
