@@ -20,7 +20,7 @@
     <template v-if="menus.length">
       <template v-for="menu in menus">
         <a-menu-item v-if="menu.type === 'menu'" :key="menu.key" :disabled="menu.disabled">
-          <i class="icon mr-2.5" :class="`icon-${menu.icon}`" />{{ menu.label }}
+          <i v-if="menu.icon" class="icon mr-2.5" :class="`icon-${menu.icon}`" />{{ menu.label }}
         </a-menu-item>
         <a-sub-menu
           v-else-if="menu.type === 'sub-menu' || menu.type === 'sub-menu-group'"
@@ -29,7 +29,7 @@
           @titleClick="$emit('titleClick', $event)"
         >
           <span slot="title">
-            <i class="icon mr-2.5" :class="`icon-${menu.icon}`" />{{ menu.label }}
+            <i v-if="menu.icon" class="icon mr-2.5" :class="`icon-${menu.icon}`" />{{ menu.label }}
           </span>
           <template v-if="menu.type === 'sub-menu'">
             <a-menu-item v-for="child in menu.children" :key="child.key">
@@ -38,7 +38,11 @@
           </template>
 
           <template v-else>
-            <a-menu-item-group v-for="group in menu.children" :key="group.key" :title="group.title">
+            <a-menu-item-group v-for="group in menu.children" :key="group.key">
+              <span slot="title">
+                <i v-if="group.icon" class="icon mr-2.5" :class="`icon-${group.icon}`" />
+                {{ group.label }}
+              </span>
               <a-menu-item v-for="child in group.children" :key="child.key">
                 {{ child.label }}
               </a-menu-item>

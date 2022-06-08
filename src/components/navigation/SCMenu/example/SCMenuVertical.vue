@@ -1,58 +1,48 @@
-import SCMenu from '../index.vue'
-import SCMenuBasic from '../example/SCMenuBasic.vue'
-import SCMenuVertical from '../example/SCMenuVertical.vue'
-
-export default {
-  title: 'Navigation/Menu',
-  component: SCMenu
-}
-
-const Template = (args, { argTypes }) => ({
-  props: Object.keys(argTypes),
-  components: { SCMenuBasic },
-  template: '<SCMenuBasic />'
-})
-
-export const Default = Template.bind({})
-
-Default.parameters = {
-  docs: {
-    source: {
-      code: `<template>
+<template>
   <div>
     <h4 class="font-medium-lg">
       Menu Default:
     </h4>
     <hr class="mb-4">
 
-    <div class="w-full">
-      <fieldset>
+    <div class="mb-6 flex items-center">
+      <span class="mr-3">Theme:</span>
+      <SCSwitch
+        v-model="dark"
+        checked-children="dark"
+        un-checked-children="light"
+      />
+    </div>
+
+    <div class="w-full flex">
+      <fieldset class="w-6/12">
         <legend class="font-medium-md">
-          Light
+          Inline
         </legend>
 
-        <div class="w-full">
+        <div class="flex">
           <SCMenu
             v-model="current"
-            mode="horizontal"
+            style="width: 256px"
+            :theme="dark ? 'dark' : 'light'"
+            mode="inline"
             :menus="menus"
             @click="handleClick"
           />
         </div>
       </fieldset>
-    </div>
 
-    <div class="w-full mt-4">
-      <fieldset>
+      <fieldset class="w-6/12">
         <legend class="font-medium-md">
-          Dark
+          Vertical
         </legend>
 
-        <div class="w-full">
+        <div class="flex">
           <SCMenu
             v-model="current"
-            theme="dark"
-            mode="horizontal"
+            style="width: 256px"
+            :theme="dark ? 'dark' : 'light'"
+            mode="vertical"
             :menus="menus"
             @click="handleClick"
           />
@@ -63,10 +53,18 @@ Default.parameters = {
 </template>
 
 <script>
+import SCMenu from '../index.vue'
+import SCSwitch from '../../../data-entry/SCSwitch/index.vue'
+
 export default {
+  components: {
+    SCMenu,
+    SCSwitch
+  },
   data() {
     return {
       current: ['mail'],
+      dark: false,
       menus: [
         {
           key: 'mail',
@@ -155,59 +153,3 @@ export default {
   }
 }
 </script>
-`
-    }
-  }
-}
-
-export const Vertical = () => ({
-  components: { SCMenuVertical },
-  template: `<div>
-    <SCMenuVertical />
-  </div>
-  `
-})
-
-Vertical.parameters = {
-  docs: {
-    source: {
-      code: `<template>
-  <div>
-    <h4 class="font-medium-lg">
-      Pagination total number:
-    </h4>
-    <hr class="mb-4">
-
-    <div class="flex">
-      <div class="w-full">
-        <SCPagination
-          v-model="current"
-          :total="85"
-          :show-total="total => \`Total \${total} items\`"
-          :page-size="20"
-        />
-        <br>
-        <SCPagination
-          v-model="current"
-          :total="85"
-          :show-total="(total, range) => \`\${range[0]}-\${range[1]} of \${total} items\`"
-          :page-size="20"
-        />
-      </div>
-    </div>
-  </div>
-</template>
-
-<script>
-export default {
-  data() {
-    return {
-      current: 6
-    }
-  }
-}
-</script>
-`
-    }
-  }
-}

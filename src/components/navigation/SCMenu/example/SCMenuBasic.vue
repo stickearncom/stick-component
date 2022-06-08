@@ -95,7 +95,7 @@ export default {
           icon: 'envelope-alt-solid',
           children: [
             {
-              title: 'Item 1',
+              label: 'Item 1',
               children: [
                 {
                   key: 'option-group-1',
@@ -112,7 +112,7 @@ export default {
               ]
             },
             {
-              title: 'Item 2',
+              label: 'Item 2',
               children: [
                 {
                   key: 'option-group-3',

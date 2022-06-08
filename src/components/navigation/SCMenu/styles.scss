@@ -8,6 +8,24 @@
   color: $gray-8;
   @include font-medium-sm;
 
+  &.ant-menu-vertical,
+  &.ant-menu-inline,
+  &.ant-menu-vertical-left,
+  &.ant-menu-vertical-right  {
+    .ant-menu-submenu-selected,
+    .ant-menu-item-selected {
+      color: $purple-6;
+    }
+
+    .ant-menu-item-selected {
+      background-color: $purple-1;
+
+      &:after {
+        border-right-color: $purple-6;
+      }
+    }
+  }
+
   &.ant-menu-horizontal {
     line-height: 54px;
 
@@ -30,6 +48,12 @@
   .ant-menu-submenu-active,
   .ant-menu-submenu-title:hover {
     color: $purple-6;
+    
+    .ant-menu-submenu-arrow {
+      &:before {
+        background: linear-gradient(to right, $purple-6, $purple-6);
+      }
+    }
   }
 
   // Dark theme
@@ -59,10 +83,36 @@
   &.ant-menu-dark {
     background: $purple-10;
   }
+
+  .ant-menu-submenu-vertical,
+  .ant-menu-submenu-vertical-left,
+  .ant-menu-submenu-vertical-right,
+  .ant-menu-submenu-inline {
+    >.ant-menu-submenu-title:hover {
+      .ant-menu-submenu-arrow {
+        &::after,
+        &::before {
+          background: linear-gradient(to right, $purple-6, $purple-6);
+        }
+      }
+    }
+  }
+
+  .ant-menu-item:active, 
+  .ant-menu-submenu-title:active {
+    background: $purple-1;
+    color: $purple-6;
+  }
 }
 
 .sc-menu-sub {
   color: $gray-10;
+
+  .ant-menu-item-group-title {
+    @include font-medium-xs;
+    color: $gray-4;
+  }
+
   .ant-menu-item {
     font-weight: 500;
   }
@@ -87,7 +137,8 @@
     .ant-menu-submenu-open,
     .ant-menu-submenu-active,
     .ant-menu-submenu-title:hover,
-    .ant-menu-item-selected {
+    .ant-menu-item-selected,
+    .ant-menu-item-group-title {
       color: $white-1;
     }
     .ant-menu-sub {
@@ -97,5 +148,25 @@
     &.ant-menu-submenu-popup .ant-menu-item-selected {
       background-color: $purple-6;
     }
+  }
+
+  .ant-menu-submenu-vertical,
+  .ant-menu-submenu-vertical-left,
+  .ant-menu-submenu-vertical-right,
+  .ant-menu-submenu-inline {
+    >.ant-menu-submenu-title:hover {
+      .ant-menu-submenu-arrow {
+        &::after,
+        &::before {
+          background: linear-gradient(to right, $purple-6, $purple-6);
+        }
+      }
+    }
+  }
+
+  .ant-menu-item:active, 
+  .ant-menu-submenu-title:active {
+    background: $purple-1;
+    color: $purple-6;
   }
 }
