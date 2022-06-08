@@ -5,7 +5,10 @@
         <a
           :class="currentKey === option.key ? 'active' : null"
           @click="handleClick(option)"
-        >{{ option.label }}</a>
+        >
+          <SCIcon v-if="iconType" :type="iconType" />
+          {{ option.label }}
+        </a>
       </li>
     </ul>
   </div>
@@ -13,9 +16,13 @@
 
 <script>
 /* eslint-disable no-undefined */
+import SCIcon from '@stickearncom/scicon'
 
 export default {
   name: 'SCTabs',
+  components: {
+    SCIcon
+  },
   model: {
     prop: 'activeKey',
     event: 'close'
@@ -26,6 +33,10 @@ export default {
       default: undefined
     },
     activeKey: {
+      type: String,
+      default: undefined
+    },
+    iconType: {
       type: String,
       default: undefined
     },
@@ -54,7 +65,7 @@ export default {
     },
     tabPosition: {
       type: String,
-      default: 'top',
+      default: 'bottom',
       validator(value) {
         return ['top', 'right', 'bottom', 'left'].indexOf(value) !== -1
       }
@@ -84,7 +95,9 @@ export default {
   computed: {
     classes() {
       return {
-        'sc-tabs': true
+        'sc-tabs': true,
+        [`sc-tabs-${this.size}`]: this.size !== 'default',
+        [`sc-tabs-${this.tabPosition}`]: this.tabPosition !== 'bottom'
       }
     }
   },
