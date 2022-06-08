@@ -1,6 +1,6 @@
 {
   "name": "@stickearncom/stickcomponent",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "private": false,
   "author": "stickearncom",
   "scripts": {
@@ -19,8 +19,8 @@
     "dist/*"
   ],
   "dependencies": {
-    "@stickearncom/scicon": "^0.1.10",
-    "@stickearncom/scstyles": "^0.1.8",
+    "@stickearncom/scicon": "^0.1.12",
+    "@stickearncom/scstyles": "^0.1.9",
     "@tailwindcss/postcss7-compat": "^2.2.17",
     "@testing-library/jest-dom": "^5.16.1",
     "@vue/composition-api": "^1.4.4",
