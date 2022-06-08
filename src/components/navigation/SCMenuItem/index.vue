@@ -36,7 +36,7 @@ export default {
     classes() {
       return {
         'sc-menu-item': true,
-        'ant-dropdown-menu-item': true
+        'ant-menu-item': true
       }
     }
   }

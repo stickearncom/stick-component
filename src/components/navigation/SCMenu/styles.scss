@@ -1,0 +1,101 @@
+@import "@stickearncom/scstyles/base/variables.scss";
+@import "@stickearncom/scstyles/base/font-mixins.scss";
+@import "@stickearncom/scstyles/base/mixin.scss";
+@import "@stickearncom/scstyles/base/colors-variables.scss";
+
+.sc-menu {
+  border-bottom-color: transparent;
+  color: $gray-8;
+  @include font-medium-sm;
+
+  &.ant-menu-horizontal {
+    line-height: 54px;
+
+    & > .ant-menu-item:hover,
+    & > .ant-menu-submenu:hover,
+    & > .ant-menu-item-active,
+    & > .ant-menu-submenu-active,
+    & > .ant-menu-item-open,
+    & > .ant-menu-submenu-open,
+    & > .ant-menu-item-selected,
+    & > .ant-menu-submenu-selected {
+      color: $purple-6;
+      border-bottom-color: $purple-6;
+    }
+  }
+
+  &.ant-menu:not(.ant-menu-inline) .ant-menu-submenu-open,
+  .ant-menu-item:hover,
+  .ant-menu-item-active,
+  .ant-menu-submenu-active,
+  .ant-menu-submenu-title:hover {
+    color: $purple-6;
+  }
+
+  // Dark theme
+  &.ant-menu-dark {
+    color: $white-1;
+
+    .ant-menu-item:hover,
+    .ant-menu-item-active,
+    .ant-menu-submenu-active,
+    .ant-menu-submenu-open,
+    .ant-menu-submenu-selected,
+    .ant-menu-submenu-title:hover,
+    .ant-menu-item,
+    .ant-menu-item-selected,
+    .ant-menu-item-group-title,
+    .ant-menu-item > a {
+      color: $white-1 !important;
+    }
+
+    .ant-menu-item-selected,
+    .ant-menu-submenu-selected,
+    &.ant-menu-submenu-popup .ant-menu-item-selected {
+      background-color: $purple-6;
+    }
+  }
+
+  &.ant-menu-dark {
+    background: $purple-10;
+  }
+}
+
+.sc-menu-sub {
+  color: $gray-10;
+  .ant-menu-item {
+    font-weight: 500;
+  }
+  .ant-menu-item:hover,
+  .ant-menu-item-active,
+  .ant-menu:not(.ant-menu-inline)
+  .ant-menu-submenu-open,
+  .ant-menu-submenu-active,
+  .ant-menu-submenu-title:hover,
+  .ant-menu-item-selected {
+    color: $purple-6;
+  }
+
+  .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+    background-color: $purple-1;
+  }
+
+  &.ant-menu-dark {
+    .ant-menu-item:hover,
+    .ant-menu-item-active,
+    .ant-menu:not(.ant-menu-inline)
+    .ant-menu-submenu-open,
+    .ant-menu-submenu-active,
+    .ant-menu-submenu-title:hover,
+    .ant-menu-item-selected {
+      color: $white-1;
+    }
+    .ant-menu-sub {
+      background: $purple-10;
+    }
+
+    &.ant-menu-submenu-popup .ant-menu-item-selected {
+      background-color: $purple-6;
+    }
+  }
+}
