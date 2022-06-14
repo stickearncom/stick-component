@@ -11,7 +11,8 @@
     @close="$emit('close')"
   >
     <template #icon>
-      <i v-if="type === 'error'" class="icon icon-times-circle-solid" />
+      <i v-if="icon" class="icon" :class="`icon-${icon}`" />
+      <i v-else-if="type === 'error'" class="icon icon-times-circle-solid" />
       <i v-else-if="type === 'info'" class="icon icon-check-circle-solid" />
       <i v-else-if="type === 'success'" class="icon icon-info-circle-solid" />
     </template>
@@ -19,6 +20,7 @@
 </template>
 
 <script>
+/* eslint-disable no-undefined */
 import { Alert } from 'ant-design-vue'
 
 export default {
@@ -57,6 +59,10 @@ export default {
     closable:  {
       type: Boolean,
       default: false
+    },
+    icon: {
+      type: String,
+      default: undefined
     }
   },
   computed: {
