@@ -8,7 +8,8 @@
     :disabled="disabled"
     :size="size"
     @search="$emit('search', $event)"
-    @pressEnter="$emit('pressEnter', $event)"
+    @change="$emit('change', $event.target.value)"
+    @pressEnter="$emit('pressEnter', $event.target.value)"
   >
     <a-button slot="enterButton">
       <SCIcon type="search-solid" />

@@ -7,11 +7,31 @@
 
     <SCRow :gutter="[16, 32]">
       <SCCol :span="12">
-        <SCInputSearch placeholder="Search input" allow-clear size="large" />
+        <SCInputSearch
+          placeholder="Search input"
+          allow-clear
+          size="large"
+          @search="handleSearch"
+          @change="handleChange"
+          @pressEnter="handlePressEnter"
+        />
         <div style="margin: 16px 0" />
-        <SCInputSearch placeholder="Search input" allow-clear />
+        <SCInputSearch
+          placeholder="Search input"
+          allow-clear
+          @search="handleSearch"
+          @change="handleChange"
+          @pressEnter="handlePressEnter"
+        />
         <div style="margin: 16px 0" />
-        <SCInputSearch placeholder="Search input" allow-clear size="small" />
+        <SCInputSearch
+          placeholder="Search input"
+          allow-clear
+          size="small"
+          @search="handleSearch"
+          @change="handleChange"
+          @pressEnter="handlePressEnter"
+        />
       </SCCol>
       <SCCol :span="12">
         <SCInputSearch
@@ -46,6 +66,17 @@ export default {
     SCRow,
     SCCol,
     SCInputSearch
+  },
+  methods: {
+    handleChange(value) {
+      console.log('change', value)
+    },
+    handleSearch(value) {
+      console.log('search', value)
+    },
+    handlePressEnter(value) {
+      console.log('pressEnter', value)
+    }
   }
 }
 </script>
