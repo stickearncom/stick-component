@@ -1,35 +1,37 @@
 <template>
   <div>
     <h4 class="font-medium-lg">
-      Tabs:
+      Tabs Vertical:
     </h4>
     <hr class="mb-4">
 
-    <div class="flex flex-col">
-      <div class="w-full mb-10">
+    <div class="flex">
+      <div class="w-6/12 mb-10">
         <fieldset class="w-11/12">
           <legend class="font-medium-md">
             Basic
           </legend>
 
           <div>
-            <SCTabs v-model="activeKey" :options="tabsList" @change="callback" />
+            <SCTabs v-model="activeKey" :options="tabsList" tab-position="left" @change="callback" />
           </div>
         </fieldset>
       </div>
 
-      <div class="w-full mb-10">
+      <div class="w-6/12 mb-10">
         <fieldset class="w-11/12">
           <legend class="font-medium-md">
             Tabs with icon
           </legend>
 
           <div>
-            <SCTabs v-model="activeKey" :options="tabsList" icon-type="setting-outline" @change="callback" />
+            <SCTabs v-model="activeKey" :options="tabsList" tab-position="left" icon-type="setting-outline" @change="callback" />
           </div>
         </fieldset>
       </div>
+    </div>
 
+    <div class="flex">
       <div class="w-full mb-10">
         <fieldset class="w-11/12">
           <legend class="font-medium-md">
@@ -37,15 +39,15 @@
           </legend>
 
           <div class="mb-7">
-            <SCTabs v-model="activeKey" :options="tabsListLarge" size="large" icon-type="setting-outline" @change="callback" />
+            <SCTabs v-model="activeKey" :options="tabsListLarge" tab-position="left" size="large" icon-type="setting-outline" @change="callback" />
           </div>
 
           <div class="mb-7">
-            <SCTabs v-model="activeKey" :options="tabsListDefault" icon-type="setting-outline" @change="callback" />
+            <SCTabs v-model="activeKey" :options="tabsListDefault" tab-position="left" icon-type="setting-outline" @change="callback" />
           </div>
 
           <div>
-            <SCTabs v-model="activeKey" :options="tabsListSmall" size="small" icon-type="setting-outline" @change="callback" />
+            <SCTabs v-model="activeKey" :options="tabsListSmall" tab-position="left" size="small" icon-type="setting-outline" @change="callback" />
           </div>
         </fieldset>
       </div>
@@ -57,11 +59,11 @@
           </legend>
 
           <div class="mb-7">
-            <SCTabs v-model="activeKey" :options="tabsList" tab-position="top" icon-type="setting-outline" @change="callback" />
+            <SCTabs v-model="activeKey" :options="tabsList" tab-position="left" icon-type="setting-outline" @change="callback" />
           </div>
 
           <div>
-            <SCTabs v-model="activeKey" :options="tabsList" icon-type="setting-outline" @change="callback" />
+            <SCTabs v-model="activeKey" :options="tabsList" tab-position="right" icon-type="setting-outline" @change="callback" />
           </div>
         </fieldset>
       </div>

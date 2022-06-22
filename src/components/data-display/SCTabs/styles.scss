@@ -5,9 +5,79 @@
 
 .sc-tabs {
   text-align: center;
-  border-bottom: 1px solid $gray-2;
+  // border-bottom: 1px solid $gray-2;
   color: $gray-8;
   @include font-medium-sm;
+
+  &.sc-tabs-small a {
+    @include padding-y(6px);
+    @include padding-x(16px);
+  }
+
+  &.sc-tabs-large a {
+    @include padding-y(16px);
+    @include padding-x(32px);
+    @include font-medium-md;
+  }
+
+  &.sc-tabs-top {
+    // border-top: 1px solid $gray-2;
+    border-bottom: 0;
+
+    a {
+      &.active {
+        &:after {
+          top: 0;
+        }
+      }
+    }
+  }
+
+  &.sc-tabs-left {
+    border-top: 0;
+    border-bottom: 0;
+    text-align: left;
+
+    .sc-tabs__list {
+      display: inline-block;
+    }
+
+    a {
+      &.active {
+        border-left: 2px solid $purple-6;
+
+        &:after {
+          background: $white-1 !important;
+        }
+      }
+    }
+  }
+
+  &.sc-tabs-right {
+    border-top: 0;
+    border-bottom: 0;
+    text-align: right;
+
+    .sc-tabs__list {
+      display: inline-block;
+    }
+
+    .sc-tabs__item {
+      &:not(:last-of-type) {
+        margin-right: 0;
+      }
+    }
+
+    a {
+      &.active {
+        border-right: 2px solid $purple-6;
+
+        &:after {
+          background: $white-1 !important;
+        }
+      }
+    }
+  }
 
   .sc-tabs__list {
     @include flexbox;
